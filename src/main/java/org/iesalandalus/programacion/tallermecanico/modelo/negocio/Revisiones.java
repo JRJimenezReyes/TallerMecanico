@@ -87,7 +87,7 @@ public class Revisiones {
         revisionEncontrada.setFechaFin(fechaFin);
     }
 
-    public Revision buscar(Revision revision) {
+    public Revision buscar(int revision) {
         for (Revision r : revisiones) {
             if (r.equals(revision)) {
                 return r;

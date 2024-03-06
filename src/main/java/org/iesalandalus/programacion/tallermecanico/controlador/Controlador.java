@@ -36,7 +36,11 @@ public class Controlador {
     }
 
     public void crearRevision(String matricula, int km, LocalDate fecha, double precio) {
-        modelo.crearRevision(matricula, km, fecha, precio);
+        try {
+            modelo.crearRevision(matricula, km, fecha, precio);
+        } catch (Exception e) {
+            vista.mostrarMensajeError(e.getMessage());
+        }
     }
 
     public List<Revision> listarRevisiones() {
@@ -44,19 +48,35 @@ public class Controlador {
     }
 
     public Revision buscarRevision(String matricula) {
-        return modelo.buscarRevision(matricula);
+        try {
+            return modelo.buscarRevision(Integer.parseInt(matricula));
+        } catch (Exception e) {
+            vista.mostrarMensajeError(e.getMessage());
+            return null;
+        }
     }
 
     public void borrarRevision(String matricula) {
-        modelo.borrarRevision(matricula);
+        try {
+            modelo.borrarRevision(Integer.parseInt(matricula));
+        } catch (Exception e) {
+            vista.mostrarMensajeError(e.getMessage());
+        }
     }
 
     public void modificarRevision(Revision revision) {
-        modelo.modificarRevision(revision);
+        try {
+            modelo.modificar(revision);
+        } catch (Exception e) {
+            vista.mostrarMensajeError(e.getMessage());
+        }
     }
 
     public void cerrarRevision(String matricula) {
-        modelo.cerrarRevision(matricula);
+        try {
+            modelo.cerrar(matricula);
+        } catch (Exception e) {
+            vista.mostrarMensajeError(e.getMessage());
+        }
     }
 }
-

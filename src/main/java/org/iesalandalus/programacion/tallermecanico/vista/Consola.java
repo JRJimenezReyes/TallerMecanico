@@ -37,7 +37,7 @@ public class Consola {
         return SC.nextInt();
     }
 
-    public static String leerCadena(String mensaje) {
+    public static String leerCadena() {
         mostrarMensaje(mensaje);
         return SC.nextLine();
     }

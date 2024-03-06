@@ -1,5 +1,7 @@
 package org.iesalandalus.programacion.tallermecanico.modelo.dominio;
 
+import java.util.List;
+import java.util.Objects;
 import java.util.regex.Pattern;
 
 public record Vehiculo(
@@ -36,13 +38,21 @@ public record Vehiculo(
         return matricula;
     }
 
+    public String getMarca() {
+        return  marca;
+    }
 
-    public static Vehiculo get(String matricula) {
+    public static Vehiculo get(String matricula, List<Vehiculo> vehiculos) {
         if (matricula == null) {
             throw new NullPointerException("La matrícula no puede ser nula.");
         }
         if (!Pattern.matches(PATRON_MATRICULA, matricula)) {
             throw new IllegalArgumentException("La matrícula no tiene un formato válido.");
+        }
+        for (Vehiculo vehiculo : vehiculos) {
+            if (vehiculo.matricula.equals(matricula)) {
+                return vehiculo;
+            }
         }
         return null;
     }

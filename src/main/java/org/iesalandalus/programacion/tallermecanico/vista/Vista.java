@@ -3,9 +3,9 @@ package org.iesalandalus.programacion.tallermecanico.vista;
 import org.iesalandalus.programacion.tallermecanico.controlador.Controlador;
 import org.iesalandalus.programacion.tallermecanico.modelo.dominio.Revision;
 
+import javax.swing.*;
 import java.time.LocalDate;
 import java.util.List;
-import java.util.Scanner;
 
 import static org.iesalandalus.programacion.tallermecanico.vista.Consola.elegirOpcion;
 import static org.iesalandalus.programacion.tallermecanico.vista.Consola.mostrarMenu;
@@ -70,7 +70,7 @@ public class Vista {
     }
 
     private void nuevaRevision() {
-        String matricula = Consola.leerCadena("Introduzca la matrícula del vehículo: ");
+        String matricula = Consola.leerCadena();
         int km = Consola.leerEntero("Introduzca el kilometraje del vehículo: ");
         LocalDate fecha = Consola.leerFecha("Introduzca la fecha de la revisión: ");
         double precio = Consola.leerReal("Introduzca el precio de la revisión: ");
@@ -99,7 +99,7 @@ public class Vista {
     }
 
     private void buscarRevision() {
-        String matricula = Consola.leerCadena("Introduzca la matrícula del vehículo: ");
+        String matricula = Consola.leerCadena();
 
         try {
             Revision revision = controlador.buscarRevision(matricula);
@@ -114,7 +114,7 @@ public class Vista {
     }
 
     private void borrarRevision() {
-        String matricula = Consola.leerCadena("Introduzca la matrícula del vehículo: ");
+        String matricula = Consola.leerCadena();
 
         try {
             controlador.borrarRevision(matricula);
@@ -125,7 +125,7 @@ public class Vista {
     }
 
     private void modificarRevision() {
-        String matricula = Consola.leerCadena("Introduzca la matrícula del vehículo: ");
+        String matricula = Consola.leerCadena();
 
         try {
             Revision revision = controlador.buscarRevision(matricula);
@@ -149,7 +149,7 @@ public class Vista {
     }
 
     private void cerrarRevision() {
-        String matricula = Consola.leerCadena("Introduzca la matrícula del vehículo: ");
+        String matricula = Consola.leerCadena();
 
         try {
             Revision revision = controlador.buscarRevision(matricula);
@@ -179,6 +179,10 @@ public class Vista {
         if (respuesta.equals("S")) {
             System.exit(0);
         }
+    }
+
+    public void mostrarMensajeError(String mensaje) {
+        System.err.println("Error: " + mensaje);
     }
 }
 

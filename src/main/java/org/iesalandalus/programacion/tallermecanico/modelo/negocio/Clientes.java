@@ -2,9 +2,7 @@ package org.iesalandalus.programacion.tallermecanico.modelo.negocio;
 
 import org.iesalandalus.programacion.tallermecanico.modelo.dominio.Cliente;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,7 +20,7 @@ public class Clientes {
     }
 
     public List<Cliente> get() {
-        return new ArrayList<>(clientes);
+        return Collections.unmodifiableList(clientes);
     }
 
     public boolean insertar(Cliente cliente) {
@@ -46,10 +44,11 @@ public class Clientes {
         return false;
     }
 
-    public Cliente buscar(Cliente cliente) {
-        for (Cliente c : clientes) {
-            if (c.equals(cliente)) {
-                return c;
+    public Cliente buscar(String dni) {
+        Objects.requireNonNull(dni, "El DNI no puede ser nulo");
+        for (Cliente cliente : clientes) {
+            if (cliente.getDni().equals(dni)) {
+                return cliente;
             }
         }
         return null;
@@ -60,6 +59,33 @@ public class Clientes {
             throw new IllegalAccessException("El cliente no se encuentra en la lista: " + cliente);
         }
     }
+
+    public int getNumeroClientes() {
+        return clientes.size();
+    }
+
+    public List<Cliente> buscarPorNombre(String nombre) {
+        if (nombre == null || nombre.trim().isEmpty()) {
+            return Collections.emptyList();
+        }
+        List<Cliente> clientesEncontrados = new ArrayList<>();
+        for (Cliente cliente : clientes) {
+            if (cliente.getNombre().toLowerCase().contains(nombre.toLowerCase())) {
+                clientesEncontrados.add(cliente);
+            }
+        }
+        return Collections.unmodifiableList(clientesEncontrados);
+    }
+
+    public boolean contains(Cliente cliente) {
+        for (Cliente c : clientes) {
+            if (c.equals(cliente)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
 }
 
 

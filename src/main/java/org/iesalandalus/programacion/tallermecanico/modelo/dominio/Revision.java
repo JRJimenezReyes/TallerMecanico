@@ -18,6 +18,10 @@ public class Revision implements Comparable<Revision> {
     private LocalDate fechaFin;
     private int horas;
     private double precioMaterial;
+    private EstadoRevision estado;
+    private int km;
+    private LocalDate fecha;
+    private double precio;
 
     public Revision(Cliente cliente, Vehiculo vehiculo, LocalDate fechaInicio) {
         if (cliente == null) {
@@ -103,11 +107,43 @@ public class Revision implements Comparable<Revision> {
         this.id = numeroRevision;
     }
 
+    public EstadoRevision getEstado() {
+        return estado;
+    }
+
+    public void setEstado(EstadoRevision estado) {
+        this.estado = estado;
+    }
+
     public double getPrecio() {
         if (!estaCerrada()) {
             throw new IllegalStateException("La revisión no está cerrada.");
         }
         return Math.round((getHoras() * PRECIO_HORA + precioMaterial) * 100) / 100.0;
+    }
+
+    public void setKm(int km) {
+        if (km >= 0) {
+            this.km = km;
+        } else {
+            throw new IllegalArgumentException("El kilometraje no puede ser negativo.");
+        }
+    }
+
+    public void setFecha(LocalDate fecha) {
+        if (fecha != null) {
+            this.fecha = fecha;
+        } else {
+            throw new IllegalArgumentException("La fecha no puede ser nula.");
+        }
+    }
+
+    public void setPrecio(double precio) {
+        if (precio >= 0) {
+            this.precio = precio;
+        } else {
+            throw new IllegalArgumentException("El precio no puede ser negativo.");
+        }
     }
 
     public void anadirHoras(int horas) throws OperationNotSupportedException {
@@ -194,6 +230,10 @@ public class Revision implements Comparable<Revision> {
             return fechaInicio.compareTo(other.fechaInicio);
         }
         return cmp;
+    }
+
+    public void setCerrada(boolean b) {
+        this.estado = EstadoRevision.CERRADA;
     }
 
 }
