@@ -38,6 +38,7 @@ public class Consola {
     }
 
     public static String leerCadena() {
+        String mensaje = null;
         mostrarMensaje(mensaje);
         return SC.nextLine();
     }
