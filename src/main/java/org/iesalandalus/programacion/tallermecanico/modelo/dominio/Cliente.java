@@ -8,7 +8,7 @@ import java.util.regex.Pattern;
 
 public class Cliente {
     private static final String ER_NOMBRE = "([A-Z][a-z]+)( [A-Z][a-z]+)*"; //([A-Z][a-z]+)( [A-Z][a-z]+)*
-    private static final String ER_DNI = "^\\d{8}[A-Z]{1}"; //^[0-9]{8}[^\W\d_[a-z][IÑOU]] validacion del dni
+    private static final String ER_DNI = "^[0-9]{8}[^\\W\\d_[a-z][IÑOU]]"; //^[0-9]{8}[^\W\d_[a-z][IÑOU]] validacion del dni
     private static final String ER_TELEFONO = "^\\d{9}";
 
     private String nombre;
@@ -16,9 +16,9 @@ public class Cliente {
     private String telefono;
 
     public Cliente(String nombre, String dni, String telefono) {
-        set(nombre);
-        set(dni);
-        set(telefono);
+        setNombre(nombre);
+        setDni(dni);
+        setTelefono(telefono);
     }
 
     public String getNombre() {
@@ -46,10 +46,11 @@ public class Cliente {
     }
 
     private boolean comprobarLetraDni(String dni) {
-        boolean letraCorrectaDni = !((dni.charAt(dni.length()-1) != )) ;
+        int []
+        while (dni.length() < 8) {
 
-        if (dni.charAt(dni.length()-1) != )
+        }
 
-
+        return !(dni.matches(ER_DNI));
     }
 }
