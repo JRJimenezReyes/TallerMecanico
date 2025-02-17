@@ -7,9 +7,10 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Cliente {
-    private static final String ER_NOMBRE = "([A-Z][a-z]+)( [A-Z][a-z]+)*"; //([A-Z][a-z]+)( [A-Z][a-z]+)*
+    private static final String ER_NOMBRE = "([A-Z][Á,É,Í,Ó,Ú,Ü][a-z][á,é,í,ó,ú]+)( [A-Z][a-z]+)*"; //([A-Z][a-z]+)( [A-Z][a-z]+)*
     private static final String ER_DNI = "^[0-9]{8}[^\\W\\d_[a-z][IÑOU]]"; //^[0-9]{8}[^\W\d_[a-z][IÑOU]] validacion del dni
     private static final String ER_TELEFONO = "^\\d{9}";
+
 
     private String nombre;
     private String dni;
@@ -19,6 +20,12 @@ public class Cliente {
         setNombre(nombre);
         setDni(dni);
         setTelefono(telefono);
+    }
+
+    public Cliente(Cliente cliente) {
+        nombre = cliente.nombre;
+        dni = cliente.nombre;
+        telefono = cliente.telefono;
     }
 
     public String getNombre() {
@@ -42,15 +49,57 @@ public class Cliente {
         if (!(dni.matches(ER_DNI))) {
             throw new TallerMecanicoExcepcion("El dni no e válido.");
         }
+        if (comprobarLetraDni(dni) == false) {
+            throw new TallerMecanicoExcepcion("El dni no es válido.");
+        }
         this.dni = dni;
     }
 
-    private boolean comprobarLetraDni(String dni) {
-        int []
-        while (dni.length() < 8) {
 
+
+    private boolean comprobarLetraDni(String dni) {
+        boolean dniCorrecto = false;
+        char[] letraDni =  {'T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E'};
+        String numerosDniCadena;
+        numerosDniCadena = dni.substring(0,(dni.length()-2));
+        Integer numerosDniEnteros = Integer.valueOf(numerosDniCadena);
+
+        if (letraDni[numerosDniEnteros % 23] == dni.charAt(dni.length()-1)) {
+            dniCorrecto = true;
         }
 
-        return !(dni.matches(ER_DNI));
+        return dniCorrecto;
+    }
+
+    public String getTelefono() {
+        return telefono;
+    }
+
+    public void setTelefono(String telefono) {
+        Objects.requireNonNull(telefono, "El teléfono no puede ser nulo.");
+        if (!(telefono.matches(ER_TELEFONO))) {
+            throw new TallerMecanicoExcepcion("El teléfono no es válido");
+        }
+    }
+
+    public static Cliente get(String dni) {
+        return new Cliente("dario", dni, "950132332");
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        Cliente cliente = (Cliente) o;
+        return Objects.equals(dni, cliente.dni);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(dni);
+    }
+
+    @Override
+    public String toString() {
+        return String.format("[nombre=%s, dni=%s, telefono=%s]", nombre, dni, telefono);
     }
 }
