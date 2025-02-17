@@ -95,4 +95,5 @@ class VehiculoTest {
 		assertEquals(String.format("%s %s - %s", MARCA, MODELO, MATRICULA), vehiculo.toString());
 	}
 
+
 }

@@ -36,15 +36,17 @@ public class Clientes {
 
         if (clientes.contains(cliente)){
 
+
+
             if (nombre != null && !nombre.isBlank()){
-                cliente.setNombre(nombre);
+                buscar(cliente).setNombre(nombre);
             }
 
             if (telefono != null && !telefono.isBlank()){
-                cliente.setTelefono(telefono);
+                buscar(cliente).setTelefono(telefono);
             }
 
-            return cliente;
+            return buscar(cliente);
 
         } else {
             throw new TallerMecanicoExcepcion("No existe ningún cliente con ese DNI.");
@@ -54,7 +56,8 @@ public class Clientes {
     public Cliente buscar(Cliente cliente){
        Objects.requireNonNull(cliente, "No se puede buscar un cliente nulo.");
         if (clientes.contains(cliente)){
-            return cliente;
+            int indexCliente = clientes.indexOf(cliente);
+            return clientes.get(indexCliente);
         } else {
             return null;
         }
