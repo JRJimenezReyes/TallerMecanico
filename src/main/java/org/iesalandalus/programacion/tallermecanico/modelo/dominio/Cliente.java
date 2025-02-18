@@ -7,7 +7,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Cliente {
-    private static final String ER_NOMBRE = "([A-Z][Á,É,Í,Ó,Ú,Ü][a-z][á,é,í,ó,ú]+)( [A-Z][a-z]+)*"; //([A-Z][a-z]+)( [A-Z][a-z]+)*
+    private static final String ER_NOMBRE = "^([A-ZÁÉÍÓÚÜ][a-záéíóú]+)( [A-ZÁÉÍÓÚÜ][a-záéíóú]+)*"; //([A-ZÁÉÍÓÚÜ][a-záéíóú]+)( [A-ZÁÉÍÓÚÜ][a-záéíóú]+)*
     private static final String ER_DNI = "^[0-9]{8}[^\\W\\d_[a-z][IÑOU]]"; //^[0-9]{8}[^\W\d_[a-z][IÑOU]] validacion del dni
     private static final String ER_TELEFONO = "^\\d{9}";
 
