@@ -27,7 +27,7 @@ public class Clientes {
         coleccionClientes.add(cliente);
     }
 
-    public boolean modificar(Cliente cliente, String nombre, String telefono) throws TallerMecanicoExcepcion {
+    public Cliente modificar(Cliente cliente, String nombre, String telefono) throws TallerMecanicoExcepcion {
         if (cliente == null) {
             throw new NullPointerException("No se puede modificar un cliente nulo.");
         }
@@ -41,7 +41,7 @@ public class Clientes {
         if (telefono != null && !telefono.isBlank()) {
             clienteExistente.setTelefono(telefono);
         }
-        return true;
+        return new Cliente(cliente);
     }
 
     public Cliente buscar(Cliente cliente) {

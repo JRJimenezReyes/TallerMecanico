@@ -7,31 +7,31 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Vehiculos {
-    private final List<Vehiculo> coleccionVehiculo;
+    private final List<Vehiculo> coleccionVehiculos;
 
     public Vehiculos() {
-        coleccionVehiculo = new ArrayList<>();
+        coleccionVehiculos = new ArrayList<>();
     }
 
     public List<Vehiculo> get() {
-        return new ArrayList<>(coleccionVehiculo);
+        return new ArrayList<>(coleccionVehiculos);
     }
 
     public void insertar(Vehiculo vehiculo) throws TallerMecanicoExcepcion {
         if (vehiculo == null) {
             throw new NullPointerException("No se puede insertar un vehículo nulo.");
         }
-        if (coleccionVehiculo.contains(vehiculo)) {
+        if (coleccionVehiculos.contains(vehiculo)) {
             throw new TallerMecanicoExcepcion("Ya existe un vehículo con esa matrícula.");
         }
-        coleccionVehiculo.add(vehiculo);
+        coleccionVehiculos.add(vehiculo);
     }
 
     public Vehiculo buscar(Vehiculo vehiculo) {
         if (vehiculo == null) {
             throw new NullPointerException("No se puede buscar un vehículo nulo.");
         }
-        for (Vehiculo v : coleccionVehiculo) {
+        for (Vehiculo v : coleccionVehiculos) {
             if (v.equals(vehiculo)) {
                 return v;
             }
@@ -47,6 +47,6 @@ public class Vehiculos {
         if (vehiculoExistente == null) {
             throw new TallerMecanicoExcepcion("No existe ningún vehículo con esa matrícula.");
         }
-        coleccionVehiculo.remove(vehiculoExistente);
+        coleccionVehiculos.remove(vehiculoExistente);
     }
 }
