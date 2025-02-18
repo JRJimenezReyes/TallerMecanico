@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8b0e04e-6981-41d9-b2bd-c9ae382a0816" name="Changes" comment="Commit inicial con el enunciado, las dependencias y los tests.">
+    <list default="true" id="f8b0e04e-6981-41d9-b2bd-c9ae382a0816" name="Changes" comment="a punto de terminar la clase Cliente.java">
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/modelo/dominio/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/modelo/dominio/Cliente.java" afterDir="false" />
     </list>
@@ -58,7 +60,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="spring_inicial" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -70,12 +72,12 @@
     &quot;assignee&quot;: &quot;JRJimenezReyes&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Belia-Aritza/TallerMecanico.git",
-    "accountId": "7bcd9ce1-a922-464f-84ee-7a5f64765152"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Belia-Aritza/TallerMecanico.git&quot;,
+    &quot;accountId&quot;: &quot;7bcd9ce1-a922-464f-84ee-7a5f64765152&quot;
   }
-}]]></component>
+}</component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -96,9 +98,24 @@
     "Gradle.ClienteTest.executor": "Run",
     "Gradle.Tests in 'org.iesalandalus.programacion.tallermecanico.modelo'.executor": "Run",
     "JUnit.ClienteTest (1).executor": "Run",
+    "JUnit.ClienteTest.constrctorClienteValidoCopiaClienteCorrectamente.executor": "Run",
+    "JUnit.ClienteTest.constructoNombreValidoDniNuloTelefonoValidoLanzaExcepcion.executor": "Run",
+    "JUnit.ClienteTest.constructorClienteNuloLanzaExcepcion.executor": "Run",
+    "JUnit.ClienteTest.constructorNombreNoValidoDniValidoTelefonoValidoLanzaExcepcion.executor": "Run",
+    "JUnit.ClienteTest.constructorNombreNuloDniValidoTelefonoValidoLanzaExcepcion.executor": "Run",
+    "JUnit.ClienteTest.constructorNombreValidoDniNoValidoTelefonoValidoLanzaExcepcion.executor": "Run",
+    "JUnit.ClienteTest.constructorNombreValidoDniValidoTelefonoNoValidoLanzaExcepcion.executor": "Run",
     "JUnit.ClienteTest.constructorNombreValidoDniValidoTelefonoNuloLanzaExcepcion.executor": "Debug",
+    "JUnit.ClienteTest.constructorNombreValidoDniValidoTelefonoValidoCreaClienteCorrectamente (1).executor": "Run",
     "JUnit.ClienteTest.constructorNombreValidoDniValidoTelefonoValidoCreaClienteCorrectamente.executor": "Run",
-    "JUnit.ClienteTest.executor": "Debug",
+    "JUnit.ClienteTest.constructorNombreValidoLetraDniNoValidaTelefonoValidoLanzaExcepcion.executor": "Run",
+    "JUnit.ClienteTest.equalsHashCodeSeBasanSoloEnDni.executor": "Run",
+    "JUnit.ClienteTest.executor": "Run",
+    "JUnit.ClienteTest.getClienteDniNoValidoLanzaExcepcion.executor": "Run",
+    "JUnit.ClienteTest.getClienteDniNuloLanzaExcepcion.executor": "Run",
+    "JUnit.ClienteTest.getClienteDniValidoDevuelveClienteConDichoDni.executor": "Run",
+    "JUnit.ClienteTest.getClienteLetraDniNoValidaLanzaExcepcion.executor": "Run",
+    "JUnit.ClienteTest.toStringDevuelveLaCadenaEsperada.executor": "Run",
     "JUnit.org.iesalandalus.programacion.tallermecanico.modelo in TallerMecanicoResuelto.test.executor": "Run",
     "RunOnceActivity.ChatTagsLlmMigration": "true",
     "RunOnceActivity.CodyAccountHistoryMigration": "true",
@@ -147,46 +164,7 @@
       <recent name="org.iesalandalus.programacion.tallermecanico.modelo.dominio" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ClienteTest.constructorNombreValidoDniValidoTelefonoValidoCreaClienteCorrectamente">
-    <configuration name="ClienteTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;org.iesalandalus.programacion.tallermecanico.modelo.dominio.ClienteTest&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="ClienteTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="org.iesalandalus.programacion.tallermecanico.TallerMecanico.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.iesalandalus.programacion.tallermecanico.modelo.dominio.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.iesalandalus.programacion.tallermecanico.modelo.dominio" />
-      <option name="MAIN_CLASS_NAME" value="org.iesalandalus.programacion.tallermecanico.modelo.dominio.ClienteTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.ClienteTest">
     <configuration name="ClienteTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TallerMecanico.test" />
       <extension name="coverage">
@@ -202,8 +180,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ClienteTest.constructorNombreValidoDniValidoTelefonoNuloLanzaExcepcion" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="org.iesalandalus.programacion.tallermecanico.TallerMecanico.test" />
+    <configuration name="ClienteTest.equalsHashCodeSeBasanSoloEnDni" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TallerMecanico.test" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="org.iesalandalus.programacion.tallermecanico.modelo.dominio.*" />
@@ -212,14 +190,14 @@
       </extension>
       <option name="PACKAGE_NAME" value="org.iesalandalus.programacion.tallermecanico.modelo.dominio" />
       <option name="MAIN_CLASS_NAME" value="org.iesalandalus.programacion.tallermecanico.modelo.dominio.ClienteTest" />
-      <option name="METHOD_NAME" value="constructorNombreValidoDniValidoTelefonoNuloLanzaExcepcion" />
+      <option name="METHOD_NAME" value="equalsHashCodeSeBasanSoloEnDni" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ClienteTest.constructorNombreValidoDniValidoTelefonoValidoCreaClienteCorrectamente" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="org.iesalandalus.programacion.tallermecanico.TallerMecanico.test" />
+    <configuration name="ClienteTest.getClienteDniNoValidoLanzaExcepcion" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TallerMecanico.test" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="org.iesalandalus.programacion.tallermecanico.modelo.dominio.*" />
@@ -228,26 +206,58 @@
       </extension>
       <option name="PACKAGE_NAME" value="org.iesalandalus.programacion.tallermecanico.modelo.dominio" />
       <option name="MAIN_CLASS_NAME" value="org.iesalandalus.programacion.tallermecanico.modelo.dominio.ClienteTest" />
-      <option name="METHOD_NAME" value="constructorNombreValidoDniValidoTelefonoValidoCreaClienteCorrectamente(java.lang.String,java.lang.String,java.lang.String)" />
+      <option name="METHOD_NAME" value="getClienteDniNoValidoLanzaExcepcion(java.lang.String)" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ClienteTest.getClienteLetraDniNoValidaLanzaExcepcion" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TallerMecanico.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.iesalandalus.programacion.tallermecanico.modelo.dominio.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.iesalandalus.programacion.tallermecanico.modelo.dominio" />
+      <option name="MAIN_CLASS_NAME" value="org.iesalandalus.programacion.tallermecanico.modelo.dominio.ClienteTest" />
+      <option name="METHOD_NAME" value="getClienteLetraDniNoValidaLanzaExcepcion(java.lang.String)" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ClienteTest.toStringDevuelveLaCadenaEsperada" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TallerMecanico.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.iesalandalus.programacion.tallermecanico.modelo.dominio.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.iesalandalus.programacion.tallermecanico.modelo.dominio" />
+      <option name="MAIN_CLASS_NAME" value="org.iesalandalus.programacion.tallermecanico.modelo.dominio.ClienteTest" />
+      <option name="METHOD_NAME" value="toStringDevuelveLaCadenaEsperada" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="Gradle.ClienteTest" />
-      <item itemvalue="JUnit.ClienteTest (1)" />
-      <item itemvalue="JUnit.ClienteTest.constructorNombreValidoDniValidoTelefonoNuloLanzaExcepcion" />
-      <item itemvalue="JUnit.ClienteTest.constructorNombreValidoDniValidoTelefonoValidoCreaClienteCorrectamente" />
+      <item itemvalue="JUnit.ClienteTest.equalsHashCodeSeBasanSoloEnDni" />
+      <item itemvalue="JUnit.ClienteTest.getClienteDniNoValidoLanzaExcepcion" />
+      <item itemvalue="JUnit.ClienteTest.getClienteLetraDniNoValidaLanzaExcepcion" />
+      <item itemvalue="JUnit.ClienteTest.toStringDevuelveLaCadenaEsperada" />
       <item itemvalue="JUnit.ClienteTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ClienteTest.constructorNombreValidoDniValidoTelefonoValidoCreaClienteCorrectamente" />
-        <item itemvalue="JUnit.ClienteTest.constructorNombreValidoDniValidoTelefonoNuloLanzaExcepcion" />
-        <item itemvalue="JUnit.ClienteTest (1)" />
         <item itemvalue="JUnit.ClienteTest" />
-        <item itemvalue="Gradle.ClienteTest" />
+        <item itemvalue="JUnit.ClienteTest.toStringDevuelveLaCadenaEsperada" />
+        <item itemvalue="JUnit.ClienteTest.equalsHashCodeSeBasanSoloEnDni" />
+        <item itemvalue="JUnit.ClienteTest.getClienteLetraDniNoValidaLanzaExcepcion" />
+        <item itemvalue="JUnit.ClienteTest.getClienteDniNoValidoLanzaExcepcion" />
       </list>
     </recent_temporary>
   </component>
@@ -285,6 +295,46 @@
     </ignored-roots>
     <MESSAGE value="Commit inicial con el enunciado, las dependencias y los tests." />
     <option name="LAST_COMMIT_MESSAGE" value="Commit inicial con el enunciado, las dependencias y los tests." />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/modelo/dominio/Cliente.java</url>
+          <line>78</line>
+          <properties class="org.iesalandalus.programacion.tallermecanico.modelo.dominio.Cliente" method="setTelefono">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="41" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/modelo/dominio/Cliente.java</url>
+          <line>79</line>
+          <option name="timeStamp" value="42" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/modelo/dominio/Cliente.java</url>
+          <line>80</line>
+          <option name="timeStamp" value="43" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/modelo/dominio/Cliente.java</url>
+          <line>81</line>
+          <option name="timeStamp" value="44" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/modelo/dominio/Cliente.java</url>
+          <line>82</line>
+          <option name="timeStamp" value="45" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/modelo/dominio/Cliente.java</url>
+          <line>84</line>
+          <option name="timeStamp" value="46" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/TallerMecanico$RevisionTest.ic" NAME="RevisionTest Coverage Results" MODIFIED="1706862963586" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

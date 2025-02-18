@@ -23,8 +23,9 @@ public class Cliente {
     }
 
     public Cliente(Cliente cliente) {
+        Objects.requireNonNull(cliente, "No es posible copiar un cliente nulo.");
         nombre = cliente.nombre;
-        dni = cliente.nombre;
+        dni = cliente.dni;
         telefono = cliente.telefono;
     }
 
@@ -33,9 +34,9 @@ public class Cliente {
     }
 
     public void setNombre(String nombre) {
-        Objects.requireNonNull(nombre, "El nombre no puede ser nulo");
+        Objects.requireNonNull(nombre, "El nombre no puede ser nulo.");
         if (!(nombre.matches(ER_NOMBRE))) {
-            throw new TallerMecanicoExcepcion("El nombre no es válido.");
+            throw new IllegalArgumentException("El nombre no tiene un formato válido.");
         }
         this.nombre = nombre;
     }
@@ -45,12 +46,12 @@ public class Cliente {
     }
 
     private void setDni(String dni) {
-        Objects.requireNonNull(dni, "El dni no puede ser nulo.");
+        Objects.requireNonNull(dni, "El DNI no puede ser nulo.");
         if (!(dni.matches(ER_DNI))) {
-            throw new TallerMecanicoExcepcion("El dni no e válido.");
+            throw new IllegalArgumentException("El DNI no tiene un formato válido.");
         }
         if (comprobarLetraDni(dni) == false) {
-            throw new TallerMecanicoExcepcion("El dni no es válido.");
+            throw new IllegalArgumentException("La letra del DNI no es correcta.");
         }
         this.dni = dni;
     }
@@ -61,10 +62,10 @@ public class Cliente {
         boolean dniCorrecto = false;
         char[] letraDni =  {'T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E'};
         String numerosDniCadena;
-        numerosDniCadena = dni.substring(0,(dni.length()-2));
+        numerosDniCadena = dni.substring(0,(dni.length()-1));
         Integer numerosDniEnteros = Integer.valueOf(numerosDniCadena);
 
-        if (letraDni[numerosDniEnteros % 23] == dni.charAt(dni.length()-1)) {
+        if (letraDni[(numerosDniEnteros % 23)] == dni.charAt(dni.length()-1)) {
             dniCorrecto = true;
         }
 
@@ -78,12 +79,13 @@ public class Cliente {
     public void setTelefono(String telefono) {
         Objects.requireNonNull(telefono, "El teléfono no puede ser nulo.");
         if (!(telefono.matches(ER_TELEFONO))) {
-            throw new TallerMecanicoExcepcion("El teléfono no es válido");
+            throw new IllegalArgumentException("El teléfono no tiene un formato válido.");
         }
+        this.telefono = telefono;
     }
 
     public static Cliente get(String dni) {
-        return new Cliente("dario", dni, "950132332");
+        return new Cliente("Dario", dni, "950132332");
     }
 
     @Override
@@ -100,6 +102,6 @@ public class Cliente {
 
     @Override
     public String toString() {
-        return String.format("[nombre=%s, dni=%s, telefono=%s]", nombre, dni, telefono);
+        return String.format("%s - %s (%s)", nombre, dni, telefono);
     }
 }
