@@ -31,7 +31,7 @@ public class Clientes {
         }
     }
 
-    public Cliente modificar(Cliente cliente, String nombre, String telefono)throws TallerMecanicoExcepcion{
+    public boolean modificar(Cliente cliente, String nombre, String telefono)throws TallerMecanicoExcepcion{
         Objects.requireNonNull(cliente, "No se puede modificar un cliente nulo.");
 
         if (clientes.contains(cliente)){
@@ -46,7 +46,7 @@ public class Clientes {
                 buscar(cliente).setTelefono(telefono);
             }
 
-            return buscar(cliente);
+            return true;
 
         } else {
             throw new TallerMecanicoExcepcion("No existe ningún cliente con ese DNI.");
