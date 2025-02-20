@@ -37,6 +37,7 @@ public class Clientes {
         }
         if (nombre != null && !nombre.isBlank()) {
             clienteExistente.setNombre(nombre);
+
         }
         if (telefono != null && !telefono.isBlank()) {
             clienteExistente.setTelefono(telefono);
