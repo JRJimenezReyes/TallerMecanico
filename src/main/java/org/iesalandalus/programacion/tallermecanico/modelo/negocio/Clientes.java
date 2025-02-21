@@ -28,7 +28,7 @@ public class Clientes {
 
     }
 
-    public Cliente modificar(Cliente cliente, String nombre, String telefono) throws TallerMecanicoExcepcion {
+    public boolean modificar(Cliente cliente, String nombre, String telefono) throws TallerMecanicoExcepcion {
         Objects.requireNonNull(cliente, "No se puede modificar un cliente nulo.");
         Cliente clienteExistente = buscar(cliente);
         if (clienteExistente == null) {
@@ -40,7 +40,7 @@ public class Clientes {
         if (telefono != null && !telefono.trim().isEmpty()) {
             clienteExistente.setTelefono(telefono);
         }
-        return clienteExistente;
+        return true;
     }
 
     public Cliente buscar(Cliente cliente){
