@@ -77,12 +77,6 @@ public class Revisiones {
         }
     }
 
-    public Revision anadirHoras(Revision revision, int horas) throws TallerMecanicoExcepcion {
-        Revision revision1 = getRevision(revision);
-        revision1.anadirHoras(horas);
-        return revision1;
-    }
-
     private Revision getRevision(Revision revision) throws TallerMecanicoExcepcion {
         if (revision == null) {
             throw new NullPointerException("No puedo operar sobre una revisión nula.");
@@ -92,6 +86,12 @@ public class Revisiones {
             throw new TallerMecanicoExcepcion("No existe ninguna revisión igual.");
         }
         return revisionExistente;
+    }
+
+    public Revision anadirHoras(Revision revision, int horas) throws TallerMecanicoExcepcion {
+        Revision revision1 = getRevision(revision);
+        revision1.anadirHoras(horas);
+        return revision1;
     }
 
     public Revision anadirPrecioMaterial(Revision revision, float precioMaterial) throws TallerMecanicoExcepcion {
