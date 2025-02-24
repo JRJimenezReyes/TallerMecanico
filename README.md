@@ -56,7 +56,7 @@ Para ello te muestro un diagrama de clases para el mismo y poco a poco te iré e
 2. Crea los métodos de verificación de los atributos, teniendo en cuenta que la **marca** puede seguir alguno de los siguientes patrones: Seat, Land Rover, KIA, Rolls-Royce, SsangYong. El **modelo** simplemente no debe estar en blanco. La matrícula tendrá el formato de una matrícula española moderna (1111BBB). Debes crear las constantes para las expresiones regulares que luego utilizarás en los métodos de modificación. Los métodos de modificación lanzarán las excepciones adecuadas en caso de que el valor que se pretenda asignar al atributo no sea adecuado.
 3. Crea el **constructor canónico** que hará uso de los métodos de verificación.
 4. Crea el **método de clase** que se indica en el diagrama, que dada una matrícula correcta nos devuelva un vehículo válido con dicha matrícula y que será utilizado en las futuras **búsquedas**.
-5. Un vehívculo será igual a otro si su matrícula es la misma. Basándote en ello crea los métodos `equals` y `hashCode`.
+5. Un vehículo será igual a otro si su matrícula es la misma. Basándote en ello crea los métodos `equals` y `hashCode`.
 6. Crea el método `toString` que devuelva la cadena que esperan los tests.
 7. Comprueba que la **clase pasa los test** para la misma y cuando lo haga realiza un **commit**.
 

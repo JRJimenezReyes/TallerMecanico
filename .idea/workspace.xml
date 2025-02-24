@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8b0e04e-6981-41d9-b2bd-c9ae382a0816" name="Changes" comment="a punto de terminar la clase Cliente.java">
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="f8b0e04e-6981-41d9-b2bd-c9ae382a0816" name="Changes" comment="clase Cliente.java terminda">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/modelo/dominio/Vehiculo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/modelo/dominio/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/modelo/dominio/Cliente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,6 +53,7 @@
         <option value="Enum" />
         <option value="Class" />
         <option value="Exception" />
+        <option value="Record" />
       </list>
     </option>
   </component>
@@ -80,6 +80,9 @@
 }</component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
@@ -116,6 +119,14 @@
     "JUnit.ClienteTest.getClienteDniValidoDevuelveClienteConDichoDni.executor": "Run",
     "JUnit.ClienteTest.getClienteLetraDniNoValidaLanzaExcepcion.executor": "Run",
     "JUnit.ClienteTest.toStringDevuelveLaCadenaEsperada.executor": "Run",
+    "JUnit.VehiculoTest.constructorMarcaNoValidaModeloValidoMatrivaValidaLanzaExcepcion.executor": "Run",
+    "JUnit.VehiculoTest.constructorMarcaValidaModeloNoValidoMatrivaValidaLanzaExcepcion.executor": "Run",
+    "JUnit.VehiculoTest.constructorMarcaValidaModeloNuloMatrivaValidaLanzaExcepcion.executor": "Run",
+    "JUnit.VehiculoTest.constructorMarcaValidaModeloValidoMatrivaNoValidaLanzaExcepcion.executor": "Run",
+    "JUnit.VehiculoTest.constructorMarcaValidaModeloValidoMatrivaNulaLanzaExcepcion.executor": "Run",
+    "JUnit.VehiculoTest.constructorMarcaValidaModeloValidoMatrivaValidaCreaVehiculoCorrectamente.executor": "Run",
+    "JUnit.VehiculoTest.executor": "Run",
+    "JUnit.VehiculoTest.getVehiculoMatriculaValidaDevuelveVehiculoConDichaMatricula.executor": "Run",
     "JUnit.org.iesalandalus.programacion.tallermecanico.modelo in TallerMecanicoResuelto.test.executor": "Run",
     "RunOnceActivity.ChatTagsLlmMigration": "true",
     "RunOnceActivity.CodyAccountHistoryMigration": "true",
@@ -136,11 +147,11 @@
     "git-widget-placeholder": "spring__inicial",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/dario/OneDrive/Documentos/GitHub/TallerMecanico/src/test/java/org/iesalandalus/programacion/tallermecanico/modelo/ModeloTest.java",
+    "last_opened_file_path": "C:/Users/dario/Desktop/Programacion/ProyectosProgramación/Robot",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle"
+    "settings.editor.selected.configurable": "reference.projectsettings.compiler.excludes"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -164,8 +175,8 @@
       <recent name="org.iesalandalus.programacion.tallermecanico.modelo.dominio" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ClienteTest">
-    <configuration name="ClienteTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.VehiculoTest">
+    <configuration name="VehiculoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TallerMecanico.test" />
       <extension name="coverage">
         <pattern>
@@ -174,13 +185,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.iesalandalus.programacion.tallermecanico.modelo.dominio" />
-      <option name="MAIN_CLASS_NAME" value="org.iesalandalus.programacion.tallermecanico.modelo.dominio.ClienteTest" />
+      <option name="MAIN_CLASS_NAME" value="org.iesalandalus.programacion.tallermecanico.modelo.dominio.VehiculoTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ClienteTest.equalsHashCodeSeBasanSoloEnDni" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="VehiculoTest.constructorMarcaNoValidaModeloValidoMatrivaValidaLanzaExcepcion" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TallerMecanico.test" />
       <extension name="coverage">
         <pattern>
@@ -189,14 +200,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.iesalandalus.programacion.tallermecanico.modelo.dominio" />
-      <option name="MAIN_CLASS_NAME" value="org.iesalandalus.programacion.tallermecanico.modelo.dominio.ClienteTest" />
-      <option name="METHOD_NAME" value="equalsHashCodeSeBasanSoloEnDni" />
+      <option name="MAIN_CLASS_NAME" value="org.iesalandalus.programacion.tallermecanico.modelo.dominio.VehiculoTest" />
+      <option name="METHOD_NAME" value="constructorMarcaNoValidaModeloValidoMatrivaValidaLanzaExcepcion(java.lang.String)" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ClienteTest.getClienteDniNoValidoLanzaExcepcion" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="VehiculoTest.constructorMarcaValidaModeloNuloMatrivaValidaLanzaExcepcion" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TallerMecanico.test" />
       <extension name="coverage">
         <pattern>
@@ -205,14 +216,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.iesalandalus.programacion.tallermecanico.modelo.dominio" />
-      <option name="MAIN_CLASS_NAME" value="org.iesalandalus.programacion.tallermecanico.modelo.dominio.ClienteTest" />
-      <option name="METHOD_NAME" value="getClienteDniNoValidoLanzaExcepcion(java.lang.String)" />
+      <option name="MAIN_CLASS_NAME" value="org.iesalandalus.programacion.tallermecanico.modelo.dominio.VehiculoTest" />
+      <option name="METHOD_NAME" value="constructorMarcaValidaModeloNuloMatrivaValidaLanzaExcepcion" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ClienteTest.getClienteLetraDniNoValidaLanzaExcepcion" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="VehiculoTest.constructorMarcaValidaModeloValidoMatrivaNoValidaLanzaExcepcion" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TallerMecanico.test" />
       <extension name="coverage">
         <pattern>
@@ -221,14 +232,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.iesalandalus.programacion.tallermecanico.modelo.dominio" />
-      <option name="MAIN_CLASS_NAME" value="org.iesalandalus.programacion.tallermecanico.modelo.dominio.ClienteTest" />
-      <option name="METHOD_NAME" value="getClienteLetraDniNoValidaLanzaExcepcion(java.lang.String)" />
+      <option name="MAIN_CLASS_NAME" value="org.iesalandalus.programacion.tallermecanico.modelo.dominio.VehiculoTest" />
+      <option name="METHOD_NAME" value="constructorMarcaValidaModeloValidoMatrivaNoValidaLanzaExcepcion(java.lang.String)" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ClienteTest.toStringDevuelveLaCadenaEsperada" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="VehiculoTest.getVehiculoMatriculaValidaDevuelveVehiculoConDichaMatricula" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TallerMecanico.test" />
       <extension name="coverage">
         <pattern>
@@ -237,27 +248,27 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.iesalandalus.programacion.tallermecanico.modelo.dominio" />
-      <option name="MAIN_CLASS_NAME" value="org.iesalandalus.programacion.tallermecanico.modelo.dominio.ClienteTest" />
-      <option name="METHOD_NAME" value="toStringDevuelveLaCadenaEsperada" />
+      <option name="MAIN_CLASS_NAME" value="org.iesalandalus.programacion.tallermecanico.modelo.dominio.VehiculoTest" />
+      <option name="METHOD_NAME" value="getVehiculoMatriculaValidaDevuelveVehiculoConDichaMatricula" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.ClienteTest.equalsHashCodeSeBasanSoloEnDni" />
-      <item itemvalue="JUnit.ClienteTest.getClienteDniNoValidoLanzaExcepcion" />
-      <item itemvalue="JUnit.ClienteTest.getClienteLetraDniNoValidaLanzaExcepcion" />
-      <item itemvalue="JUnit.ClienteTest.toStringDevuelveLaCadenaEsperada" />
-      <item itemvalue="JUnit.ClienteTest" />
+      <item itemvalue="JUnit.VehiculoTest.constructorMarcaNoValidaModeloValidoMatrivaValidaLanzaExcepcion" />
+      <item itemvalue="JUnit.VehiculoTest.constructorMarcaValidaModeloNuloMatrivaValidaLanzaExcepcion" />
+      <item itemvalue="JUnit.VehiculoTest.constructorMarcaValidaModeloValidoMatrivaNoValidaLanzaExcepcion" />
+      <item itemvalue="JUnit.VehiculoTest.getVehiculoMatriculaValidaDevuelveVehiculoConDichaMatricula" />
+      <item itemvalue="JUnit.VehiculoTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ClienteTest" />
-        <item itemvalue="JUnit.ClienteTest.toStringDevuelveLaCadenaEsperada" />
-        <item itemvalue="JUnit.ClienteTest.equalsHashCodeSeBasanSoloEnDni" />
-        <item itemvalue="JUnit.ClienteTest.getClienteLetraDniNoValidaLanzaExcepcion" />
-        <item itemvalue="JUnit.ClienteTest.getClienteDniNoValidoLanzaExcepcion" />
+        <item itemvalue="JUnit.VehiculoTest" />
+        <item itemvalue="JUnit.VehiculoTest.constructorMarcaNoValidaModeloValidoMatrivaValidaLanzaExcepcion" />
+        <item itemvalue="JUnit.VehiculoTest.constructorMarcaValidaModeloNuloMatrivaValidaLanzaExcepcion" />
+        <item itemvalue="JUnit.VehiculoTest.getVehiculoMatriculaValidaDevuelveVehiculoConDichaMatricula" />
+        <item itemvalue="JUnit.VehiculoTest.constructorMarcaValidaModeloValidoMatrivaNoValidaLanzaExcepcion" />
       </list>
     </recent_temporary>
   </component>
@@ -286,7 +297,15 @@
       <option name="project" value="LOCAL" />
       <updated>1739183845414</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="clase Cliente.java terminda">
+      <option name="closed" value="true" />
+      <created>1739890990262</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1739890990262</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -294,44 +313,50 @@
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
     <MESSAGE value="Commit inicial con el enunciado, las dependencias y los tests." />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit inicial con el enunciado, las dependencias y los tests." />
+    <MESSAGE value="clase Cliente.java terminda" />
+    <option name="LAST_COMMIT_MESSAGE" value="clase Cliente.java terminda" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/modelo/dominio/Cliente.java</url>
-          <line>78</line>
-          <properties class="org.iesalandalus.programacion.tallermecanico.modelo.dominio.Cliente" method="setTelefono">
+          <url>file://$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/modelo/dominio/Vehiculo.java</url>
+          <line>22</line>
+          <properties class="org.iesalandalus.programacion.tallermecanico.modelo.dominio.Vehiculo" method="validarMatricula">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>
-          <option name="timeStamp" value="41" />
+          <option name="timeStamp" value="66" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/modelo/dominio/Cliente.java</url>
-          <line>79</line>
-          <option name="timeStamp" value="42" />
+          <url>file://$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/modelo/dominio/Vehiculo.java</url>
+          <line>25</line>
+          <option name="timeStamp" value="64" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/modelo/dominio/Cliente.java</url>
-          <line>80</line>
-          <option name="timeStamp" value="43" />
+          <url>file://$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/modelo/dominio/Vehiculo.java</url>
+          <line>24</line>
+          <option name="timeStamp" value="65" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/modelo/dominio/Cliente.java</url>
-          <line>81</line>
-          <option name="timeStamp" value="44" />
+          <url>file://$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/modelo/dominio/Vehiculo.java</url>
+          <line>23</line>
+          <option name="timeStamp" value="67" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/modelo/dominio/Cliente.java</url>
-          <line>82</line>
-          <option name="timeStamp" value="45" />
+          <url>file://$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/modelo/dominio/Vehiculo.java</url>
+          <line>26</line>
+          <option name="timeStamp" value="68" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/modelo/dominio/Cliente.java</url>
-          <line>84</line>
-          <option name="timeStamp" value="46" />
+          <url>file://$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/modelo/dominio/Vehiculo.java</url>
+          <line>27</line>
+          <option name="timeStamp" value="69" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/modelo/dominio/Vehiculo.java</url>
+          <line>28</line>
+          <option name="timeStamp" value="70" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
