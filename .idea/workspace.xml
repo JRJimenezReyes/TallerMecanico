@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8b0e04e-6981-41d9-b2bd-c9ae382a0816" name="Changes" comment="Revisiones.java pasa todos los test correctamente.">
+    <list default="true" id="f8b0e04e-6981-41d9-b2bd-c9ae382a0816" name="Changes" comment="Modelo.java pasa todos los test correctamente.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/modelo/Modelo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/modelo/Modelo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/modelo/negocio/Revisiones.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/modelo/negocio/Revisiones.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/vista/Opcion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/vista/Opcion.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -182,6 +181,7 @@
     "Gradle.Tests in 'org.iesalandalus.programacion.tallermecanico.modelo'.executor": "Run",
     "JUnit.ClienteTest.executor": "Run",
     "JUnit.ClientesTest.executor": "Run",
+    "JUnit.ModeloTest.executor": "Run",
     "JUnit.RevisionTest.constructorRevisionNulaLanzaExcepcion.executor": "Run",
     "JUnit.RevisionTest.executor": "Run",
     "JUnit.RevisionTest.toStringDevuelveLaCadenaEsperada.executor": "Run",
@@ -373,7 +373,15 @@
       <option name="project" value="LOCAL" />
       <updated>1740068684557</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Modelo.java pasa todos los test correctamente.">
+      <option name="closed" value="true" />
+      <created>1740384673803</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1740384673803</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -392,7 +400,8 @@
     <MESSAGE value="Vehiculos.java pasa todos los test correctamente." />
     <MESSAGE value="Clientes.java pasa todos los test correctamente después de arreglar una errata." />
     <MESSAGE value="Revisiones.java pasa todos los test correctamente." />
-    <option name="LAST_COMMIT_MESSAGE" value="Revisiones.java pasa todos los test correctamente." />
+    <MESSAGE value="Modelo.java pasa todos los test correctamente." />
+    <option name="LAST_COMMIT_MESSAGE" value="Modelo.java pasa todos los test correctamente." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/TallerMecanico$RevisionTest.ic" NAME="RevisionTest Coverage Results" MODIFIED="1706862963586" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
