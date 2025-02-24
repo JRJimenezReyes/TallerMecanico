@@ -51,7 +51,7 @@ public class Clientes {
 
     public void borrar(Cliente cliente) throws TallerMecanicoExcepcion {
         Objects.requireNonNull(cliente, "No se puede borrar un cliente nulo.");
-        if(!coleccionClientes.remove(cliente)){
+        if(coleccionClientes.remove(cliente)){
             throw new TallerMecanicoExcepcion("No existe ningún cliente con ese DNI.");
         }
     }
