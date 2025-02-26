@@ -1,5 +1,7 @@
 package org.iesalandalus.programacion.tallermecanico.modelo.dominio;
 
+import org.iesalandalus.programacion.tallermecanico.modelo.negocio.Vehiculos;
+
 import java.util.Objects;
 
 public record Vehiculo(String marca, String modelo, String matricula) {

@@ -1,12 +1,15 @@
 package org.iesalandalus.programacion.tallermecanico.modelo.dominio;
 
 import org.iesalandalus.programacion.tallermecanico.modelo.TallerMecanicoExcepcion;
+import org.iesalandalus.programacion.tallermecanico.modelo.negocio.Clientes;
 
 import java.util.Objects;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Cliente {
+    private Clientes coleccionClientes;
+
     private static final String ER_NOMBRE = "^([A-ZÁÉÍÓÚÜ][a-záéíóú]+)( [A-ZÁÉÍÓÚÜ][a-záéíóú]+)*"; //([A-ZÁÉÍÓÚÜ][a-záéíóú]+)( [A-ZÁÉÍÓÚÜ][a-záéíóú]+)*
     private static final String ER_DNI = "^[0-9]{8}[^\\W\\d_[a-z][IÑOU]]"; //^[0-9]{8}[^\W\d_[a-z][IÑOU]] validacion del dni
     private static final String ER_TELEFONO = "^\\d{9}";
