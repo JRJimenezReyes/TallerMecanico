@@ -65,7 +65,7 @@ Para ello te muestro un diagrama de clases para el mismo y poco a poco te iré e
 2. Crea los métodos de acceso y modificación de cada atributo, teniendo en cuenta que es posible registrar una revisión pasada (nuestro cliente a veces apunta las revisiones y luego los pasa a la aplicación). La fecha de inicio de la revisión no puede ser posterior a hoy. La fecha de fin no puede ser igual o anterior a la fecha de inicio y tampoco puede ser posterior a hoy. Los métodos de modificación lanzarán las excepciones adecuadas en caso de que el valor que se pretenda asignar al atributo no sea adecuado.
 3. Crea el **constructor con parámetros** que hará uso de los métodos de modificación.
 4. Crea el **constructor copia** que creará una copia y en el caso del cliente creará una nueva instancia llamando a su constructor copia.
-5. Crea los métodos `anadirHoras` y `anadirPrecioMaterial` que comprueben si los parámetros son correctos y laa añada al atributo adecuado.
+5. Crea los métodos `anadirHoras` y `anadirPrecioMaterial` que comprueben si los parámetros son correctos y la añada al atributo adecuado.
 6. Crea el método `cerrar` que se encargará de asignar la fecha de fin si esta es correcta.
 7. Crea el método `getPrecio` que devolverá el precio de la revisión conforme a la fórmula establecida por nuestro cliente y explicada anteriormente.
 8. Una revisión será igual a otro si es el mismo cliente, el mismo turismo y la fecha de inicio. Basándote en ello crea los métodos `equals` y `hashCode`.
