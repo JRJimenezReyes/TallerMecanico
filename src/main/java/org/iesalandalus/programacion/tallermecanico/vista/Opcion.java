@@ -22,9 +22,9 @@ public enum Opcion {
     ANADIR_PRECIO_MATERIAL_REVISION(37, "Añadir precio de material a revisión"),
     SALIR(0, "Salir");
 
-    private int numeroOpcion;
-    private String mensaje;
-    private static Map<Integer, Opcion> opciones = new HashMap<>();
+    private final int numeroOpcion;
+    private final String mensaje;
+    private static final Map<Integer, Opcion> opciones = new HashMap<>();
     static {
         for (Opcion op : Opcion.values()) {
             opciones.put(op.numeroOpcion, op);
