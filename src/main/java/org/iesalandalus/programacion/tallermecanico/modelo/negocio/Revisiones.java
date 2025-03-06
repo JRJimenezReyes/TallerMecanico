@@ -51,7 +51,6 @@ public class Revisiones {
             throw new NullPointerException("No se puede insertar una revisión nula.");
         }
 
-
         for (Revision revision1 : revisiones) {
             if (revision1.getCliente().equals(revision.getCliente()) && !revision1.estaCerrada()) {
                 throw new TallerMecanicoExcepcion("El cliente tiene otra revisión en curso.");
@@ -107,14 +106,15 @@ public class Revisiones {
     }
 
     public Revision buscar(Revision revision) {
+        Revision revisionEncontrada = null;
         if (revision == null) {
             throw new NullPointerException("No se puede buscar una revisión nula.");
         }
         for (Revision revision1 : revisiones) {
             if (revision1.equals(revision)) {
-                return revision1;
+                revisionEncontrada = revision1;
             }
         }
-        return null;
+        return revisionEncontrada;
     }
 }

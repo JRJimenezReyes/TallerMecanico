@@ -32,7 +32,7 @@ public class Revision {
 
     public Revision(Revision revisionCopia) {
         Objects.requireNonNull(revisionCopia, "La revisión no puede ser nula.");
-        this.cliente = revisionCopia.cliente;
+        this.cliente = new Cliente(revisionCopia.cliente);
         this.vehiculo = revisionCopia.vehiculo;
         this.fechaInicio = revisionCopia.fechaInicio;
         this.fechaFin = revisionCopia.fechaFin;
