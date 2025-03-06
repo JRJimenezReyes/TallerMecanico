@@ -2,7 +2,7 @@ package org.iesalandalus.programacion.tallermecanico.modelo.dominio;
 import java.util.Objects;
 
 public class Cliente {
-    private static final String ER_NOMBRE = "^(?u)[A-ZÁÉÍÓÚÑ][a-záéíóúñ]+(?: [A-ZÁÉÍÓÚÑ][a-záéíóúñ]+)*$";
+    private static final String ER_NOMBRE = "^(?:)[A-ZÁÉÍÓÚÑ][a-záéíóúñ]+(?: [A-ZÁÉÍÓÚÑ][a-záéíóúñ]+)*$";
     private static String ER_DNI = "\\d{8}[A-Z]";
     private static String ER_TELEFONO = "\\d{9}";
     private String nombre;
@@ -14,14 +14,12 @@ public class Cliente {
         setDni(dni);
         setTelefono(telefono);
     }
-
     public Cliente (Cliente cliente) {
         Objects.requireNonNull(cliente, "No es posible copiar un cliente nulo.");
         this.nombre = cliente.nombre;
         this.dni = cliente.dni;
         this.telefono = cliente.telefono;
     }
-
     public String getNombre() {
         return nombre;
     }
@@ -48,18 +46,15 @@ public class Cliente {
         }
         this.dni = dni;
     }
-
     private boolean comprobarLetraDni(String dni) {
         String letrasDni = "TRWAGMYFPDXBNJZSQVHLCKE";
         int numero = Integer.parseInt(dni.substring(0, 8));
         char letraCalculada = letrasDni.charAt(numero % 23);
         return dni.charAt(8) == letraCalculada;
     }
-
     public String getTelefono() {
         return telefono;
     }
-
     public void setTelefono(String telefono) {
         Objects.requireNonNull(telefono, "El teléfono no puede ser nulo.");
         if (!telefono.matches(ER_TELEFONO)) {
@@ -67,34 +62,22 @@ public class Cliente {
         }
         this.telefono = telefono;
     }
-
     public static Cliente get(String dni) {
-        Objects.requireNonNull(dni, "El DNI no puede ser nulo.");
-        if (!dni.matches(ER_DNI)) {
-            throw new IllegalArgumentException("El DNI no tiene un formato válido.");
-        }
-        String letrasDni = "TRWAGMYFPDXBNJZSQVHLCKE";
-        int numero = Integer.parseInt(dni.substring(0, 8));
-        char letraCalculada = letrasDni.charAt(numero % 23);
-        if (dni.charAt(8) != letraCalculada) {
-            throw new IllegalArgumentException("La letra del DNI no es correcta.");
-        }
-        return new Cliente("Nombre Desconocido", dni, "111111111");
+        Cliente cliente = new Cliente("Nombre Temporal", dni, "600000000");
+        cliente.setDni(dni);
+            return cliente;
     }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Cliente cliente = (Cliente) o;
-        return Objects.equals(getDni(), cliente.dni);
+        return Objects.equals(dni, cliente.dni);
     }
-
     @Override
     public int hashCode() {
-        return Objects.hash(getDni());
+        return Objects.hash(dni);
     }
-
     @Override
     public String toString() {
         return String.format("%s - %s (%s)", nombre, dni, telefono);

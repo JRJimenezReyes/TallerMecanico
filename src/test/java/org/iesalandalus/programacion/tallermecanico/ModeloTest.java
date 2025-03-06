@@ -1,4 +1,4 @@
-package org.iesalandalus.programacion.tallermecanico.modelo;
+package org.iesalandalus.programacion.tallermecanico;
 
 import org.iesalandalus.programacion.tallermecanico.modelo.dominio.Cliente;
 import org.iesalandalus.programacion.tallermecanico.modelo.dominio.Revision;

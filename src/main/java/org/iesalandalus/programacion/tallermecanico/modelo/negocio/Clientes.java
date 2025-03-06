@@ -29,9 +29,9 @@ public class Clientes {
 
     public Cliente buscar(Cliente cliente) {
         Objects.requireNonNull(cliente, "No se puede buscar un cliente nulo.");
-        for (Cliente c : clientes) {
-            if (c.getDni().equals(cliente.getDni())) {
-                return c;
+        for (Cliente cliente1 : clientes) {
+            if (cliente1.getDni().equals(cliente.getDni())) {
+                return cliente1;
             }
         }
         return null;
