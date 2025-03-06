@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8b0e04e-6981-41d9-b2bd-c9ae382a0816" name="Changes" comment="Commit Con Vehiculos.java Test Pasados">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/modelo/dominio/Revision.java" afterDir="false" />
+    <list default="true" id="f8b0e04e-6981-41d9-b2bd-c9ae382a0816" name="Changes" comment="Commit Con Revisiones.java Test Pasados">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/modelo/Modelo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/modelo/negocio/Revisiones.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/modelo/negocio/Clientes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/modelo/negocio/Clientes.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,11 +77,6 @@
     &quot;accountId&quot;: &quot;7afb4187-7209-404d-b356-a4a604097a01&quot;
   }
 }</component>
-  <component name="JavaAutoRunManager">
-    <enabled-run-configurations>
-      <run-configuration type="JUnit" name="RevisionTest.toStringDevuelveLaCadenaEsperada" />
-    </enabled-run-configurations>
-  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -102,6 +97,9 @@
     "Gradle.Tests in 'org.iesalandalus.programacion.tallermecanico.modelo'.executor": "Run",
     "JUnit.ClienteTest.executor": "Run",
     "JUnit.ClientesTest.executor": "Run",
+    "JUnit.ModeloTest.borrarVehiculoLlamaRevisionesGetVehiculoRevisionesBorrarVehiculosBorrar.executor": "Run",
+    "JUnit.ModeloTest.executor": "Run",
+    "JUnit.ModeloTest.insertarRevisionLlamaClientesBuscarVehiculosBuscarRevisionesInsertar.executor": "Run",
     "JUnit.RevisionTest.anadirHorasHorasNoValidasLanzaExcepcion.executor": "Run",
     "JUnit.RevisionTest.anadirHorasRevisionCerradaLanzaExcepcion.executor": "Run",
     "JUnit.RevisionTest.anadirPrecioMaterialPrecioMaterialNoValidoLanzaExcepcion.executor": "Run",
@@ -115,6 +113,9 @@
     "JUnit.RevisionTest.executor": "Run",
     "JUnit.RevisionTest.getPrecioCalculaCorrectamentePrecio.executor": "Run",
     "JUnit.RevisionTest.toStringDevuelveLaCadenaEsperada.executor": "Run",
+    "JUnit.RevisionesTest.cerrarRevisionNoExistenteFechaValidaLanzaExcepcion.executor": "Run",
+    "JUnit.RevisionesTest.executor": "Run",
+    "JUnit.RevisionesTest.insertarRevisionClienteRevisionAnteiorLanzaExcepcion.executor": "Debug",
     "JUnit.VehiculoTest.executor": "Run",
     "JUnit.VehiculosTest.executor": "Run",
     "JUnit.org.iesalandalus.programacion.tallermecanico.modelo in TallerMecanicoResuelto.test.executor": "Run",
@@ -161,6 +162,38 @@
     </key>
   </component>
   <component name="RunManager">
+    <configuration name="ModeloTest.borrarVehiculoLlamaRevisionesGetVehiculoRevisionesBorrarVehiculosBorrar" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TallerMecanico.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.iesalandalus.programacion.tallermecanico.modelo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.iesalandalus.programacion.tallermecanico.modelo" />
+      <option name="MAIN_CLASS_NAME" value="org.iesalandalus.programacion.tallermecanico.modelo.ModeloTest" />
+      <option name="METHOD_NAME" value="borrarVehiculoLlamaRevisionesGetVehiculoRevisionesBorrarVehiculosBorrar" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ModeloTest.insertarRevisionLlamaClientesBuscarVehiculosBuscarRevisionesInsertar" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TallerMecanico.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.iesalandalus.programacion.tallermecanico.modelo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.iesalandalus.programacion.tallermecanico.modelo" />
+      <option name="MAIN_CLASS_NAME" value="org.iesalandalus.programacion.tallermecanico.modelo.ModeloTest" />
+      <option name="METHOD_NAME" value="insertarRevisionLlamaClientesBuscarVehiculosBuscarRevisionesInsertar" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="RevisionTest.anadirPrecioMaterialPrecioMaterialNoValidoLanzaExcepcion" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TallerMecanico.test" />
       <extension name="coverage">
@@ -177,83 +210,51 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RevisionTest.anadirPrecioMaterialRevisionCerradaLanzaExcepcion" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="RevisionesTest.cerrarRevisionNoExistenteFechaValidaLanzaExcepcion" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TallerMecanico.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.iesalandalus.programacion.tallermecanico.modelo.dominio.*" />
+          <option name="PATTERN" value="org.iesalandalus.programacion.tallermecanico.modelo.negocio.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.iesalandalus.programacion.tallermecanico.modelo.dominio" />
-      <option name="MAIN_CLASS_NAME" value="org.iesalandalus.programacion.tallermecanico.modelo.dominio.RevisionTest" />
-      <option name="METHOD_NAME" value="anadirPrecioMaterialRevisionCerradaLanzaExcepcion" />
+      <option name="PACKAGE_NAME" value="org.iesalandalus.programacion.tallermecanico.modelo.negocio" />
+      <option name="MAIN_CLASS_NAME" value="org.iesalandalus.programacion.tallermecanico.modelo.negocio.RevisionesTest" />
+      <option name="METHOD_NAME" value="cerrarRevisionNoExistenteFechaValidaLanzaExcepcion" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RevisionTest.cerrarFechaFinFuturaLanzaExcepcion" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="RevisionesTest.insertarRevisionClienteRevisionAnteiorLanzaExcepcion" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TallerMecanico.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.iesalandalus.programacion.tallermecanico.modelo.dominio.*" />
+          <option name="PATTERN" value="org.iesalandalus.programacion.tallermecanico.modelo.negocio.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.iesalandalus.programacion.tallermecanico.modelo.dominio" />
-      <option name="MAIN_CLASS_NAME" value="org.iesalandalus.programacion.tallermecanico.modelo.dominio.RevisionTest" />
-      <option name="METHOD_NAME" value="cerrarFechaFinFuturaLanzaExcepcion" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="RevisionTest.constructorClienteValidoVehiculoValidoFechaInicioValidaCreaRevisionCorrectamente" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="TallerMecanico.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.iesalandalus.programacion.tallermecanico.modelo.dominio.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.iesalandalus.programacion.tallermecanico.modelo.dominio" />
-      <option name="MAIN_CLASS_NAME" value="org.iesalandalus.programacion.tallermecanico.modelo.dominio.RevisionTest" />
-      <option name="METHOD_NAME" value="constructorClienteValidoVehiculoValidoFechaInicioValidaCreaRevisionCorrectamente" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="RevisionTest.toStringDevuelveLaCadenaEsperada" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="TallerMecanico.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.iesalandalus.programacion.tallermecanico.modelo.dominio.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.iesalandalus.programacion.tallermecanico.modelo.dominio" />
-      <option name="MAIN_CLASS_NAME" value="org.iesalandalus.programacion.tallermecanico.modelo.dominio.RevisionTest" />
-      <option name="METHOD_NAME" value="toStringDevuelveLaCadenaEsperada" />
+      <option name="PACKAGE_NAME" value="org.iesalandalus.programacion.tallermecanico.modelo.negocio" />
+      <option name="MAIN_CLASS_NAME" value="org.iesalandalus.programacion.tallermecanico.modelo.negocio.RevisionesTest" />
+      <option name="METHOD_NAME" value="insertarRevisionClienteRevisionAnteiorLanzaExcepcion" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
+      <item itemvalue="JUnit.ModeloTest.borrarVehiculoLlamaRevisionesGetVehiculoRevisionesBorrarVehiculosBorrar" />
+      <item itemvalue="JUnit.ModeloTest.insertarRevisionLlamaClientesBuscarVehiculosBuscarRevisionesInsertar" />
+      <item itemvalue="JUnit.RevisionesTest.cerrarRevisionNoExistenteFechaValidaLanzaExcepcion" />
+      <item itemvalue="JUnit.RevisionesTest.insertarRevisionClienteRevisionAnteiorLanzaExcepcion" />
       <item itemvalue="JUnit.RevisionTest.anadirPrecioMaterialPrecioMaterialNoValidoLanzaExcepcion" />
-      <item itemvalue="JUnit.RevisionTest.anadirPrecioMaterialRevisionCerradaLanzaExcepcion" />
-      <item itemvalue="JUnit.RevisionTest.cerrarFechaFinFuturaLanzaExcepcion" />
-      <item itemvalue="JUnit.RevisionTest.constructorClienteValidoVehiculoValidoFechaInicioValidaCreaRevisionCorrectamente" />
-      <item itemvalue="JUnit.RevisionTest.toStringDevuelveLaCadenaEsperada" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.RevisionTest.toStringDevuelveLaCadenaEsperada" />
-        <item itemvalue="JUnit.RevisionTest.constructorClienteValidoVehiculoValidoFechaInicioValidaCreaRevisionCorrectamente" />
-        <item itemvalue="JUnit.RevisionTest.cerrarFechaFinFuturaLanzaExcepcion" />
-        <item itemvalue="JUnit.RevisionTest.anadirPrecioMaterialRevisionCerradaLanzaExcepcion" />
+        <item itemvalue="JUnit.ModeloTest.borrarVehiculoLlamaRevisionesGetVehiculoRevisionesBorrarVehiculosBorrar" />
+        <item itemvalue="JUnit.ModeloTest.insertarRevisionLlamaClientesBuscarVehiculosBuscarRevisionesInsertar" />
+        <item itemvalue="JUnit.RevisionesTest.insertarRevisionClienteRevisionAnteiorLanzaExcepcion" />
+        <item itemvalue="JUnit.RevisionesTest.cerrarRevisionNoExistenteFechaValidaLanzaExcepcion" />
         <item itemvalue="JUnit.RevisionTest.anadirPrecioMaterialPrecioMaterialNoValidoLanzaExcepcion" />
       </list>
     </recent_temporary>
@@ -315,7 +316,15 @@
       <option name="project" value="LOCAL" />
       <updated>1739779410126</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Commit Con Revisiones.java Test Pasados">
+      <option name="closed" value="true" />
+      <created>1740057070742</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1740057070742</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -328,7 +337,8 @@
     <MESSAGE value="Commit Con clientes.java Test Pasados" />
     <MESSAGE value="Commit Con Vehiculo.java Test Pasados" />
     <MESSAGE value="Commit Con Vehiculos.java Test Pasados" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit Con Vehiculos.java Test Pasados" />
+    <MESSAGE value="Commit Con Revisiones.java Test Pasados" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit Con Revisiones.java Test Pasados" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/TallerMecanico$RevisionTest.ic" NAME="RevisionTest Coverage Results" MODIFIED="1706862963586" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
