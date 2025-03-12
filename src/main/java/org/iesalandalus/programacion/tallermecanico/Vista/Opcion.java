@@ -54,10 +54,10 @@ public enum Opcion {
         //Para un mapa el constainskey toma como si ese número que funciona como CLAVE existe.
     }
 
-    public Opcion get(int numeroOpcion) throws TallerMecanicoExcepcion{
+    public static Opcion get(int numeroOpcion){
         if (esValida(numeroOpcion)) {
             return opciones.get(numeroOpcion);
-        } else throw new TallerMecanicoExcepcion("El número de opción no es valido.");
+        } else throw new IllegalArgumentException("El número de opción no es valido.");
     }
 
     @Override

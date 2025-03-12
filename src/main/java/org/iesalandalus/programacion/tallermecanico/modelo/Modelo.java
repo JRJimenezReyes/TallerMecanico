@@ -127,7 +127,7 @@ public class Modelo {
 
     public List<Vehiculo> getVehiculos() {
 
-        return new ArrayList<Vehiculo>(vehiculos.get());
+        return new ArrayList<>(vehiculos.get());
     }
 
     public List<Revision> getRevisiones() {
