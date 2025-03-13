@@ -222,6 +222,5 @@ public class Vista {
         }
     }
     private void salir(){
-        /** No se hace nada**/
     }
 }
