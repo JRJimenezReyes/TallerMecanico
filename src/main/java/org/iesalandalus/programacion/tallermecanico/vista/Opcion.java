@@ -15,11 +15,13 @@ public enum Opcion {
     LISTAR_VEHICULOS(24, "Listar vehículos"),
     INSERTAR_REVISION(31, "Insertar revisión"),
     BUSCAR_REVISION(32, "Buscar revisión"),
-    LISTAR_REVISIONES(33, "Listar revisiones"),
-    LISTAR_REVISIONES_CLIENTE(34, "Listar revisiones de un cliente"),
-    LISTAR_REVISIONES_VEHICULO(35, "Listar revisiones de un vehículo"),
-    ANADIR_HORAS_REVISION(36, "Añadir horas a revisión"),
-    ANADIR_PRECIO_MATERIAL_REVISION(37, "Añadir precio de material a revisión"),
+    BORRAR_REVISION(33,"Borrar revisión"),
+    LISTAR_REVISIONES(34, "Listar revisiones"),
+    LISTAR_REVISIONES_CLIENTE(35, "Listar revisiones de un cliente"),
+    LISTAR_REVISIONES_VEHICULO(36, "Listar revisiones de un vehículo"),
+    ANADIR_HORAS_REVISION(37, "Añadir horas a revisión"),
+    ANADIR_PRECIO_MATERIAL_REVISION(38, "Añadir precio de material a revisión"),
+    CERRAR_REVISION(39,"Cerrar revisión"),
     SALIR(0, "Salir");
 
     private final int numeroOpcion;
