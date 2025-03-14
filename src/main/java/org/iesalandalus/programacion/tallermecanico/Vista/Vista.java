@@ -16,7 +16,7 @@ public class Vista {
         this.controlador = controlador;
     }
 
-    public void comenzar(){
+    public void comenzar() throws TallerMecanicoExcepcion {
         Opcion opcion;
         do {
             Consola.mostrarMenu();
@@ -30,7 +30,7 @@ public class Vista {
         System.out.println("Me doy el piro, vampiro!");
     }
 
-    private void ejecutar(Opcion opcion){
+    private void ejecutar(Opcion opcion) throws TallerMecanicoExcepcion {
 
         switch(opcion){
             case INSERTAR_CLIENTE -> insertarCliente();
@@ -163,7 +163,7 @@ public class Vista {
 
     private void listarRevisionesClientes(){
         Consola.mostrarCabecera("Listado de revisiones por cliente");
-        List<Revision> revisonesCliente = controlador.getRevisionesCliente();
+        List<Revision> revisonesCliente = controlador.getRevisiones();
         if (!revisonesCliente.isEmpty()){
             for (Revision revision : revisonesCliente){
                 System.out.println(revision);
@@ -176,7 +176,7 @@ public class Vista {
 
     private void listarRevisionesVehiculos(){
         Consola.mostrarCabecera("Listado de revisiones por vehículos");
-        List<Revision> revisonesCliente = controlador.getRevisionesVehiculo();
+        List<Revision> revisonesCliente = controlador.getRevisiones();
         if (!revisonesCliente.isEmpty()){
             for (Revision revision : revisonesCliente){
                 System.out.println(revision);

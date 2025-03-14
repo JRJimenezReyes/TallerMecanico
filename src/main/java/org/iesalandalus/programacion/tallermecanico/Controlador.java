@@ -23,7 +23,7 @@ public class Controlador {
         vista.setControlador(new Controlador(modelo,vista));
     }
 
-    public void comenzar(){
+    public void comenzar() throws TallerMecanicoExcepcion {
         modelo.comenzar();
         vista.comenzar();
     }
