@@ -1,10 +1,8 @@
 package org.iesalandalus.programacion.tallermecanico.Vista;
 
-import com.sun.jdi.Value;
 import org.iesalandalus.programacion.tallermecanico.modelo.dominio.Cliente;
 import org.iesalandalus.programacion.tallermecanico.modelo.dominio.Revision;
 import org.iesalandalus.programacion.tallermecanico.modelo.dominio.Vehiculo;
-import org.iesalandalus.programacion.tallermecanico.modelo.negocio.Clientes;
 import org.iesalandalus.programacion.utilidades.Entrada;
 
 import java.time.LocalDate;
@@ -14,30 +12,34 @@ public class Consola {
     private static final String CADENA_FORMATO_FECHA = "dd/MM/yyyy";
     private Consola(){}
 
-    public static void mostrarCebecera(String mensaje){
+    public static void mostrarCabecera(String mensaje){
         System.out.println(mensaje);
-        System.out.println("-".repeat(mensaje.length()));
+        System.out.println("-".repeat(mensaje.length()).concat("%n%n"));
         //Esto lo que hace es poner una cadena y despues el comanodo repetir por lo larga que sea la cadena del mensaje.
 
     }
 
     public static void mostrarMenu(){
-        mostrarCebecera("Menú de opciones: ");
-        mostrarCebecera("Gestor de Taller de Reparación de Vehículos.");
+        mostrarCabecera("Gestor de Taller de Reparación de Vehículos.");
+        mostrarCabecera("Menú de opciones: ");
         for (Opcion opcion : Opcion.values()){
             System.out.println(opcion);
         }
     }
 
     public static Opcion elegirOpcion(){
-        int opcion = -1;
+        Opcion opcion = null;
         do {
+            try {
+                opcion = Opcion.get(leerEntero("Introduzca el número de opción:"));
+            } catch (IllegalArgumentException e) {
+                System.out.printf("ERROR: %s%n", e.getMessage());
+            }
 
-            System.out.print("Introduzca el número de la opción válida: ");
-            opcion = Entrada.entero();
-        } while (!Opcion.esValida(opcion));
+        } while (opcion == null);
 
-        return Opcion.get(opcion);
+
+        return opcion;
     }
 
     private static float leerReal(String mensaje){
@@ -58,15 +60,14 @@ public class Consola {
     }
 
     private static LocalDate leerFecha(String mensaje){
-        System.out.println(mensaje);
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern(CADENA_FORMATO_FECHA);
-        return LocalDate.parse(Entrada.cadena(),formatter);
+        return LocalDate.parse(leerCadena(mensaje),formatter);
     }
 
     public static Cliente leerCliente(){
         Cliente cliente = new Cliente(leerClienteDNI());
         cliente.setNombre(leerNuevoNombre());
-        cliente.setTelefono(leerNuevoTalefono());
+        cliente.setTelefono(leerNuevoTelefono());
         return cliente;
         
     }
@@ -81,7 +82,7 @@ public class Consola {
         return leerCadena("Introduzca un nombre para el cliente: ");
     }
 
-    public static String leerNuevoTalefono(){
+    public static String leerNuevoTelefono(){
         return leerCadena("Introduzca un nuevo teléfono para el cliente.");
     }
 
@@ -98,7 +99,7 @@ public class Consola {
     }
 
     public static Revision leerRevision(){
-        return new Revision(leerCliente(),leerVehiculo(),leerFecha("Introduzca la fecha de la revisión: "));
+        return new Revision(leerClienteDNI(),leerVehiculoMatricula(),leerFecha("Introduzca la fecha de la revisión: "));
     }
 
     public static int leerHoras(){
