@@ -221,7 +221,7 @@ class ModeloTest {
     }
 
     @Test
-    void getClientesLlamaClientesGet() {
+    void getClientesLlamaClientesGet() throws TallerMecanicoExcepcion {
         when(clientes.get()).thenReturn(new ArrayList<>(List.of(cliente)));
         List<Cliente> clientesExistentes = modelo.getClientes();
         verify(clientes).get();
