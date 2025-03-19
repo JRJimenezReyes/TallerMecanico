@@ -14,7 +14,7 @@ public class Consola {
 
     public static void mostrarCabecera(String mensaje){
         System.out.println(mensaje);
-        System.out.println("-".repeat(mensaje.length()).concat("%n%n"));
+        System.out.println("-".repeat(mensaje.length()).concat(""));
         //Esto lo que hace es poner una cadena y despues el comanodo repetir por lo larga que sea la cadena del mensaje.
 
     }

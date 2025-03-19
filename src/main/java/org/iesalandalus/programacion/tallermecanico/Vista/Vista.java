@@ -69,7 +69,7 @@ public class Vista {
     }
 
     private void insertarRevision() throws TallerMecanicoExcepcion {
-        Consola.mostrarCabecera("insertar Revisión");
+        Consola.mostrarCabecera("Insertar Revisión");
         controlador.insertar(Consola.leerRevision());
     }
     private void buscarCliente(){

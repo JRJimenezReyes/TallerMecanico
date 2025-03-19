@@ -20,7 +20,7 @@ public class Controlador {
         Objects.requireNonNull(vista,"La vista no puede ser nula.");
         this.vista = vista;
         this.modelo = modelo;
-        vista.setControlador(new Controlador(modelo,vista));
+        this.vista.setControlador(this);
     }
 
     public void comenzar() throws TallerMecanicoExcepcion {
@@ -34,6 +34,7 @@ public class Controlador {
     }
 
     public void insertar(Cliente cliente) throws TallerMecanicoExcepcion {
+
         modelo.insertar(cliente);
     }
 
