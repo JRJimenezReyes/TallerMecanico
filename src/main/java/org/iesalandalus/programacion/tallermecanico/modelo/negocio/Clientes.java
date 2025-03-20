@@ -8,55 +8,51 @@ import java.util.List;
 import java.util.Objects;
 
 public class Clientes {
-
-    private List<Cliente> clientes;
+    private final List<Cliente> coleccionCliente;
 
     public Clientes() {
-        clientes = new ArrayList<>();
+        coleccionCliente = new ArrayList<>();
     }
 
     public List<Cliente> get() {
-        return new ArrayList<>(clientes);
+        return new ArrayList<>(coleccionCliente);
     }
 
     public void insertar(Cliente cliente) throws TallerMecanicoExcepcion {
-        Objects.requireNonNull(cliente, "No se puede insertar un cliente nulo.");
-        if (buscar(cliente) != null) {
+        Objects.requireNonNull(cliente,"No se puede insertar un cliente nulo.");
+        if (coleccionCliente.contains(cliente)){
             throw new TallerMecanicoExcepcion("Ya existe un cliente con ese DNI.");
         }
-        clientes.add(cliente);
+        coleccionCliente.add(cliente);
+    }
+
+    public Cliente modificar(Cliente cliente ,String nombre , String telefono) throws TallerMecanicoExcepcion{
+        Objects.requireNonNull(cliente,"No se puede modificar un cliente nulo.");
+        Cliente clienteexistente = buscar(cliente);
+        if (clienteexistente == null){
+            throw new TallerMecanicoExcepcion("No existe ningún cliente con ese DNI.");
+        }
+        if (nombre != null && !nombre.isBlank()) {
+            clienteexistente.setNombre(nombre);
+        }
+        if (telefono != null && !telefono.isBlank()) {
+            clienteexistente.setTelefono(telefono);
+        }
+        return clienteexistente;
     }
 
     public Cliente buscar(Cliente cliente) {
-        Objects.requireNonNull(cliente, "No se puede buscar un cliente nulo.");
-        for (Cliente cliente1 : clientes) {
-            if (cliente1.getDni().equals(cliente.getDni())) {
-                return cliente1;
-            }
-        }
-        return null;
+        Objects.requireNonNull(cliente,"No se puede buscar un cliente nulo.");
+        int indice = coleccionCliente.indexOf(cliente);
+        return (indice == (-1)) ? null : coleccionCliente.get(indice);
     }
 
-    public void borrar(Cliente cliente) throws TallerMecanicoExcepcion {
-        Objects.requireNonNull(cliente, "No se puede borrar un cliente nulo.");
-        Cliente encontrado = buscar(cliente);
-        if (encontrado == null) {
+    public void borrar(Cliente cliente) throws TallerMecanicoExcepcion{
+        Objects.requireNonNull(cliente,"No se puede borrar un cliente nulo.");
+        int incice = coleccionCliente.indexOf(cliente);
+        if (incice == (-1)) {
             throw new TallerMecanicoExcepcion("No existe ningún cliente con ese DNI.");
         }
-        clientes.remove(encontrado);
-    }
-
-    public void modificar(Cliente cliente, String nombre, String telefono) throws TallerMecanicoExcepcion {
-        Objects.requireNonNull(cliente, "No se puede modificar un cliente nulo.");
-        Cliente encontrado = buscar(cliente);
-        if (encontrado == null) {
-            throw new TallerMecanicoExcepcion("No existe ningún cliente con ese DNI.");
-        }
-        if (nombre != null) {
-            encontrado.setNombre(nombre);
-        }
-        if (telefono != null) {
-            encontrado.setTelefono(telefono);
-        }
+        coleccionCliente.remove(incice);
     }
 }

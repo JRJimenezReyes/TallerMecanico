@@ -2,41 +2,43 @@ package org.iesalandalus.programacion.tallermecanico.modelo.dominio;
 
 import java.util.Objects;
 
-public record Vehiculo(String marca, String modelo, String matricula) {
-    private static final String ER_MARCA = "^(?:[A-Z][a-z]+(?: [A-Z][a-z]+)?|[A-Z]{2,}|[A-Z][a-z]+-[A-Z][a-z]+|[A-Z][a-z]+[A-Z][a-z]+)$";
-    private static final String ER_MATRICULA = "^[0-9]{4}[BCDFGHJKLMNPRSTVWXYZ]{3}$";
+public record Vehiculo(String marca , String modelo , String matricula) {
+    private static final String ER_MARCA = "^(?!\\s)(?![A-Z]{2}-[A-Z]{2})(?=.*[A-Z])[A-Za-z0-9\\- ]{3,}(?<!\\s)$";
+    private static final String ER_MATRICULA = "^\\d{4}(?:(?![AEIOU])[A-Z]){3}$";
 
 
-    public Vehiculo {
+    public Vehiculo{
         validarMarca(marca);
         validarModelo(modelo);
         validarMatricula(matricula);
     }
 
-    private void validarMarca(String marca) {
-        Objects.requireNonNull(marca, "La marca no puede ser nula.");
-        if (!marca.matches(ER_MARCA)) {
+    private void validarMarca(String marca){
+        Objects.requireNonNull(marca,"La marca no puede ser nula.");
+        if (!marca.matches(ER_MARCA)){
+            throw new IllegalArgumentException("La marca no tiene un formato válido.");
+        }
+        if (marca.isBlank()){
             throw new IllegalArgumentException("La marca no tiene un formato válido.");
         }
     }
 
     private void validarModelo(String modelo) {
-        Objects.requireNonNull(modelo, "El modelo no puede ser nulo.");
-        if (modelo.isBlank()) {
+        Objects.requireNonNull(modelo,"El modelo no puede ser nulo.");
+        if (modelo.isBlank()){
             throw new IllegalArgumentException("El modelo no puede estar en blanco.");
         }
     }
 
-    private void validarMatricula(String matricula) {
-        Objects.requireNonNull(matricula, "La matrícula no puede ser nula.");
-        if (!matricula.matches(ER_MATRICULA)) {
+    private void validarMatricula(String matricula){
+        Objects.requireNonNull(matricula,"La matrícula no puede ser nula.");
+        if (!matricula.matches(ER_MATRICULA)){
             throw new IllegalArgumentException("La matrícula no tiene un formato válido.");
         }
     }
 
-    public static Vehiculo get(String matricula) {
-        Vehiculo vehiculo = new Vehiculo("Seat", "Ibiza", matricula);
-        return vehiculo;
+    public static Vehiculo get(String matricula){
+        return new Vehiculo("Vehiculo","modelo",matricula);
     }
 
     @Override
@@ -49,7 +51,7 @@ public record Vehiculo(String marca, String modelo, String matricula) {
 
     @Override
     public int hashCode() {
-        return Objects.hash(matricula);
+        return Objects.hashCode(matricula);
     }
 
     @Override
