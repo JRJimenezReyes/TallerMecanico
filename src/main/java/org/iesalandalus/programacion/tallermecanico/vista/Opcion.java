@@ -50,6 +50,6 @@ public enum Opcion {
 
     @Override
     public String toString() {
-        return String.format("%d.- %s&b", numeroOpcion, texto);
+        return String.format("%d.- %s%b", numeroOpcion, texto);
     }
 }
