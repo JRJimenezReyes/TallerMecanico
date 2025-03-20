@@ -1,0 +1,5 @@
+language: "java"
+name: "TallerMecanico"
+appmap_dir: "tmp/appmap"
+packages:
+- path: "org.iesalandalus.programacion.tallermecanico"
