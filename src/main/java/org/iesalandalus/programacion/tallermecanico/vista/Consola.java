@@ -3,6 +3,7 @@ package org.iesalandalus.programacion.tallermecanico.vista;
 import org.iesalandalus.programacion.tallermecanico.modelo.dominio.Cliente;
 import org.iesalandalus.programacion.tallermecanico.modelo.dominio.Revision;
 import org.iesalandalus.programacion.tallermecanico.modelo.dominio.Vehiculo;
+import org.iesalandalus.programacion.utilidades.Entrada;
 
 import java.time.LocalDate;
 import java.util.Scanner;
@@ -13,7 +14,7 @@ import java.time.format.DateTimeParseException;
 public class Consola {
 
     private static final String CADENA_FORMATO_FECHA = "dd/MM/yyyy";
-    private static final Scanner scanner = new Scanner(System.in);
+
 
     private Consola() {}
 
@@ -49,7 +50,7 @@ public class Consola {
         do {
             System.out.print(mensaje);
             try {
-                numero = Integer.parseInt(scanner.nextLine());
+                numero = Entrada.entero();
                 valido = true;
             } catch (NumberFormatException e) {
                 System.out.println("Entrada inválida. Por favor, introduce un número entero.");
@@ -64,7 +65,7 @@ public class Consola {
         do {
             System.out.print(mensaje);
             try {
-                numero = Float.parseFloat(scanner.nextLine());
+                numero =Entrada.real();
                 valido = true;
             } catch (NumberFormatException e) {
                 System.out.println("Entrada inválida. Por favor, introduce un número real.");
@@ -75,7 +76,7 @@ public class Consola {
 
     private static String leerCadena(String mensaje) {
         System.out.print(mensaje);
-        return scanner.nextLine();
+        return Entrada.cadena();
     }
 
     private static LocalDate leerFecha(String mensaje) {
@@ -84,7 +85,7 @@ public class Consola {
         boolean valido = false;
         do {
             System.out.print(mensaje);
-            String entrada = scanner.nextLine();
+            String entrada = Entrada.cadena();
             try {
                 fecha = LocalDate.parse(entrada, formatter);
                 valido = true;
