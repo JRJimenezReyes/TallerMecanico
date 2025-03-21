@@ -1,6 +1,4 @@
-package org.iesalandalus.programacion.tallermecanico.Vista;
-
-import org.iesalandalus.programacion.tallermecanico.modelo.TallerMecanicoExcepcion;
+package org.iesalandalus.programacion.tallermecanico.vista;
 
 import java.util.HashMap;
 import java.util.Map;

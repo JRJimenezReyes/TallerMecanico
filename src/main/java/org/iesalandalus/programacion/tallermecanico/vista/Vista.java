@@ -1,5 +1,5 @@
-package org.iesalandalus.programacion.tallermecanico.Vista;
-import org.iesalandalus.programacion.tallermecanico.Controlador;
+package org.iesalandalus.programacion.tallermecanico.vista;
+import org.iesalandalus.programacion.tallermecanico.controlador.Controlador;
 import org.iesalandalus.programacion.tallermecanico.modelo.TallerMecanicoExcepcion;
 import org.iesalandalus.programacion.tallermecanico.modelo.dominio.Cliente;
 import org.iesalandalus.programacion.tallermecanico.modelo.dominio.Revision;
