@@ -2,7 +2,7 @@ package org.iesalandalus.programacion.tallermecanico.vista;
 import java.util.List;
 
 import org.iesalandalus.programacion.tallermecanico.Controlador.Controlador;
-import org.iesalandalus.programacion.tallermecanico.modelo.TallerMecanicoExcepcion;
+import org.iesalandalus.programacion.tallermecanico.TallerMecanicoExcepcion;
 import org.iesalandalus.programacion.tallermecanico.modelo.dominio.Cliente;
 import org.iesalandalus.programacion.tallermecanico.modelo.dominio.Revision;
 import org.iesalandalus.programacion.tallermecanico.modelo.dominio.Vehiculo;
