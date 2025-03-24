@@ -51,7 +51,7 @@ public class Mecanico extends Trabajo {
 
     @Override
     public float getPrecioEspecifico() {
-        return (getHoras() *FACTOR_HORA) + (precioMaterial * FACTOR_PRECIO_MATERIAL);
+        return (estaCerrado()) ? (getHoras() *FACTOR_HORA) + (precioMaterial * FACTOR_PRECIO_MATERIAL) : 0;
     }
 
 

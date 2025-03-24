@@ -1,13 +1,14 @@
-package org.iesalandalus.programacion.tallermecanico.modelo.negocio;
+package org.iesalandalus.programacion.tallermecanico.modelo.negocio.memoria;
 
-import org.iesalandalus.programacion.tallermecanico.modelo.TallerMecanicoExcepcion;
+import org.iesalandalus.programacion.tallermecanico.TallerMecanicoExcepcion;
 import org.iesalandalus.programacion.tallermecanico.modelo.dominio.Cliente;
+import org.iesalandalus.programacion.tallermecanico.modelo.negocio.IClientes;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-public class Clientes {
+public class Clientes implements IClientes {
     private List<Cliente> coleccionClientes;
 
     public Clientes() {
@@ -18,7 +19,7 @@ public class Clientes {
         return new ArrayList<>(coleccionClientes);
     }
 
-    public void insertar(Cliente cliente) throws TallerMecanicoExcepcion{
+    public void insertar(Cliente cliente) throws TallerMecanicoExcepcion {
         Objects.requireNonNull(cliente, "No se puede insertar un cliente nulo.");
         if (coleccionClientes.contains(cliente)) {
             throw new TallerMecanicoExcepcion("Ya existe un cliente con ese DNI.");
@@ -40,7 +41,7 @@ public class Clientes {
         return cliente;
     }
 
-        public Cliente buscar(Cliente cliente) {
+    public Cliente buscar(Cliente cliente) {
         Objects.requireNonNull(cliente, "No se puede buscar un cliente nulo.");
         int index = coleccionClientes.indexOf(cliente);
         return (index != -1) ? coleccionClientes.get(index) : null;

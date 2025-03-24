@@ -15,7 +15,6 @@ public class Revision extends Trabajo {
         super(revision);
     }
 
-
     @Override
     public String toString() {
         String cadena;
@@ -35,6 +34,6 @@ public class Revision extends Trabajo {
 
     @Override
     public float getPrecioEspecifico() {
-        return getHoras()*FACTOR_HORA;
+        return (estaCerrado()) ? FACTOR_HORA * getHoras() : 0;
     }
 }
