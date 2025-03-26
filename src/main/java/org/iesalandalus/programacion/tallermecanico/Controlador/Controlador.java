@@ -3,7 +3,8 @@ package org.iesalandalus.programacion.tallermecanico.Controlador;
 import org.iesalandalus.programacion.tallermecanico.TallerMecanicoExcepcion;
 import org.iesalandalus.programacion.tallermecanico.modelo.Modelo;
 import org.iesalandalus.programacion.tallermecanico.modelo.dominio.Cliente;
-import org.iesalandalus.programacion.tallermecanico.modelo.dominio.Revision;
+import org.iesalandalus.programacion.tallermecanico.modelo.dominio.Trabajo;
+import org.iesalandalus.programacion.tallermecanico.modelo.dominio.Trabajp;
 import org.iesalandalus.programacion.tallermecanico.modelo.dominio.Vehiculo;
 import org.iesalandalus.programacion.tallermecanico.vista.Vista;
 
@@ -43,7 +44,7 @@ public class Controlador {
         modelo.insertar(vehiculo);
     }
 
-    public void insertar(Revision revision) throws TallerMecanicoExcepcion {
+    public void insertar(Trabajo revision) throws TallerMecanicoExcepcion {
         modelo.insertar(revision);
     }
 
@@ -55,7 +56,7 @@ public class Controlador {
         return modelo.buscar(vehiculo);
     }
 
-    public Revision buscar(Revision revision) {
+    public Trabajo buscar(Trabajo revision) {
         return modelo.buscar(revision);
     }
 
@@ -63,15 +64,15 @@ public class Controlador {
         return modelo.modificar(cliente, nombre, telefono);
     }
 
-    public void anadirHoras(Revision revision, int horas) throws TallerMecanicoExcepcion {
+    public void anadirHoras(Trabajo revision, int horas) throws TallerMecanicoExcepcion {
         modelo.anadirHoras(revision, horas);
     }
 
-    public void anadirPrecioMaterial(Revision revision, float precioMaterial) throws TallerMecanicoExcepcion {
+    public void anadirPrecioMaterial(Trabajo revision, float precioMaterial) throws TallerMecanicoExcepcion {
         modelo.anadirPrecioMaterial(revision, precioMaterial);
     }
 
-    public void cerrar(Revision revision, LocalDate fechaFin) throws TallerMecanicoExcepcion {
+    public void cerrar(Trabajo revision, LocalDate fechaFin) throws TallerMecanicoExcepcion {
         modelo.cerrar(revision, fechaFin);
     }
 
@@ -83,7 +84,7 @@ public class Controlador {
         modelo.borrar(vehiculo);
     }
 
-    public void borrar(Revision revision) throws TallerMecanicoExcepcion {
+    public void borrar(Trabajo revision) throws TallerMecanicoExcepcion {
         modelo.borrar(revision);
     }
 
@@ -95,15 +96,15 @@ public class Controlador {
         return modelo.getVehiculos();
     }
 
-    public List<Revision> getRevisiones(){
-        return modelo.getRevisiones();
+    public List<Trabajp> getRevisiones(){
+        return modelo.getTrabajos();
     }
 
-    public List<Revision> getRevisiones(Cliente cliente){
+    public List<Trabajp> getRevisiones(Cliente cliente){
         return modelo.getRevisiones(cliente);
     }
 
-    public List<Revision> getRevisiones(Vehiculo vehiculo){
+    public List<Trabajp> getRevisiones(Vehiculo vehiculo){
         return modelo.getRevisiones(vehiculo);
     }
 }

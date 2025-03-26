@@ -10,12 +10,15 @@ import java.util.List;
 import java.util.Objects;
 
 public class Trabajos implements ITrabajos {
+
     private List<Trabajo> coleccionRevisiones;
+
     public Trabajos(){
 
         coleccionRevisiones = new ArrayList<>();
     }
     public List<Trabajo> get(){
+
         return coleccionRevisiones;
 
     }

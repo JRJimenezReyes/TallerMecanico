@@ -4,7 +4,7 @@ import java.util.List;
 import org.iesalandalus.programacion.tallermecanico.Controlador.Controlador;
 import org.iesalandalus.programacion.tallermecanico.TallerMecanicoExcepcion;
 import org.iesalandalus.programacion.tallermecanico.modelo.dominio.Cliente;
-import org.iesalandalus.programacion.tallermecanico.modelo.dominio.Revision;
+import org.iesalandalus.programacion.tallermecanico.modelo.dominio.Trabajp;
 import org.iesalandalus.programacion.tallermecanico.modelo.dominio.Vehiculo;
 
 
@@ -112,7 +112,7 @@ public class Vista {
 
     private void buscarRevision() {
         System.out.println("BUSCAR REVISION");
-        Revision r = controlador.buscar(Consola.leerRevision());
+        Trabajp r = controlador.buscar(Consola.leerRevision());
         if(r == null) {
             System.out.println("No se encontró la revisión buscada");
         }else {
@@ -214,7 +214,7 @@ public class Vista {
     }
 
     private void listarRevisiones() {
-        List<Revision> aux = controlador.getRevisiones();
+        List<Trabajp> aux = controlador.getRevisiones();
         System.out.println("LISTADO DE REVISIONES");
         if(aux.isEmpty()) {
             System.out.println(" -- Listado vacio --");
@@ -226,7 +226,7 @@ public class Vista {
     }
 
     private void listarRevisionesCliente() {
-        List<Revision> aux = controlador.getRevisiones(Consola.leerClienteDni());
+        List<Trabajp> aux = controlador.getRevisiones(Consola.leerClienteDni());
         System.out.println("LISTADO DE REVISIONES CLIENTE");
         if(aux.isEmpty()) {
             System.out.println(" -- Listado vacio --");
@@ -238,7 +238,7 @@ public class Vista {
     }
 
     private void listarRevisionesVehiculo() {
-        List<Revision> aux = controlador.getRevisiones(Consola.leerVehiculoMatricula());
+        List<Trabajp> aux = controlador.getRevisiones(Consola.leerVehiculoMatricula());
         System.out.println("LISTADO DE REVISIONES VEHICULO");
         if(aux.isEmpty()) {
             System.out.println(" -- Listado vacio --");
