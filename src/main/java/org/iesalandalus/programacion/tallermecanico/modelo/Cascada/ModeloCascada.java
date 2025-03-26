@@ -3,10 +3,7 @@ package org.iesalandalus.programacion.tallermecanico.modelo.Cascada;
 import org.iesalandalus.programacion.tallermecanico.TallerMecanicoExcepcion;
 import org.iesalandalus.programacion.tallermecanico.modelo.Modelo;
 import org.iesalandalus.programacion.tallermecanico.modelo.dominio.*;
-import org.iesalandalus.programacion.tallermecanico.modelo.negocio.FabricaFuenteDatos;
-import org.iesalandalus.programacion.tallermecanico.modelo.negocio.IClientes;
-import org.iesalandalus.programacion.tallermecanico.modelo.negocio.ITrabajos;
-import org.iesalandalus.programacion.tallermecanico.modelo.negocio.IVehiculos;
+import org.iesalandalus.programacion.tallermecanico.modelo.negocio.*;
 import org.iesalandalus.programacion.tallermecanico.modelo.negocio.memoria.Clientes;
 import org.iesalandalus.programacion.tallermecanico.modelo.negocio.memoria.Trabajos;
 import org.iesalandalus.programacion.tallermecanico.modelo.negocio.memoria.Vehiculos;
@@ -14,12 +11,19 @@ import org.iesalandalus.programacion.tallermecanico.modelo.negocio.memoria.Vehic
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class ModeloCascada implements Modelo {
     private IClientes clientes;
     private IVehiculos vehiculos;
     private ITrabajos trabajos;
-    public ModeloCascada (FabricaFuenteDatos fabricaFuenteDatos){}
+    public ModeloCascada (FabricaFuenteDatos fabricaFuenteDatos){
+        Objects.requireNonNull(fabricaFuenteDatos,"la fabrica de datos no puede ser nula");
+        IFuenteDatos fuenteDatos =fabricaFuenteDatos.crear();
+        clientes = fuenteDatos.crearClientes();
+        vehiculos = fuenteDatos.crearVehiculos();
+        trabajos = fuenteDatos.crearTrabajos();
+    }
 
     @Override
     public void comenzar() {
