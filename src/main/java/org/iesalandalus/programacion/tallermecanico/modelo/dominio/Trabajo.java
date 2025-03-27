@@ -7,8 +7,6 @@ import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
 import java.util.Objects;
 
-import static org.iesalandalus.programacion.tallermecanico.modelo.dominio.Cliente.cliente;
-
 public abstract class Trabajo {
     static final DateTimeFormatter FORMATO_FECHA = DateTimeFormatter.ofPattern("dd/MM/yyyy");
     private static final float FACTOR_DIA = 10f;
@@ -49,8 +47,8 @@ public abstract class Trabajo {
         return trabajoCopiado;
     }
 
-    public Trabajo get(Vehiculo vehiculo){
-        Objects.requireNonNull(vehiculo, "No se puede obtener un vehículo nulo.");
+    public static Trabajo get(Vehiculo vehiculo){
+        Objects.requireNonNull(vehiculo, "El vehículo no puede ser nulo.");
         return  new Revision(Cliente.get("11111111H"), vehiculo, LocalDate.now());
     }
 
@@ -92,10 +90,10 @@ public abstract class Trabajo {
     private void setFechaFin(LocalDate fechaFin) {
         Objects.requireNonNull(fechaFin, "La fecha de fin no puede ser nula.");
         if (fechaFin.isBefore(fechaInicio)) {
-            throw new IllegalArgumentException("La fecha de fin no puede ser futura.");
+            throw new IllegalArgumentException("La fecha de fin no puede ser anterior a la fecha de inicio.");
         }
         if (fechaFin.isAfter(LocalDate.now())) {
-            throw new IllegalArgumentException("La fecha de fin no puede ser anterior a la fecha de inicio.");
+            throw new IllegalArgumentException("La fecha de fin no puede ser futura.");
         }
         this.fechaFin = fechaFin;
     }
@@ -109,7 +107,7 @@ public abstract class Trabajo {
             throw new IllegalArgumentException("Las horas a añadir deben ser mayores que cero.");
         }
         if (estaCerrado()) {
-            throw new TallerMecanicoExcepcion("No se puede añadir horas, ya que la revisión está cerrada.");
+            throw new TallerMecanicoExcepcion("No se puede añadir horas, ya que el trabajo está cerrado.");
         }
 
         this.horas += horas;
@@ -127,7 +125,7 @@ public abstract class Trabajo {
     }
 
     public float getPrecio() {
-        return getPrecioFijo() * getPrecioEspecifico();
+        return getPrecioFijo() + getPrecioEspecifico();
     }
 
     private float getPrecioFijo(){
