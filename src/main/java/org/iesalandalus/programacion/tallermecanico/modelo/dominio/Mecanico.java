@@ -1,5 +1,7 @@
 package org.iesalandalus.programacion.tallermecanico.modelo.dominio;
 
+import org.iesalandalus.programacion.tallermecanico.modelo.TallerMecanicoExcepcion;
+
 import java.time.LocalDate;
 
 public class Mecanico extends Trabajo {
@@ -10,18 +12,27 @@ public class Mecanico extends Trabajo {
 
     public Mecanico(Cliente cliente, Vehiculo vehiculo, LocalDate fechaInicio){
         super(cliente,vehiculo,fechaInicio);
+        precioMaterial = 0;
     }
 
 
     public Mecanico(Mecanico mecanico){
         super(mecanico.getCliente(),mecanico.getVehiculo(),mecanico.getFechaInicio());
+        precioMaterial = 0;
     }
 
 
 
 
-    public float anadirPrecioMaterial() {
-        return precioMaterial = precioMaterial + getPrecioMaterial();
+    public void anadirPrecioMaterial(float precioMaterial) throws TallerMecanicoExcepcion {
+        if (precioMaterial <= 0){
+            throw new IllegalArgumentException("El precio del material no puede ser menor o igual que 0");
+        }
+
+        if (estaCerrado()){
+            throw new TallerMecanicoExcepcion("Este trabajo está cerrado.");
+        }
+        this.precioMaterial = precioMaterial + getPrecioMaterial();
     }
 
 

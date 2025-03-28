@@ -1,17 +1,18 @@
 package org.iesalandalus.programacion.tallermecanico;
 
 import org.iesalandalus.programacion.tallermecanico.controlador.Controlador;
-import org.iesalandalus.programacion.tallermecanico.vista.Vista;
-import org.iesalandalus.programacion.tallermecanico.modelo.Modelo;
+import org.iesalandalus.programacion.tallermecanico.modelo.negocio.FabricaFuenteDatos;
+import org.iesalandalus.programacion.tallermecanico.vista.texto.VistaTexto;
+import org.iesalandalus.programacion.tallermecanico.modelo.ModeloCascada;
 import org.iesalandalus.programacion.tallermecanico.modelo.TallerMecanicoExcepcion;
 
 public class Main {
     public static void main(String[] args) throws TallerMecanicoExcepcion {
-        Vista vista = new Vista();
-        Modelo modelo = new Modelo();
-        Controlador controlador = new Controlador(modelo, vista);
+        VistaTexto vistaTexto = new VistaTexto();
+        ModeloCascada modeloCascada = new ModeloCascada(FabricaFuenteDatos.MEMORIA);
+        Controlador controlador = new Controlador(modeloCascada, vistaTexto);
 
-        vista.setControlador(controlador);
-        vista.comenzar();
+        vistaTexto.setControlador(controlador);
+        vistaTexto.comenzar();
     }
 }
