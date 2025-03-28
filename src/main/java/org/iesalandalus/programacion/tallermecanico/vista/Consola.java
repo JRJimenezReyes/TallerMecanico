@@ -2,6 +2,7 @@ package org.iesalandalus.programacion.tallermecanico.vista;
 
 import org.iesalandalus.programacion.tallermecanico.modelo.dominio.Cliente;
 import org.iesalandalus.programacion.tallermecanico.modelo.dominio.Revision;
+import org.iesalandalus.programacion.tallermecanico.modelo.dominio.Trabajo;
 import org.iesalandalus.programacion.tallermecanico.modelo.dominio.Vehiculo;
 
 import java.time.LocalDate;
@@ -127,7 +128,7 @@ public class Consola {
         return Vehiculo.get(matricula);
     }
 
-    public static Revision leerRevision() {
+    public static Trabajo leerRevision() {
         Cliente cliente = leerCliente();
         Vehiculo vehiculo = leerVehiculo();
         LocalDate fechaInicio = leerFecha("Introduce la fecha de inicio de la revisión (dd/MM/yyyy): ");

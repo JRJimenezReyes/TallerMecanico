@@ -2,7 +2,7 @@ package org.iesalandalus.programacion.tallermecanico.vista;
 
 import org.iesalandalus.programacion.tallermecanico.controlador.Controlador;
 import org.iesalandalus.programacion.tallermecanico.modelo.dominio.Cliente;
-import org.iesalandalus.programacion.tallermecanico.modelo.dominio.Revision;
+import org.iesalandalus.programacion.tallermecanico.modelo.dominio.Trabajo;
 import org.iesalandalus.programacion.tallermecanico.modelo.dominio.Vehiculo;
 
 import java.time.LocalDate;
@@ -79,7 +79,7 @@ public class Vista {
     private void insertarRevision() {
         Consola.mostrarCabecera("Insertar Revisión");
         try {
-            Revision revision = Consola.leerRevision();
+            Trabajo revision = Consola.leerRevision();
             controlador.insertar(revision);
             System.out.println("Revisión insertada correctamente.");
         } catch (Exception e) {
@@ -112,7 +112,7 @@ public class Vista {
     private void buscarRevision() {
         Consola.mostrarCabecera("Buscar Revisión");
         try {
-            Revision revision = Consola.leerRevision();
+            Trabajo revision = Consola.leerRevision();
             revision = controlador.buscar(revision);
             System.out.println(revision != null ? revision : "Revisión no encontrada.");
         } catch (Exception e) {
@@ -136,7 +136,7 @@ public class Vista {
     private void anadirHoras() {
         Consola.mostrarCabecera("Añadir Horas");
         try {
-            Revision revision = Consola.leerRevision();
+            Trabajo revision = Consola.leerRevision();
             int horas = Consola.leerHoras();
             controlador.anadirHoras(revision, horas);
             System.out.println("Horas añadidas correctamente.");
@@ -148,7 +148,7 @@ public class Vista {
     private void anadirPrecioMaterial() {
         Consola.mostrarCabecera("Añadir Precio Material");
         try {
-            Revision revision = Consola.leerRevision();
+            Trabajo revision = Consola.leerRevision();
             float precioMaterial = Consola.leerPrecioMaterial();
             controlador.anadirPrecioMaterial(revision, precioMaterial);
             System.out.println("Precio del material añadido correctamente.");
@@ -160,7 +160,7 @@ public class Vista {
     private void cerrarRevision() {
         Consola.mostrarCabecera("Cerrar Revisión");
         try {
-            Revision revision = Consola.leerRevision();
+            Trabajo revision = Consola.leerRevision();
             LocalDate fechaCierre = Consola.leerFechaCierre();
             controlador.cerrar(revision, fechaCierre);
             System.out.println("Revisión cerrada correctamente.");
@@ -194,7 +194,7 @@ public class Vista {
     private void borrarRevision() {
         Consola.mostrarCabecera("Borrar Revisión");
         try {
-            Revision revision = Consola.leerRevision();
+            Trabajo revision = Consola.leerRevision();
             controlador.borrar(revision);
             System.out.println("Revisión borrada correctamente.");
         } catch (Exception e) {
@@ -227,7 +227,7 @@ public class Vista {
     private void listarRevisiones() {
         Consola.mostrarCabecera("Listar Revisiones");
         try {
-            for (Revision revision : controlador.getRevisiones()) {
+            for (Trabajo revision : controlador.getRevisiones()) {
                 System.out.println(revision);
             }
         } catch (Exception e) {
@@ -239,7 +239,7 @@ public class Vista {
         Consola.mostrarCabecera("Listar Revisiones por Cliente");
         try {
             Cliente cliente = Consola.leerClienteDni();
-            for (Revision revision : controlador.getRevisiones(cliente)) {
+            for (Trabajo revision : controlador.getRevisiones(cliente)) {
                 System.out.println(revision);
             }
         } catch (Exception e) {
@@ -251,7 +251,7 @@ public class Vista {
         Consola.mostrarCabecera("Listar Revisiones por Vehículo");
         try {
             Vehiculo vehiculo = Consola.leerVehiculoMatricula();
-            for (Revision revision : controlador.getRevisiones(vehiculo)) {
+            for (Trabajo revision : controlador.getRevisiones(vehiculo)) {
                 System.out.println(revision);
             }
         } catch (Exception e) {
