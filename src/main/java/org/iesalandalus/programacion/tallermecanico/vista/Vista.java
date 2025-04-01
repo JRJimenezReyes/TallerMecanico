@@ -10,17 +10,11 @@ import java.time.LocalDate;
 import java.util.List;
 
 public interface Vista {
-    static int leerHoras() {
-        return Consola.leerEntero("Escriba la cantidad de horas de trabajo: ");
-    }
+    int leerHoras();
 
-    static float leerPrecioMaterial() {
-        return Consola.leerReal("Introduce el precio del material: ");
-    }
+    float leerPrecioMaterial();
 
-    static LocalDate leerFechaCierre() {
-        return Consola.leerFecha("Introduzca la fecha de cierre de la revisión: ");
-    }
+    LocalDate leerFechaCierre();
 
     GestorEventos getGestorEventos();
 
@@ -29,6 +23,7 @@ public interface Vista {
     void comenzar() throws TallerMecanicoExcepcion;
 
     void terminar();
+
 
     Cliente leerCliente();
 

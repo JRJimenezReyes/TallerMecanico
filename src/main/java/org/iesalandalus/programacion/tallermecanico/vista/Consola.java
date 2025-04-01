@@ -61,6 +61,7 @@ public class Consola {
     }
 
     public static LocalDate leerFecha(String mensaje){
+        System.out.printf("Introduzca la fecha en este formato: %s", CADENA_FORMATO_FECHA);
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern(CADENA_FORMATO_FECHA);
         return LocalDate.parse(leerCadena(mensaje),formatter);
     }

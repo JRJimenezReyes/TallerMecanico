@@ -51,7 +51,8 @@ public class VistaTexto implements org.iesalandalus.programacion.tallermecanico.
         switch(evento){
             case INSERTAR_CLIENTE -> gestorEventos.notificarEvento(Evento.INSERTAR_CLIENTE);
             case INSERTAR_VEHICULO -> gestorEventos.notificarEvento(Evento.INSERTAR_VEHICULO);
-            case INSERTAR_TRABAJO -> gestorEventos.notificarEvento(Evento.INSERTAR_TRABAJO);
+            case INSERTAR_REVISION -> gestorEventos.notificarEvento(Evento.INSERTAR_REVISION);
+            case INSERTAR_MECANICO -> gestorEventos.notificarEvento(Evento.INSERTAR_MECANICO);
             case BUSCAR_CLIENTE -> gestorEventos.notificarEvento(Evento.BUSCAR_CLIENTE);
             case BUSCAR_VEHICULO -> gestorEventos.notificarEvento(Evento.BUSCAR_VEHICULO);
             case BUSCAR_TRABAJO -> gestorEventos.notificarEvento(Evento.BUSCAR_TRABAJO);
@@ -79,6 +80,15 @@ public class VistaTexto implements org.iesalandalus.programacion.tallermecanico.
         cliente.setTelefono(leerNuevoTelefono());
         return cliente;
 
+    }
+    public float leerPrecioMaterial(){
+        System.out.print("Introduzca el precio del material:");
+        return Entrada.real();
+    }
+
+    public int leerHoras(){
+        System.out.print("Introduzca la cantidad de horas.");
+        return Entrada.entero();
     }
 
     @Override
@@ -130,6 +140,11 @@ public class VistaTexto implements org.iesalandalus.programacion.tallermecanico.
 
     @Override
     public void notificarResultado(Evento evento, String texto, boolean exito){
+        if (exito){
+            System.out.println(texto);
+        }else {
+            System.out.printf("ERROR: %s%n", texto);
+        }
 
     }
 
@@ -144,6 +159,10 @@ public class VistaTexto implements org.iesalandalus.programacion.tallermecanico.
         }else {
             System.out.println("La lista esta vacía.");
         }
+    }
+
+    public LocalDate leerFechaCierre(){
+        return Consola.leerFecha("Introduzca la fecha de cierre.");
     }
 
     @Override
