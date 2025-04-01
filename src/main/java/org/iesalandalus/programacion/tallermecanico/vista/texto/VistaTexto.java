@@ -10,7 +10,7 @@ import java.time.LocalDate;
 import java.util.List;
 
 public class VistaTexto implements Vista {
-    private GestorEventos gestorEventos;
+    private GestorEventos gestorEventos = new GestorEventos(Evento.values());
 
     @Override
     public GestorEventos getGestorEventos () {
