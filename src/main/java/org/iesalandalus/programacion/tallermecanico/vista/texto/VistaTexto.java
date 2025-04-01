@@ -165,4 +165,25 @@ public class VistaTexto implements Vista {
             System.out.println("No hay ningún trabajo.");
         }
     }
+
+    @Override
+    public void mostrarTrabajosCliente(List<Trabajo> trabajosCliente) {
+        if (!trabajosCliente.isEmpty()){
+            for (Trabajo trabajo : trabajosCliente) {
+                System.out.println(trabajo);
+            }
+        }else{
+            System.out.println("No hay trabajos para este cliente");
+        }
+    }
+    @Override
+    public void mostrarTrabajosVehiculo(List<Trabajo> trabajosVehiculo) {
+        if (!trabajosVehiculo.isEmpty()){
+            for (Trabajo trabajo : trabajosVehiculo) {
+                System.out.println(trabajo);
+            }
+        }else{
+            System.out.println("No hay trabajos para este vehículo");
+        }
+    }
 }

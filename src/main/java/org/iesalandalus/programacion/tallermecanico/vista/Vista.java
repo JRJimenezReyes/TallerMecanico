@@ -53,4 +53,8 @@ public interface Vista {
     void mostrarVehiculos (List<Vehiculo> vehiculo);
 
     void mostrarTrabajos (List<Trabajo> trabajo);
+
+    void mostrarTrabajosCliente(List<Trabajo> trabajosCliente);
+
+    void mostrarTrabajosVehiculo(List<Trabajo> trabajosVehiculo);
 }
