@@ -11,7 +11,7 @@ import java.time.LocalDate;
 import java.util.List;
 import java.util.Objects;
 
-public class IModeloCascada implements IModelo {
+public class IModeloCascada implements org.iesalandalus.programacion.tallermecanico.modelo.Modelo {
     private IClientes clientes;
     private IVehiculos vehiculos;
     private ITrabajos trabajos;
@@ -47,7 +47,7 @@ public class IModeloCascada implements IModelo {
     }
 
     @Override
-    public void insertar(Trabajo trabajo) throws TallerMecanicoExcepcion {
+    public void insertar (Trabajo trabajo) throws TallerMecanicoExcepcion {
         Objects.requireNonNull(trabajo, "El trabajo no puede ser nulo.");
         Cliente cliente = buscar(trabajo.getCliente());
         Vehiculo vehiculo = buscar(trabajo.getVehiculo());
@@ -72,7 +72,7 @@ public class IModeloCascada implements IModelo {
     }
 
     @Override
-    public Trabajo buscar(Trabajo trabajo) {
+    public Trabajo buscar (Trabajo trabajo) {
         Trabajo trabajoEncontrado = trabajos.buscar(trabajo);
         return (trabajoEncontrado != null) ? Trabajo.copiar(trabajoEncontrado) : null;
     }
@@ -132,7 +132,7 @@ public class IModeloCascada implements IModelo {
     }
 
     @Override
-    public List<Trabajo> getTrabajos() {
+    public List<Trabajo> getTrabajos () {
         return trabajos.get().stream().map(trabajo -> {
             if (trabajo instanceof Revision) {
                 return new Revision((Revision) trabajo);
@@ -143,12 +143,12 @@ public class IModeloCascada implements IModelo {
     }
 
     @Override
-    public List<Trabajo> getTrabajos(Cliente cliente) {
+    public List<Trabajo> getTrabajos (Cliente cliente) {
         return trabajos.get(cliente).stream().map(Trabajo::copiar).toList();
     }
 
     @Override
-    public List<Trabajo> getTrabajos(Vehiculo vehiculo) {
+    public List<Trabajo> getTrabajos (Vehiculo vehiculo) {
         return trabajos.get(vehiculo).stream().map(Trabajo::copiar).toList();
     }
 }
