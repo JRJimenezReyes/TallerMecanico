@@ -1,11 +1,9 @@
-package org.iesalandalus.programacion.tallermecanico.Vista;
-
-import org.iesalandalus.programacion.tallermecanico.modelo.TallerMecanicoExcepcion;
+package org.iesalandalus.programacion.tallermecanico.vista.eventos;
 
 import java.util.HashMap;
 import java.util.Map;
 
-public enum Opcion {
+public enum Evento {
 
     INSERTAR_CLIENTE(10,"Insertar un cliente."),
     BUSCAR_CLIENTE(11,"Buscar un cliente."),
@@ -17,22 +15,23 @@ public enum Opcion {
     BORRAR_VEHICULO(22,"Borrar un vehiculo."),
     LISTAR_VEHICULOS(23,"Listar vehículos."),
     INSERTAR_REVISION(30,"Insertar una revisión."),
-    BUSCAR_REVISION(31, "Buscar una revisión."),
-    BORRAR_REVISION(32,"Borrar una revisión."),
-    LISTAR_REVISIONES(33,"Listar revisiones."),
-    LISTAR_REVISIONES_CLIENTE(34,"Listar revisiones de un cliente."),
-    LISTAR_REVISIONES_VEHICULO(35,"Listar revisiones de un vehiculo."),
-    ANADIR_HORAS_REVISION(40,"Añadir horas a una revisión."),
-    ANADIR_PRECIO_MATERIAL_REVISION(41,"Añadir precio de material a una revisión."),
-    CERRAR_REVISION(42,"Cerrar una revisión."),
+    INSERTAR_MECANICO(31,"Insertar un trabajo mecánico."),
+    BUSCAR_TRABAJO(32, "Buscar una revisión."),
+    BORRAR_TRABAJO(33,"Borrar una revisión."),
+    LISTAR_TRABAJOS(34,"Listar revisiones."),
+    LISTAR_TRABAJOS_CLIENTE(35,"Listar revisiones de un cliente."),
+    LISTAR_TRABAJOS_VEHICULO(36,"Listar revisiones de un vehiculo."),
+    ANADIR_HORAS_TRABAJO(40,"Añadir horas a una revisión."),
+    ANADIR_PRECIO_MATERIAL_MECANICO(41,"Añadir precio de material a una revisión."),
+    CERRAR_TRABAJO(42,"Cerrar una revisión."),
     SALIR(0,"Salir.");
 
 
-    private static final Map<Integer, Opcion> opciones = new HashMap<>();
+    private static final Map<Integer, Evento> opciones = new HashMap<>();
     private String mensaje;
     private int numeroOpcion;
 
-    private Opcion(int numeroOpcion, String mensaje) {
+    private Evento(int numeroOpcion, String mensaje) {
         this.mensaje = mensaje;
         this.numeroOpcion = numeroOpcion;
     }
@@ -41,21 +40,21 @@ public enum Opcion {
     static {
         //esto abre un bloque static
 
-        for (Opcion opcion : values()){
+        for (Evento evento : values()){
             //Hacemos un bucle que recorre todas las opciones del enumerado colocando values() recorre el enum
-            opciones.put(opcion.numeroOpcion,opcion);
+            opciones.put(evento.numeroOpcion, evento);
             //con esto le digo que por cada opcion coja el número de opcion asociado y lo coloque
 
         }
     }
 
-    public static boolean esValida(int numeroOpcion){
+    public static boolean esValido(int numeroOpcion){
         return opciones.containsKey(numeroOpcion);
         //Para un mapa el constainskey toma como si ese número que funciona como CLAVE existe.
     }
 
-    public static Opcion get(int numeroOpcion){
-        if (esValida(numeroOpcion)) {
+    public static Evento get(int numeroOpcion){
+        if (esValido(numeroOpcion)) {
             return opciones.get(numeroOpcion);
         } else throw new IllegalArgumentException("El número de opción no es valido.");
     }
