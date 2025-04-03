@@ -24,11 +24,7 @@ public class VistaTexto implements org.iesalandalus.programacion.tallermecanico.
         return gestorEventos;
     }
 
-    @Override
-    public void setControlador(Controlador controlador){
-        Objects.requireNonNull(controlador);
-        this.controlador = controlador;
-    }
+
 
     @Override
     public void comenzar() throws TallerMecanicoExcepcion {

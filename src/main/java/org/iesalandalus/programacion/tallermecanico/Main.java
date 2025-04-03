@@ -12,9 +12,10 @@ import org.iesalandalus.programacion.tallermecanico.modelo.TallerMecanicoExcepci
 
 public class Main {
     public static void main(String[] args){
-        Modelo modelo = FabricaModelo.CASCADA.crear(FabricaFuenteDatos.MEMORIA);
-        Vista vista = FabricaVista.TEXTO.crear();
-        Controlador controlador = new Controlador(modelo,vista);
+        FabricaModelo fabricaModelo = FabricaModelo.CASCADA;
+        FabricaVista fabricaVista = FabricaVista.TEXTO;
+        FabricaFuenteDatos fabricaFuenteDatos = FabricaFuenteDatos.MEMORIA;
+        Controlador controlador = new Controlador(fabricaModelo,fabricaFuenteDatos,fabricaVista);
         try {
             controlador.comenzar();
         } catch (TallerMecanicoExcepcion e) {
