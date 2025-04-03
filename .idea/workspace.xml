@@ -4,21 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8b0e04e-6981-41d9-b2bd-c9ae382a0816" name="Changes" comment="Modelo y sus clases pasan los test correctamente">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/controlador/IControlador.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/vista/FabricaVista.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/vista/eventos/Evento.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/vista/eventos/GestorEventos.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/vista/eventos/ReceptorEventos.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/vista/texto/VistaTexto.java" afterDir="false" />
+    <list default="true" id="f8b0e04e-6981-41d9-b2bd-c9ae382a0816" name="Changes" comment="Clases y proyecto finalizado">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/controlador/Controlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/controlador/Controlador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/vista/Consola.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/vista/texto/Consola.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/vista/Opcion.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/vista/Vista.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/vista/Vista.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/uml/tallerMecanico.uml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/uml/tallerMecanico.uml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/vista/texto/Consola.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/vista/texto/Consola.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/vista/texto/VistaTexto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/vista/texto/VistaTexto.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,61 +89,61 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Build TallerMecanico.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Tests in 'org.iesalandalus.programacion.tallermecanico.modelo'.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ClientesTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.MecanicoTest.anadirHorasMecanicoCerradoLanzaExcepcion.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.MecanicoTest.anadirPrecioMaterialMecanicoCerradaLanzaExcepcion.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.MecanicoTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.MecanicoTest.getPrecioCalculaCorrectamentePrecio.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.MecanicoTest.toStringDevuelveLaCadenaEsperada.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ModeloTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TrabajoTest.cerrarFechaFinAnteriorFechaInicioLanzaExcepcion.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TrabajoTest.cerrarFechaFinFuturaLanzaExcepcion.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TrabajoTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TrabajoTest.getTrabajoVehiculoNuloLanzaExcepcion.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TrabajosTest.anadirHorasTrabajoNuloHorasValidasLanzaExcepcion.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TrabajosTest.anadirPrecioMaterialTrabajoNuloPrecioMaterialValidoLanzaExcepcion.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TrabajosTest.borrarTrabajoNoExistenteLanzaExcepcion.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TrabajosTest.borrarTrabajoNuloLanzaExcepcion.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TrabajosTest.buscarTrabajoNuloLanzaExcepcion.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TrabajosTest.cerrarTrabajoNuloFechaValidaLanzaExcepcion.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TrabajosTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TrabajosTest.insertarTrabajoClienteTrabajoAbiertaLanzaExcepcion.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TrabajosTest.insertarTrabajoClienteTrabajoAnteiorLanzaExcepcion.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TrabajosTest.insertarTrabajoNulaLanzaExcepcion.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TrabajosTest.insertarTrabajoVehiculoTrabajoAbiertaLanzaExcepcion.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TrabajosTest.insertarTrabajoVehiculoTrabajoAnteriorLanzaExcepcion.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.VehiculosTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.org.iesalandalus.programacion.tallermecanico.modelo in TallerMecanicoResuelto.test.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ChatTagsLlmMigration&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.CodyAccountHistoryMigration&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.CodyAccountsIdsRefresh&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.CodyAssignOrphanedChatsToActiveAccount&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.CodyConvertUrlToCodebaseName&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.CodyHistoryLlmMigration&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.CodyMigrateChatHistory-v2&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.CodyProjectSettingsMigration&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.DeprecatedChatLlmMigration&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ToggleCodyToolWindowAfterMigration&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;05b78dc5&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/adria/Desktop/1ºDAW/Prog/TallerMecanico/src/test/java/org/iesalandalus/programacion/tallermecanico/modelo/ModeloTest.java&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.excludes&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Run",
+    "Gradle.Build TallerMecanico.executor": "Run",
+    "Gradle.Tests in 'org.iesalandalus.programacion.tallermecanico.modelo'.executor": "Run",
+    "JUnit.ClientesTest.executor": "Run",
+    "JUnit.MecanicoTest.anadirHorasMecanicoCerradoLanzaExcepcion.executor": "Run",
+    "JUnit.MecanicoTest.anadirPrecioMaterialMecanicoCerradaLanzaExcepcion.executor": "Run",
+    "JUnit.MecanicoTest.executor": "Run",
+    "JUnit.MecanicoTest.getPrecioCalculaCorrectamentePrecio.executor": "Run",
+    "JUnit.MecanicoTest.toStringDevuelveLaCadenaEsperada.executor": "Run",
+    "JUnit.ModeloTest.executor": "Run",
+    "JUnit.TrabajoTest.cerrarFechaFinAnteriorFechaInicioLanzaExcepcion.executor": "Run",
+    "JUnit.TrabajoTest.cerrarFechaFinFuturaLanzaExcepcion.executor": "Run",
+    "JUnit.TrabajoTest.executor": "Run",
+    "JUnit.TrabajoTest.getTrabajoVehiculoNuloLanzaExcepcion.executor": "Run",
+    "JUnit.TrabajosTest.anadirHorasTrabajoNuloHorasValidasLanzaExcepcion.executor": "Run",
+    "JUnit.TrabajosTest.anadirPrecioMaterialTrabajoNuloPrecioMaterialValidoLanzaExcepcion.executor": "Run",
+    "JUnit.TrabajosTest.borrarTrabajoNoExistenteLanzaExcepcion.executor": "Run",
+    "JUnit.TrabajosTest.borrarTrabajoNuloLanzaExcepcion.executor": "Run",
+    "JUnit.TrabajosTest.buscarTrabajoNuloLanzaExcepcion.executor": "Run",
+    "JUnit.TrabajosTest.cerrarTrabajoNuloFechaValidaLanzaExcepcion.executor": "Run",
+    "JUnit.TrabajosTest.executor": "Run",
+    "JUnit.TrabajosTest.insertarTrabajoClienteTrabajoAbiertaLanzaExcepcion.executor": "Run",
+    "JUnit.TrabajosTest.insertarTrabajoClienteTrabajoAnteiorLanzaExcepcion.executor": "Run",
+    "JUnit.TrabajosTest.insertarTrabajoNulaLanzaExcepcion.executor": "Run",
+    "JUnit.TrabajosTest.insertarTrabajoVehiculoTrabajoAbiertaLanzaExcepcion.executor": "Run",
+    "JUnit.TrabajosTest.insertarTrabajoVehiculoTrabajoAnteriorLanzaExcepcion.executor": "Run",
+    "JUnit.VehiculosTest.executor": "Run",
+    "JUnit.org.iesalandalus.programacion.tallermecanico.modelo in TallerMecanicoResuelto.test.executor": "Run",
+    "RunOnceActivity.ChatTagsLlmMigration": "true",
+    "RunOnceActivity.CodyAccountHistoryMigration": "true",
+    "RunOnceActivity.CodyAccountsIdsRefresh": "true",
+    "RunOnceActivity.CodyAssignOrphanedChatsToActiveAccount": "true",
+    "RunOnceActivity.CodyConvertUrlToCodebaseName": "true",
+    "RunOnceActivity.CodyHistoryLlmMigration": "true",
+    "RunOnceActivity.CodyMigrateChatHistory-v2": "true",
+    "RunOnceActivity.CodyProjectSettingsMigration": "true",
+    "RunOnceActivity.DeprecatedChatLlmMigration": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.ToggleCodyToolWindowAfterMigration": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "git-widget-placeholder": "ec8d44d2",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/adria/Desktop/1ºDAW/Prog/TallerMecanico/src/test/java/org/iesalandalus/programacion/tallermecanico/modelo/ModeloTest.java",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.projectsettings.compiler.excludes"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/test/java/org/iesalandalus/programacion/tallermecanico/modelo/dominio" />
@@ -330,7 +319,15 @@
       <option name="project" value="LOCAL" />
       <updated>1743338335391</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Clases y proyecto finalizado">
+      <option name="closed" value="true" />
+      <created>1743675238253</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1743675238253</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -353,7 +350,8 @@
     <MESSAGE value="Commit trabajo, mecanico, revision terminado (aun no pasa test)" />
     <MESSAGE value="Mecanico y Revision pasan test" />
     <MESSAGE value="Modelo y sus clases pasan los test correctamente" />
-    <option name="LAST_COMMIT_MESSAGE" value="Modelo y sus clases pasan los test correctamente" />
+    <MESSAGE value="Clases y proyecto finalizado" />
+    <option name="LAST_COMMIT_MESSAGE" value="Clases y proyecto finalizado" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/TallerMecanico$RevisionTest.ic" NAME="RevisionTest Coverage Results" MODIFIED="1706862963586" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
