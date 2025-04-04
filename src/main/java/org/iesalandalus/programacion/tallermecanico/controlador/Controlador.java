@@ -1,10 +1,13 @@
 package org.iesalandalus.programacion.tallermecanico.controlador;
 
+import org.iesalandalus.programacion.tallermecanico.modelo.FabricaModelo;
 import org.iesalandalus.programacion.tallermecanico.modelo.Modelo;
 import org.iesalandalus.programacion.tallermecanico.modelo.TallerMecanicoExcepcion;
 import org.iesalandalus.programacion.tallermecanico.modelo.dominio.Cliente;
 import org.iesalandalus.programacion.tallermecanico.modelo.dominio.Trabajo;
 import org.iesalandalus.programacion.tallermecanico.modelo.dominio.Vehiculo;
+import org.iesalandalus.programacion.tallermecanico.modelo.negocio.FabricaFuenteDatos;
+import org.iesalandalus.programacion.tallermecanico.vista.FabricaVista;
 import org.iesalandalus.programacion.tallermecanico.vista.Vista;
 import org.iesalandalus.programacion.tallermecanico.vista.eventos.Evento;
 import org.iesalandalus.programacion.tallermecanico.vista.texto.VistaTexto;
@@ -15,15 +18,12 @@ import java.util.Objects;
 
 public class Controlador implements IControlador {
 
-    private final Modelo modelo;
-    private final Vista vista;
+    private  Modelo modelo;
+    private  Vista vista;
 
-    public Controlador(Modelo modelo, Vista vista) {
-        Objects.requireNonNull(modelo,"ERROR: El modelo no puede ser nulo.");
-        Objects.requireNonNull(vista, "ERROR: La vista no puede ser nula.");
-        this.modelo = modelo;
-        this.vista = vista;
-        this.vista.getGestorEventos().suscribir(this,Evento.values());
+    public Controlador(FabricaModelo fabricaModelo, FabricaFuenteDatos fabricaFuenteDatos, FabricaVista fabricaVista) {
+        this.modelo = fabricaModelo.crear(fabricaFuenteDatos);
+        this.vista = fabricaVista.crear();
     }
 
     @Override
@@ -70,77 +70,5 @@ public class Controlador implements IControlador {
         } catch (Exception e){
             vista.notificarResultado(evento, e.getMessage(), false);
         }
-    }
-
-    public void insertar(Cliente cliente) throws TallerMecanicoExcepcion {
-        modelo.insertar(cliente);
-    }
-
-    public void insertar(Vehiculo vehiculo) throws TallerMecanicoExcepcion {
-        modelo.insertar(vehiculo);
-    }
-
-    public void insertar(Trabajo revision) throws TallerMecanicoExcepcion {
-        modelo.insertar(revision);
-    }
-
-    public Cliente buscar(Cliente cliente) {
-        return modelo.buscar(cliente);
-    }
-
-    public Vehiculo buscar(Vehiculo vehiculo) {
-        return modelo.buscar(vehiculo);
-    }
-
-    public Trabajo buscar(Trabajo revision) {
-        return modelo.buscar(revision);
-    }
-
-    public boolean modificar(Cliente cliente, String nombre, String telefono) throws TallerMecanicoExcepcion {
-        return modelo.modificar(cliente, nombre, telefono);
-    }
-
-    public Trabajo anadirHoras(Trabajo revision, int horas) throws TallerMecanicoExcepcion {
-        return modelo.anadirHoras(revision, horas);
-    }
-
-    public Trabajo anadirPrecioMaterial(Trabajo revision, float precioMaterial) throws TallerMecanicoExcepcion {
-        return modelo.anadirPrecioMaterial(revision, precioMaterial);
-    }
-
-    public Trabajo cerrar(Trabajo revision, LocalDate fechaFin) throws TallerMecanicoExcepcion {
-        return modelo.cerrar(revision, fechaFin);
-    }
-
-    public void borrar(Cliente cliente) throws TallerMecanicoExcepcion {
-        modelo.borrar(cliente);
-    }
-
-    public void borrar(Vehiculo vehiculo) throws TallerMecanicoExcepcion {
-        modelo.borrar(vehiculo);
-    }
-
-    public void borrar(Trabajo revision) throws TallerMecanicoExcepcion {
-        modelo.borrar(revision);
-    }
-
-    public List<Cliente> getClientes() {
-        return modelo.getClientes();
-    }
-
-    public List<Vehiculo> getVehiculos() {
-        return modelo.getVehiculos();
-    }
-
-    public List<Trabajo> getTrabajos() {
-        return modelo.getTrabajos();
-    }
-
-    public List<Trabajo> getTrabajos(Cliente cliente) {
-        return modelo.getTrabajos(cliente);
-    }
-
-    public List<Trabajo> getTrabajos(Vehiculo vehiculo) {
-        return modelo.getTrabajos(vehiculo);
     }
 }
