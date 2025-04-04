@@ -263,7 +263,15 @@
       <option name="project" value="LOCAL" />
       <updated>1743749535178</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Corrección de dependencia en diagrama de clases.">
+      <option name="closed" value="true" />
+      <created>1743751662163</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1743751662163</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
