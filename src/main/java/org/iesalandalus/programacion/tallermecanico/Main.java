@@ -2,12 +2,8 @@ package org.iesalandalus.programacion.tallermecanico;
 
 import org.iesalandalus.programacion.tallermecanico.controlador.Controlador;
 import org.iesalandalus.programacion.tallermecanico.modelo.FabricaModelo;
-import org.iesalandalus.programacion.tallermecanico.modelo.Modelo;
 import org.iesalandalus.programacion.tallermecanico.modelo.negocio.FabricaFuenteDatos;
 import org.iesalandalus.programacion.tallermecanico.vista.FabricaVista;
-import org.iesalandalus.programacion.tallermecanico.vista.Vista;
-import org.iesalandalus.programacion.tallermecanico.vista.texto.VistaTexto;
-import org.iesalandalus.programacion.tallermecanico.modelo.ModeloCascada;
 import org.iesalandalus.programacion.tallermecanico.modelo.TallerMecanicoExcepcion;
 
 public class Main {

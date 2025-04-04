@@ -24,7 +24,8 @@ public enum Evento {
     ANADIR_HORAS_TRABAJO(40,"Añadir horas a una revisión."),
     ANADIR_PRECIO_MATERIAL_MECANICO(41,"Añadir precio de material a una revisión."),
     CERRAR_TRABAJO(42,"Cerrar una revisión."),
-    SALIR(0,"Salir.");
+    MOSTRAR_ESTADISTICAS_MENSUALES(50,"Mostrar estadísticas mensuales"),
+    SALIR(0,"Salir."),;
 
 
     private static final Map<Integer, Evento> opciones = new HashMap<>();

@@ -1,14 +1,11 @@
-package org.iesalandalus.programacion.tallermecanico.modelo.negocio.memoria;
+package org.iesalandalus.programacion.tallermecanico.modelo.negocio.ficheros;
 
 import org.iesalandalus.programacion.tallermecanico.modelo.TallerMecanicoExcepcion;
 import org.iesalandalus.programacion.tallermecanico.modelo.dominio.*;
 import org.iesalandalus.programacion.tallermecanico.modelo.negocio.ITrabajos;
 
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
 
 public class Trabajos implements ITrabajos {
 
@@ -161,6 +158,7 @@ public class Trabajos implements ITrabajos {
         }
     }
 
+
     private Trabajo getTrabajoAbierto(Vehiculo vehiculo) throws TallerMecanicoExcepcion{
        Trabajo trabajoAux = null;
         Iterator<Trabajo> iterator = coleccionTrabajos.iterator();
@@ -176,4 +174,24 @@ public class Trabajos implements ITrabajos {
         }
         return trabajoAux;
     }
+
+    public Map<TipoTrabajo,Integer> getEstadisticasMensuales(LocalDate mes){
+        Map<TipoTrabajo,Integer> mapaEstadistica;
+        mapaEstadistica = inicializarEstadisticas();
+        for (Trabajo trabajo : coleccionTrabajos){
+            if (trabajo.getFechaInicio().getMonth() == mes.getMonth() && trabajo.getFechaInicio().getYear() == mes.getYear()){
+                mapaEstadistica.put(TipoTrabajo.getTipoTrabajo(trabajo),mapaEstadistica.get(TipoTrabajo.getTipoTrabajo(trabajo))+1);
+            }
+        }
+        return mapaEstadistica;
+    }
+
+    private Map<TipoTrabajo,Integer> inicializarEstadisticas(){
+        Map<TipoTrabajo,Integer> mapaTipoTrabajo = new HashMap<>();
+        mapaTipoTrabajo.put(TipoTrabajo.Mecánico,0);
+        mapaTipoTrabajo.put(TipoTrabajo.Revisión,0);
+        return mapaTipoTrabajo;
+    }
+
+
 }
