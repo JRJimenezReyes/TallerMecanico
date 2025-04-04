@@ -1,6 +1,6 @@
 package org.iesalandalus.programacion.tallermecanico.modelo.dominio;
 
-import org.iesalandalus.programacion.tallermecanico.modelo.negocio.Vehiculos;
+import org.iesalandalus.programacion.tallermecanico.modelo.negocio.memoria.Vehiculos;
 
 import java.util.Objects;
 
