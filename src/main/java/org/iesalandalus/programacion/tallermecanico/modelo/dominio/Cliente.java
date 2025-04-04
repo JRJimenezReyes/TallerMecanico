@@ -1,7 +1,7 @@
 package org.iesalandalus.programacion.tallermecanico.modelo.dominio;
 
 
-import org.iesalandalus.programacion.tallermecanico.modelo.negocio.Clientes;
+import org.iesalandalus.programacion.tallermecanico.modelo.negocio.memoria.Clientes;
 
 import java.util.Objects;
 
@@ -13,7 +13,7 @@ public class Cliente {
     private String dni;
     private String telefono;
     public Clientes coleccionClientes;
-    public static Revision cliente;
+    public static Trabajo cliente;
 
     public Cliente(String nombre, String dni, String telefono){
         setNombre(nombre);

@@ -1,7 +1,10 @@
 package org.iesalandalus.programacion.tallermecanico.modelo;
 
 import org.iesalandalus.programacion.tallermecanico.modelo.dominio.*;
-import org.iesalandalus.programacion.tallermecanico.modelo.negocio.*;
+import org.iesalandalus.programacion.tallermecanico.modelo.negocio.FabricaFuenteDatos;
+import org.iesalandalus.programacion.tallermecanico.modelo.negocio.IClientes;
+import org.iesalandalus.programacion.tallermecanico.modelo.negocio.ITrabajos;
+import org.iesalandalus.programacion.tallermecanico.modelo.negocio.IVehiculos;
 import org.iesalandalus.programacion.tallermecanico.modelo.negocio.memoria.Clientes;
 import org.iesalandalus.programacion.tallermecanico.modelo.negocio.memoria.Trabajos;
 import org.iesalandalus.programacion.tallermecanico.modelo.negocio.memoria.Vehiculos;
@@ -18,7 +21,7 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
-class ModeloTest {
+class ModeloCascadaTest {
 
     @Mock
     private static IClientes clientes;
@@ -31,14 +34,14 @@ class ModeloTest {
 
     private static Cliente cliente;
     private static Vehiculo vehiculo;
-    private static Revision revision;
+    private static Trabajo revision;
     private static Mecanico mecanico;
 
     private AutoCloseable procesadorAnotaciones;
     private MockedConstruction<Cliente> controladorCreacionMockCliente;
     private MockedConstruction<Clientes> controladorCreacionMockClientes;
     private MockedConstruction<Vehiculos> controladorCreacionMockVehiculos;
-    private MockedConstruction<Revision> controladorCreacionMockRevision;
+    private MockedConstruction<Trabajo> controladorCreacionMockRevision;
     private MockedConstruction<Mecanico> controladorCreacionMockMecanico;
     private MockedConstruction<Trabajos> controladorCreacionMockTrabajos;
 
@@ -68,7 +71,7 @@ class ModeloTest {
         controladorCreacionMockCliente = mockConstruction(Cliente.class);
         controladorCreacionMockClientes = mockConstruction(Clientes.class);
         controladorCreacionMockVehiculos = mockConstruction(Vehiculos.class);
-        controladorCreacionMockRevision = mockConstruction(Revision.class);
+        controladorCreacionMockRevision = mockConstruction(Trabajo.class);
         controladorCreacionMockMecanico = mockConstruction(Mecanico.class);
         controladorCreacionMockTrabajos = mockConstruction(Trabajos.class);
         procesadorAnotaciones = MockitoAnnotations.openMocks(this);

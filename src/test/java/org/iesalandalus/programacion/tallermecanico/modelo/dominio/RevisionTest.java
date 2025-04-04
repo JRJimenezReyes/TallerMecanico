@@ -71,7 +71,7 @@ class RevisionTest {
         assertNull(revision.getFechaFin());
         assertEquals(0, revision.getHoras());
         assertEquals(0, revision.getPrecio());
-        Revision revisonSemanaPasada = new Revision(cliente, vehiculo, semanaPasada);
+        Trabajo revisonSemanaPasada = new Revision(cliente, vehiculo, semanaPasada);
         assertEquals(semanaPasada, revisonSemanaPasada.getFechaInicio());
     }
 
@@ -103,7 +103,7 @@ class RevisionTest {
     void constructorRevisionValidaCopiaRevisionCorrectamente() {
         assertDoesNotThrow(() -> revision.anadirHoras(5));
         assertDoesNotThrow(() -> revision.cerrar(hoy));
-        Revision revisionCopia = new Revision(revision);
+        Trabajo revisionCopia = new Revision(revision);
         assertNotSame(cliente, revisionCopia.getCliente());
         assertSame(vehiculo, revisionCopia.getVehiculo());
         assertEquals(ayer, revisionCopia.getFechaInicio());
@@ -122,7 +122,7 @@ class RevisionTest {
             "0, 5, 175.0", "1, 5, 185.0", "5, 5, 225.0", "0, 10, 350.0", "1, 10, 360.0", "5, 10, 400.0",
             "0, 10, 350.0", "1, 10, 360.0", "5, 10, 400.0"})
     void getPrecioCalculaCorrectamentePrecio(int dias, int horas, float precio) {
-        Revision revisonSemanaPasada = new Revision(cliente, vehiculo, semanaPasada);
+        Trabajo revisonSemanaPasada = new Revision(cliente, vehiculo, semanaPasada);
         assertDoesNotThrow(() -> revisonSemanaPasada.anadirHoras(horas));
         LocalDate fechaFin = semanaPasada.plusDays(dias);
         assertDoesNotThrow(() -> revisonSemanaPasada.cerrar(fechaFin));
