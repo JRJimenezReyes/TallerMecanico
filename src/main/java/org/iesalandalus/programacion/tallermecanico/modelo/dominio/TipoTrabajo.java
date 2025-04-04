@@ -14,7 +14,7 @@ public enum TipoTrabajo {
         return nombre;
     }
 
-    public static TipoTrabajo get(Trabajo trabajo) {
+     static TipoTrabajo get(Trabajo trabajo) {
         if (trabajo == null) {
             throw new IllegalArgumentException("El trabajo no puede ser nulo.");
         }
