@@ -8,6 +8,7 @@ import org.iesalandalus.programacion.tallermecanico.vista.eventos.GestorEventos;
 import org.iesalandalus.programacion.utilidades.Entrada;
 
 import java.time.LocalDate;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
@@ -149,6 +150,11 @@ public class VistaTexto implements org.iesalandalus.programacion.tallermecanico.
     @Override
     public void mostrarClientes(List<Cliente> clientes){
         Consola.mostrarCabecera("Listado de clientes");
+        clientes.sort(Comparator.comparing(
+                Cliente::getNombre)
+                .thenComparing(Cliente :: getDni)
+
+        );
         if (!clientes.isEmpty()){
             for (Cliente cliente : clientes){
                 System.out.println(cliente);
@@ -177,6 +183,9 @@ public class VistaTexto implements org.iesalandalus.programacion.tallermecanico.
     public void mostrarVehiculos(List<Vehiculo> vehiculos){
         Objects.requireNonNull(vehiculos,"La lista no puede ser nula.");
         Consola.mostrarCabecera("Listado de vehículos");
+        vehiculos.sort(Comparator.comparing(Vehiculo :: marca)
+                .thenComparing(Vehiculo :: modelo)
+                .thenComparing(Vehiculo::matricula));
         if (!vehiculos.isEmpty()){
             for (Vehiculo vehiculo : vehiculos){
                 System.out.println(vehiculo);
@@ -191,6 +200,11 @@ public class VistaTexto implements org.iesalandalus.programacion.tallermecanico.
     public void mostrarTrabajos(List<Trabajo> trabajos){
         Objects.requireNonNull(trabajos,"La lista no pude ser nula.");
         Consola.mostrarCabecera("Listado de revisiones");
+        Comparator<Cliente> comparadorClientes = Comparator.comparing(Cliente :: getNombre).thenComparing(Cliente :: getDni);
+        trabajos.sort(Comparator.
+                comparing(Trabajo::getFechaInicio)
+                .thenComparing(Trabajo::getCliente,comparadorClientes)
+        );
         if (!trabajos.isEmpty()){
             for (Trabajo trabajo : trabajos){
                 System.out.println(trabajo);
