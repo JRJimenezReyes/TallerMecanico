@@ -1,8 +1,10 @@
 package org.iesalandalus.programacion.tallermecanico.modelo;
 
+import org.iesalandalus.programacion.tallermecanico.modelo.Cascada.ModeloCascada;
 import org.iesalandalus.programacion.tallermecanico.modelo.dominio.*;
 import org.iesalandalus.programacion.tallermecanico.modelo.negocio.*;
 import org.iesalandalus.programacion.tallermecanico.modelo.negocio.memoria.Clientes;
+import org.iesalandalus.programacion.tallermecanico.modelo.negocio.memoria.FuenteDatosMemoria;
 import org.iesalandalus.programacion.tallermecanico.modelo.negocio.memoria.Trabajos;
 import org.iesalandalus.programacion.tallermecanico.modelo.negocio.memoria.Vehiculos;
 import org.junit.jupiter.api.AfterEach;
@@ -51,7 +53,7 @@ class ModeloTest {
         when(cliente.getTelefono()).thenReturn("950112233");
         vehiculo = mock();
         when(vehiculo.marca()).thenReturn("Seat");
-        when(vehiculo.modelo()).thenReturn("León");
+        when(vehiculo.modelo()).thenReturn("LeÃ³n");
         when(vehiculo.matricula()).thenReturn("1234BCD");
         revision = mock();
         when(revision.getCliente()).thenReturn(cliente);

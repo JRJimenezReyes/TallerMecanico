@@ -1,6 +1,6 @@
 package org.iesalandalus.programacion.tallermecanico.modelo.negocio;
 
-import org.iesalandalus.programacion.tallermecanico.modelo.TallerMecanicoExcepcion;
+import org.iesalandalus.programacion.tallermecanico.TallerMecanicoExcepcion;
 import org.iesalandalus.programacion.tallermecanico.modelo.dominio.*;
 import org.iesalandalus.programacion.tallermecanico.modelo.negocio.memoria.Trabajos;
 import org.junit.jupiter.api.BeforeAll;
@@ -16,7 +16,7 @@ import static org.mockito.Mockito.when;
 
 class TrabajosTest {
 
-    private static Revision revision;
+    private static Trabajo revision;
     private static Mecanico mecanico;
     private static Trabajo trabajo3;
     private static Cliente cliente1;
