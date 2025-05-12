@@ -5,37 +5,38 @@ import java.util.Map;
 
 public enum Evento {
     INSERTAR_CLIENTE(11, "Insertar cliente."),
-    BUSCAR_CLIENTE(12, "Buscar un cliente."),
-    BORRAR_CLIENTE(13, "Borrar un cliente."),
-    LISTAR_CLIENTES(14, "Lista los clientes."),
-    MODIFICAR_CLIENTE(15, "Modifica un cliente."),
-    INSERTAR_VEHICULO(21, "Inserta un vehículo."),
-    BUSCAR_VEHICULO(22, "Busca un vehículo."),
-    BORRAR_VEHICULO(23,"Borra un vehículo."),
-    LISTAR_VEHICULOS(24, "Lista los vehículos."),
-    INSERTAR_REVISION(30, "Inserta una revisión."),
-    INSERTAR_MECANICO(31, "Inserta un mecanico."),
-    BUSCAR_TRABAJO(32, "Busca una revisión."),
-    BORRAR_TRABAJO(33, "Borra una revisión."),
-    LISTAR_TRABAJOS(34, "Lista las revisiones."),
-    LISTAR_TRABAJOS_CLIENTE(35, "Lista las revisiones de un cliente."),
-    LISTAR_TRABAJOS_VEHICULO(36, "Lista las revisiones de un vehículo."),
-    ANADIR_HORAS_TRABAJO(37,"Añade las horas de revisión."),
-    ANADIR_PRECIO_MATERIAL_TRABAJO(38, "Añade el precio del material de revisión."),
-    CERRAR_TRABAJO(39, "Cierra la revisión."),
+    BUSCAR_CLIENTE(12, "Buscar cliente."),
+    BORRAR_CLIENTE(13, "Borrar cliente."),
+    LISTAR_CLIENTES(14, "Listar clientes."),
+    MODIFICAR_CLIENTE(15, "Modificar cliente."),
+    INSERTAR_VEHICULO(21, "Insertar vehículo."),
+    BUSCAR_VEHICULO(22, "Buscar vehículo."),
+    BORRAR_VEHICULO(23, "Borrar vehículo."),
+    LISTAR_VEHICULOS(24, "Listar vehículos."),
+    INSERTAR_REVISION(31, "Insertar trabajo de revisión."),
+    INSERTAR_MECANICO(32, "Insertar trabajo mecánico."),
+    BUSCAR_TRABAJO(33, "Buscar trabajo."),
+    BORRAR_TRABAJO(34, "Borrar trabajo."),
+    LISTAR_TRABAJOS(35, "Listar trabajos."),
+    LISTAR_TRABAJOS_CLIENTE(36, "Listar trabajos de un cliente."),
+    LISTAR_TRABAJOS_VEHICULO(37, "Listar trabajos de un vehículo."),
+    ANADIR_HORAS_TRABAJO(38, "Añadir horas a un trabajo."),
+    ANADIR_PRECIO_MATERIAL_TRABAJO(39, "Añadir precio del material a un trabajo."),
+    CERRAR_TRABAJO(40, "Cerrar trabajo."),
+    MOSTRAR_ESTADISTICAS_MENSUALES(41, "Mostrar estadísticas mensuales."),
     SALIR(0, "Salir.");
 
-    private int codigo;
-    private String texto;
-    private static final  Map <Integer, Evento> eventos = new HashMap<>();
+    private final int codigo;
+    private final String texto;
+    private static final Map<Integer, Evento> eventos = new HashMap<>();
 
     static {
-        for (Evento evento : Evento.values()) {
+        for (Evento evento : values()) {
             eventos.put(evento.codigo, evento);
         }
     }
 
-    Evento(int codigo, String texto){
+    private Evento(int codigo, String texto) {
         this.codigo = codigo;
         this.texto = texto;
     }
@@ -47,8 +48,9 @@ public enum Evento {
     public static boolean esValido(int codigo) {
         return eventos.containsKey(codigo);
     }
+
     public static Evento get(int codigo) {
-        if(!esValido(codigo)){
+        if (!esValido(codigo)) {
             throw new IllegalArgumentException("El código no es correcto.");
         }
         return eventos.get(codigo);

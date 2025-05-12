@@ -1,31 +1,30 @@
 package org.iesalandalus.programacion.tallermecanico.modelo.dominio;
 
+import java.util.Objects;
+
 public enum TipoTrabajo {
     MECANICO("Mecánico"),
     REVISION("Revisión");
 
-    private String nombre;
+    private final String nombre;
 
-    TipoTrabajo(String nombre) {
+    private TipoTrabajo(String nombre) {
         this.nombre = nombre;
     }
 
-    public String getNombre() {
+    public static TipoTrabajo get(Trabajo trabajo) {
+        Objects.requireNonNull(trabajo, "El trabajo no puede ser nulo.");
+        TipoTrabajo tipoTrabajo = null;
+        if (trabajo instanceof Mecanico) {
+            tipoTrabajo = MECANICO;
+        } else if (trabajo instanceof Revision) {
+            tipoTrabajo = REVISION;
+        }
+        return tipoTrabajo;
+    }
+
+    @Override
+    public String toString() {
         return nombre;
     }
-
-     static TipoTrabajo get(Trabajo trabajo) {
-        if (trabajo == null) {
-            throw new IllegalArgumentException("El trabajo no puede ser nulo.");
-        }
-        if (trabajo instanceof Mecanico) {
-            return MECANICO;
-        } else if (trabajo instanceof Revision) {
-            return REVISION;
-        } else {
-            throw new IllegalArgumentException("Tipo de trabajo desconocido.");
-        }
-    }
-
 }
-

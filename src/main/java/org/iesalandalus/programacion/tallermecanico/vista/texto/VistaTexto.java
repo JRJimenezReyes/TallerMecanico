@@ -1,13 +1,16 @@
 package org.iesalandalus.programacion.tallermecanico.vista.texto;
 
 import org.iesalandalus.programacion.tallermecanico.modelo.dominio.*;
+import org.iesalandalus.programacion.tallermecanico.vista.Vista;
 import org.iesalandalus.programacion.tallermecanico.vista.eventos.Evento;
 import org.iesalandalus.programacion.tallermecanico.vista.eventos.GestorEventos;
 
 import java.time.LocalDate;
+import java.util.Comparator;
 import java.util.List;
+import java.util.Map;
 
-public class VistaTexto implements org.iesalandalus.programacion.tallermecanico.vista.Vista {
+public class VistaTexto implements Vista {
 
     private final GestorEventos gestorEventos = new GestorEventos(Evento.values());
 
@@ -18,35 +21,35 @@ public class VistaTexto implements org.iesalandalus.programacion.tallermecanico.
 
     @Override
     public void comenzar() {
-        Evento evento;
+        Evento opcion;
         do {
             Consola.mostrarMenu();
-            evento = Consola.elegirOpcion();
-            ejecutar(evento);
-        } while (evento != Evento.SALIR);
+            opcion = Consola.elegirOpcion();
+            ejecutar(opcion);
+        } while (opcion != Evento.SALIR);
     }
 
-    private void ejecutar(Evento evento) {
-        Consola.mostrarCabecera(evento.toString());
-        getGestorEventos().notificar(evento);
+    private void ejecutar(Evento opcion) {
+        Consola.mostrarCabecera(opcion.toString());
+        gestorEventos.notificar(opcion);
     }
 
     @Override
     public void terminar() {
-        Consola.mostrarCabecera("¡Hasta pronto!");
+        System.out.println("¡¡¡Hasta luego Lucasss!!!");
     }
 
     @Override
     public Cliente leerCliente() {
         String nombre = Consola.leerCadena("Introduce el nombre: ");
-        String dni = Consola.leerCadena("Introduce el dni: ");
+        String dni = Consola.leerCadena("Introduce el DNI: ");
         String telefono = Consola.leerCadena("Introduce el teléfono: ");
         return new Cliente(nombre, dni, telefono);
     }
 
     @Override
     public Cliente leerClienteDni() {
-        return Cliente.get(Consola.leerCadena("Introduce el dni: "));
+        return Cliente.get(Consola.leerCadena("Introduce el DNI: "));
     }
 
     @Override
@@ -69,14 +72,14 @@ public class VistaTexto implements org.iesalandalus.programacion.tallermecanico.
 
     @Override
     public Vehiculo leerVehiculoMatricula() {
-        return Vehiculo.get(Consola.leerCadena("Introduce la matricula: "));
+        return Vehiculo.get(Consola.leerCadena("Introduce la matrícula: "));
     }
 
     @Override
     public Trabajo leerRevision() {
         Cliente cliente = leerClienteDni();
         Vehiculo vehiculo = leerVehiculoMatricula();
-        LocalDate fechaInicio = Consola.leerFecha("Introduce la fecha de inicio: ");
+        LocalDate fechaInicio = Consola.leerFecha("Introduce la fecha de inicio");
         return new Revision(cliente, vehiculo, fechaInicio);
     }
 
@@ -84,7 +87,7 @@ public class VistaTexto implements org.iesalandalus.programacion.tallermecanico.
     public Trabajo leerMecanico() {
         Cliente cliente = leerClienteDni();
         Vehiculo vehiculo = leerVehiculoMatricula();
-        LocalDate fechaInicio = Consola.leerFecha("Introduce la fecha de inicio: ");
+        LocalDate fechaInicio = Consola.leerFecha("Introduce la fecha de inicio");
         return new Mecanico(cliente, vehiculo, fechaInicio);
     }
 
@@ -105,8 +108,11 @@ public class VistaTexto implements org.iesalandalus.programacion.tallermecanico.
 
     @Override
     public LocalDate leerFechaCierre() {
-        return Consola.leerFecha("Introduce la fecha de cierre: ");
+        return Consola.leerFecha("Introduce la fecha de cierre");
     }
+
+    @Override
+    public LocalDate leerMes() { return Consola.leerFecha("Introduce la fecha correspondiente al mes que quieres visualizar"); }
 
     @Override
     public void notificarResultado(Evento evento, String texto, boolean exito) {
@@ -124,17 +130,18 @@ public class VistaTexto implements org.iesalandalus.programacion.tallermecanico.
 
     @Override
     public void mostrarVehiculo(Vehiculo vehiculo) {
-        System.out.println((vehiculo != null) ? vehiculo : "No existe ningún vehículo con dicha matricula.");
+        System.out.println((vehiculo != null) ? vehiculo : "No existe ningún vehículo con dicha matrícula.");
     }
 
     @Override
     public void mostrarTrabajo(Trabajo trabajo) {
-        System.out.println((trabajo != null) ? trabajo : "No existe ningún trabajo para ese cliente, vehiculo y fecha.");
+        System.out.println((trabajo != null) ? trabajo : "No existe ningún trabajo para ese cliente, vehículo y fecha.");
     }
 
     @Override
     public void mostrarClientes(List<Cliente> clientes) {
         if (!clientes.isEmpty()) {
+            clientes.sort(Comparator.comparing(Cliente::getNombre).thenComparing(Cliente::getDni));
             for (Cliente cliente : clientes) {
                 System.out.println(cliente);
             }
@@ -146,6 +153,7 @@ public class VistaTexto implements org.iesalandalus.programacion.tallermecanico.
     @Override
     public void mostrarVehiculos(List<Vehiculo> vehiculos) {
         if (!vehiculos.isEmpty()) {
+            vehiculos.sort(Comparator.comparing(Vehiculo::marca).thenComparing(Vehiculo::modelo).thenComparing(Vehiculo::matricula));
             for (Vehiculo vehiculo : vehiculos) {
                 System.out.println(vehiculo);
             }
@@ -157,6 +165,8 @@ public class VistaTexto implements org.iesalandalus.programacion.tallermecanico.
     @Override
     public void mostrarTrabajos(List<Trabajo> trabajos) {
         if (!trabajos.isEmpty()) {
+            Comparator<Cliente> comparadorCliente = Comparator.comparing(Cliente::getNombre).thenComparing(Cliente::getDni);
+            trabajos.sort(Comparator.comparing(Trabajo::getFechaInicio).thenComparing(Trabajo::getCliente, comparadorCliente));
             for (Trabajo trabajo : trabajos) {
                 System.out.println(trabajo);
             }
@@ -164,4 +174,10 @@ public class VistaTexto implements org.iesalandalus.programacion.tallermecanico.
             System.out.println("No hay trabajos que mostrar.");
         }
     }
+
+    @Override
+    public void mostrarEstadisticasMensuales(Map<TipoTrabajo, Integer> estadisticas) {
+        System.out.printf("Tipos de trabajos realizados este mes: %s%n", estadisticas);
+    }
+
 }
