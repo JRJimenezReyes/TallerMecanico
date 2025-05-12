@@ -9,7 +9,7 @@ public class FuenteDatos implements IFuenteDatos {
 
     @Override
     public IClientes crearClientes(){
-        return new Clientes();
+        return Clientes.getInstancia();
     }
 
     @Override
@@ -19,6 +19,6 @@ public class FuenteDatos implements IFuenteDatos {
 
     @Override
     public IVehiculos crearVehiculos(){
-        return new Vehiculos();
+        return Vehiculos.getInstancia();
     }
 }

@@ -8,7 +8,7 @@ public interface IControlador extends ReceptorEventos {
 
     void comenzar() throws TallerMecanicoExcepcion;
 
-    void terminar();
+    void terminar() throws TallerMecanicoExcepcion;
 
     @Override
     void actualizar(Evento evento);

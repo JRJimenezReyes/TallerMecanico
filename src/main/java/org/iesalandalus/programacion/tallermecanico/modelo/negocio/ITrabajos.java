@@ -31,4 +31,8 @@ public interface ITrabajos {
 
 
     Map<TipoTrabajo, Integer> getEstadisticasMensuales(LocalDate mes);
+
+    void comenzar();
+
+    void terminar() throws TallerMecanicoExcepcion;
 }

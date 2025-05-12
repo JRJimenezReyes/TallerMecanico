@@ -28,11 +28,17 @@ public class ModeloCascada implements Modelo {
 
     @Override
     public void comenzar(){
+        clientes.comenzar();
+        vehiculos.comenzar();
+        trabajos.comenzar();
         System.out.println("Modelo comenzado.");
     }
 
     @Override
-    public void terminar(){
+    public void terminar() throws TallerMecanicoExcepcion {
+        clientes.terminar();
+        vehiculos.terminar();
+        trabajos.terminar();
         System.out.println("El modelo ha terminado.");
     }
 

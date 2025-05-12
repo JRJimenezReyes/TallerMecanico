@@ -36,7 +36,7 @@ public class VistaTexto implements org.iesalandalus.programacion.tallermecanico.
             evento = Consola.elegirOpcion();
             ejecutar(evento);
         } while (evento != Evento.SALIR);
-            controlador.terminar();
+
     }
 
     @Override
