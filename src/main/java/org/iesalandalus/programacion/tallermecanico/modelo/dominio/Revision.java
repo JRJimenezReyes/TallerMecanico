@@ -1,11 +1,6 @@
 package org.iesalandalus.programacion.tallermecanico.modelo.dominio;
 
-import org.iesalandalus.programacion.tallermecanico.modelo.TallerMecanicoExcepcion;
-
 import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
-import java.time.temporal.ChronoUnit;
-import java.util.Objects;
 
 public class Revision extends Trabajo {
 
@@ -28,11 +23,10 @@ public class Revision extends Trabajo {
     public String toString() {
         String cadena;
         if (!estaCerrado()) {
-            cadena = String.format("Revisión -> %s - %s (%s - ): 0 horas", getCliente(), getVehiculo(), getFechaInicio().format(FORMATO_FECHA));
+            cadena = String.format("Revisión -> %s - %s (%s - ): %d horas", getCliente(), getVehiculo(), getFechaInicio().format(FORMATO_FECHA), getHoras());
         } else {
-            cadena = String.format("Revisión -> %s - %s (%s - %s): 0 horas, 10,00 € total", getCliente(), getVehiculo(), getFechaInicio().format(FORMATO_FECHA), getFechaFin().format(FORMATO_FECHA));
+            cadena = String.format("Revisión -> %s - %s (%s - %s): %d horas, %.2f € total", getCliente(), getVehiculo(), getFechaInicio().format(FORMATO_FECHA), getFechaFin().format(FORMATO_FECHA), getHoras(), getPrecio());
         }
         return cadena;
     }
-
 }
