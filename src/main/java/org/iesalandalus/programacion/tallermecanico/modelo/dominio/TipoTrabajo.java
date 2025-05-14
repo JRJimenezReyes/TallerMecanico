@@ -1,27 +1,27 @@
 package org.iesalandalus.programacion.tallermecanico.modelo.dominio;
 
 public enum TipoTrabajo {
-    MECANICO(""),
-    REVISION("");
+    Mecánico("Mecánico"),
+    Revisión("Revisión");
 
     private String nombre;
 
-    private TipoTrabajo(String nombre) {
+    private TipoTrabajo(String nombre){
         this.nombre = nombre;
     }
 
-    public static TipoTrabajo get(Trabajo trabajo) {
+    public static TipoTrabajo getTipoTrabajo(Trabajo trabajo){
         TipoTrabajo tipoTrabajo = null;
-        if (trabajo instanceof Revision) {
-
-        } else if (trabajo instanceof Mecanico) {
-
+        if (trabajo instanceof Mecanico){
+            tipoTrabajo = Mecánico;
+        }else if (trabajo instanceof Revision){
+            tipoTrabajo = Revisión;
         }
         return tipoTrabajo;
     }
 
     @Override
     public String toString() {
-        return String.format("[nombre=%s]", nombre);
+        return String.format("%s", nombre);
     }
 }

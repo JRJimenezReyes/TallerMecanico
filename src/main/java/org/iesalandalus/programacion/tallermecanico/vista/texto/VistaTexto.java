@@ -1,18 +1,19 @@
 package org.iesalandalus.programacion.tallermecanico.vista.texto;
-
 import org.iesalandalus.programacion.tallermecanico.controlador.Controlador;
 import org.iesalandalus.programacion.tallermecanico.modelo.TallerMecanicoExcepcion;
 import org.iesalandalus.programacion.tallermecanico.modelo.dominio.*;
-import org.iesalandalus.programacion.tallermecanico.vista.Vista;
+import org.iesalandalus.programacion.tallermecanico.vista.Consola;
 import org.iesalandalus.programacion.tallermecanico.vista.eventos.Evento;
 import org.iesalandalus.programacion.tallermecanico.vista.eventos.GestorEventos;
 import org.iesalandalus.programacion.utilidades.Entrada;
 
 import java.time.LocalDate;
+import java.util.Comparator;
 import java.util.List;
+import java.util.Map;
 import java.util.Objects;
 
-public class VistaTexto implements Vista {
+public class VistaTexto implements org.iesalandalus.programacion.tallermecanico.vista.Vista {
     private Controlador controlador;
     private GestorEventos gestorEventos;
 
@@ -25,6 +26,8 @@ public class VistaTexto implements Vista {
         return gestorEventos;
     }
 
+
+
     @Override
     public void comenzar() throws TallerMecanicoExcepcion {
         Evento evento;
@@ -33,7 +36,7 @@ public class VistaTexto implements Vista {
             evento = Consola.elegirOpcion();
             ejecutar(evento);
         } while (evento != Evento.SALIR);
-        controlador.terminar();
+
     }
 
     @Override
@@ -44,26 +47,27 @@ public class VistaTexto implements Vista {
     private void ejecutar(Evento evento) throws TallerMecanicoExcepcion {
 
         switch(evento){
-            case INSERTAR_CLIENTE -> gestorEventos.notificar(Evento.INSERTAR_CLIENTE);
-            case INSERTAR_VEHICULO -> gestorEventos.notificar(Evento.INSERTAR_VEHICULO);
-            case INSERTAR_REVISION -> gestorEventos.notificar(Evento.INSERTAR_REVISION);
-            case INSERTAR_MECANICO -> gestorEventos.notificar(Evento.INSERTAR_MECANICO);
-            case BUSCAR_CLIENTE -> gestorEventos.notificar(Evento.BUSCAR_CLIENTE);
-            case BUSCAR_VEHICULO -> gestorEventos.notificar(Evento.BUSCAR_VEHICULO);
-            case BUSCAR_TRABAJO -> gestorEventos.notificar(Evento.BUSCAR_TRABAJO);
-            case MODIFICAR_CLIENTE -> gestorEventos.notificar(Evento.MODIFICAR_CLIENTE);
-            case ANADIR_HORAS_TRABAJO -> gestorEventos.notificar(Evento.ANADIR_HORAS_TRABAJO);
-            case ANADIR_PRECIO_MATERIAL_TRABAJO -> gestorEventos.notificar(Evento.ANADIR_PRECIO_MATERIAL_TRABAJO);
-            case BORRAR_CLIENTE -> gestorEventos.notificar(Evento.BORRAR_CLIENTE);
-            case BORRAR_TRABAJO -> gestorEventos.notificar(Evento.BORRAR_TRABAJO);
-            case CERRAR_TRABAJO -> gestorEventos.notificar(Evento.CERRAR_TRABAJO);
-            case BORRAR_VEHICULO -> gestorEventos.notificar(Evento.BORRAR_VEHICULO);
-            case LISTAR_CLIENTES -> gestorEventos.notificar(Evento.LISTAR_CLIENTES);
-            case LISTAR_TRABAJOS -> gestorEventos.notificar(Evento.LISTAR_TRABAJOS);
-            case LISTAR_TRABAJOS_CLIENTE -> gestorEventos.notificar(Evento.LISTAR_TRABAJOS_CLIENTE);
-            case LISTAR_TRABAJOS_VEHICULO -> gestorEventos.notificar(Evento.LISTAR_TRABAJOS_VEHICULO);
-            case LISTAR_VEHICULOS -> gestorEventos.notificar(Evento.LISTAR_VEHICULOS);
-            case SALIR -> gestorEventos.notificar(Evento.SALIR);
+            case INSERTAR_CLIENTE -> gestorEventos.notificarEvento(Evento.INSERTAR_CLIENTE);
+            case INSERTAR_VEHICULO -> gestorEventos.notificarEvento(Evento.INSERTAR_VEHICULO);
+            case INSERTAR_REVISION -> gestorEventos.notificarEvento(Evento.INSERTAR_REVISION);
+            case INSERTAR_MECANICO -> gestorEventos.notificarEvento(Evento.INSERTAR_MECANICO);
+            case BUSCAR_CLIENTE -> gestorEventos.notificarEvento(Evento.BUSCAR_CLIENTE);
+            case BUSCAR_VEHICULO -> gestorEventos.notificarEvento(Evento.BUSCAR_VEHICULO);
+            case BUSCAR_TRABAJO -> gestorEventos.notificarEvento(Evento.BUSCAR_TRABAJO);
+            case MODIFICAR_CLIENTE -> gestorEventos.notificarEvento(Evento.MODIFICAR_CLIENTE);
+            case ANADIR_HORAS_TRABAJO -> gestorEventos.notificarEvento(Evento.ANADIR_HORAS_TRABAJO);
+            case ANADIR_PRECIO_MATERIAL_MECANICO -> gestorEventos.notificarEvento(Evento.ANADIR_PRECIO_MATERIAL_MECANICO);
+            case BORRAR_CLIENTE -> gestorEventos.notificarEvento(Evento.BORRAR_CLIENTE);
+            case BORRAR_TRABAJO -> gestorEventos.notificarEvento(Evento.BORRAR_TRABAJO);
+            case CERRAR_TRABAJO -> gestorEventos.notificarEvento(Evento.CERRAR_TRABAJO);
+            case BORRAR_VEHICULO -> gestorEventos.notificarEvento(Evento.BORRAR_VEHICULO);
+            case LISTAR_CLIENTES -> gestorEventos.notificarEvento(Evento.LISTAR_CLIENTES);
+            case LISTAR_TRABAJOS -> gestorEventos.notificarEvento(Evento.LISTAR_TRABAJOS);
+            case LISTAR_TRABAJOS_CLIENTE -> gestorEventos.notificarEvento(Evento.LISTAR_TRABAJOS_CLIENTE);
+            case LISTAR_TRABAJOS_VEHICULO -> gestorEventos.notificarEvento(Evento.LISTAR_TRABAJOS_VEHICULO);
+            case LISTAR_VEHICULOS -> gestorEventos.notificarEvento(Evento.LISTAR_VEHICULOS);
+            case MOSTRAR_ESTADISTICAS_MENSUALES -> gestorEventos.notificarEvento(Evento.MOSTRAR_ESTADISTICAS_MENSUALES);
+            case SALIR -> gestorEventos.notificarEvento(Evento.SALIR);
 
         }
     }
@@ -105,7 +109,7 @@ public class VistaTexto implements Vista {
 
     @Override
     public Vehiculo leerVehiculo(){
-        String marca = Consola.leerCadena("Introduzca el marca del vehiculo: ");
+        String marca = Consola.leerCadena("Introduzca el modelo del vehiculo: ");
         String modelo = Consola.leerCadena("Introduzca el modelo del vehiculo: ");
         String matricula = Consola.leerCadena("Introduzca la matricula del vehiculo: ");
         return new Vehiculo(marca,modelo,matricula);
@@ -146,6 +150,11 @@ public class VistaTexto implements Vista {
     @Override
     public void mostrarClientes(List<Cliente> clientes){
         Consola.mostrarCabecera("Listado de clientes");
+        clientes.sort(Comparator.comparing(
+                        Cliente::getNombre)
+                .thenComparing(Cliente :: getDni)
+
+        );
         if (!clientes.isEmpty()){
             for (Cliente cliente : clientes){
                 System.out.println(cliente);
@@ -160,10 +169,23 @@ public class VistaTexto implements Vista {
         return Consola.leerFecha("Introduzca la fecha de cierre.");
     }
 
+    public LocalDate leerMes(){
+        return Consola.leerFecha("Introduzca el mes para la estadística.");
+    }
+
+    @Override
+    public void mostrarEstadisticas(Map<TipoTrabajo, Integer> estadistica) {
+        Objects.requireNonNull(estadistica,"Las estadísticas no pueden ser nulas.");
+        System.out.println(estadistica);
+    }
+
     @Override
     public void mostrarVehiculos(List<Vehiculo> vehiculos){
         Objects.requireNonNull(vehiculos,"La lista no puede ser nula.");
         Consola.mostrarCabecera("Listado de vehículos");
+        vehiculos.sort(Comparator.comparing(Vehiculo :: marca)
+                .thenComparing(Vehiculo :: modelo)
+                .thenComparing(Vehiculo::matricula));
         if (!vehiculos.isEmpty()){
             for (Vehiculo vehiculo : vehiculos){
                 System.out.println(vehiculo);
@@ -178,6 +200,11 @@ public class VistaTexto implements Vista {
     public void mostrarTrabajos(List<Trabajo> trabajos){
         Objects.requireNonNull(trabajos,"La lista no pude ser nula.");
         Consola.mostrarCabecera("Listado de revisiones");
+        Comparator<Cliente> comparadorClientes = Comparator.comparing(Cliente :: getNombre).thenComparing(Cliente :: getDni);
+        trabajos.sort(Comparator.
+                comparing(Trabajo::getFechaInicio)
+                .thenComparing(Trabajo::getCliente,comparadorClientes)
+        );
         if (!trabajos.isEmpty()){
             for (Trabajo trabajo : trabajos){
                 System.out.println(trabajo);
@@ -187,6 +214,8 @@ public class VistaTexto implements Vista {
             System.out.println("La lista esta vacía.");
         }
     }
+
+
 
     @Override
     public void mostrarCliente(Cliente cliente){
@@ -205,4 +234,6 @@ public class VistaTexto implements Vista {
         Objects.requireNonNull(vehiculo,"El vehiculo no puede ser nulo.");
         System.out.println(vehiculo);
     }
+
+
 }

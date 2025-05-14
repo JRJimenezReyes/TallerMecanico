@@ -5,9 +5,10 @@ import org.iesalandalus.programacion.tallermecanico.vista.eventos.Evento;
 import org.iesalandalus.programacion.tallermecanico.vista.eventos.ReceptorEventos;
 
 public interface IControlador extends ReceptorEventos {
+
     void comenzar() throws TallerMecanicoExcepcion;
 
-    void terminar();
+    void terminar() throws TallerMecanicoExcepcion;
 
     @Override
     void actualizar(Evento evento);

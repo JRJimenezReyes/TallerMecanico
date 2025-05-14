@@ -5,26 +5,12 @@ import org.iesalandalus.programacion.tallermecanico.modelo.TallerMecanicoExcepci
 import org.iesalandalus.programacion.tallermecanico.modelo.dominio.*;
 import org.iesalandalus.programacion.tallermecanico.vista.eventos.Evento;
 import org.iesalandalus.programacion.tallermecanico.vista.eventos.GestorEventos;
-import org.iesalandalus.programacion.tallermecanico.vista.texto.Consola;
 
 import java.time.LocalDate;
 import java.util.List;
+import java.util.Map;
 
 public interface Vista {
-    Cliente leerCliente();
-
-    Cliente leerClienteDNI();
-
-    String leerNuevoNombre();
-
-    String leerNuevoTelefono();
-
-    Vehiculo leerVehiculo();
-
-    Vehiculo leerVehiculoMatricula();
-
-    Trabajo leerTrabajoVehiculo();
-
     int leerHoras();
 
     float leerPrecioMaterial();
@@ -37,17 +23,26 @@ public interface Vista {
 
     void terminar();
 
+
+    Cliente leerCliente();
+
+    Cliente leerClienteDNI();
+
+    String leerNuevoNombre();
+
+    String leerNuevoTelefono();
+
+    Vehiculo leerVehiculo();
+
+    Vehiculo leerVehiculoMatricula();
+
     Revision leerRevision();
 
     Mecanico leerMecanico();
 
+    Trabajo leerTrabajoVehiculo();
+
     void notificarResultado(Evento evento, String texto, boolean exito);
-
-    void mostrarCliente(Cliente cliente);
-
-    void mostrarVehiculo(Vehiculo vehiculo);
-
-    void mostrarTrabajo(Trabajo trabajo);
 
     void mostrarClientes(List<Cliente> clientes);
 
@@ -55,4 +50,13 @@ public interface Vista {
 
     void mostrarTrabajos(List<Trabajo> trabajos);
 
+    void mostrarCliente(Cliente cliente);
+
+    void mostrarTrabajo(Trabajo trabajo);
+
+    void mostrarVehiculo(Vehiculo vehiculo);
+
+    LocalDate leerMes();
+
+    void mostrarEstadisticas(Map<TipoTrabajo,Integer> estadistica);
 }

@@ -1,72 +1,73 @@
-package org.iesalandalus.programacion.tallermecanico.vista.texto;
-
+package org.iesalandalus.programacion.tallermecanico.vista;
 
 import org.iesalandalus.programacion.tallermecanico.modelo.dominio.Cliente;
-import org.iesalandalus.programacion.tallermecanico.modelo.dominio.Trabajo;
+import org.iesalandalus.programacion.tallermecanico.modelo.dominio.Revision;
 import org.iesalandalus.programacion.tallermecanico.modelo.dominio.Vehiculo;
 import org.iesalandalus.programacion.tallermecanico.vista.eventos.Evento;
 import org.iesalandalus.programacion.utilidades.Entrada;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
-import java.time.format.DateTimeParseException;
 
 public class Consola {
     private static final String CADENA_FORMATO_FECHA = "dd/MM/yyyy";
+    private Consola(){}
 
-    private Consola() {
+    public static void mostrarCabecera(String mensaje){
+        System.out.println(mensaje);
+        System.out.println("-".repeat(mensaje.length()).concat(""));
+        //Esto lo que hace es poner una cadena y despues el comanodo repetir por lo larga que sea la cadena del mensaje.
+
     }
 
-    static void mostrarCabecera(String mensaje) {
-        System.out.printf("%n%s%n", mensaje);
-        String formatoStr = "%0" + mensaje.length() + "d%n";
-        System.out.println(String.format(formatoStr, 0).replace("0", "-"));
-        ;
-    }
-
-    static void mostrarMenu() {
-        Consola.mostrarCabecera("Gestión de un taller mecánico.");
-        for (Evento evento : Evento.values()) {
+    public static void mostrarMenu(){
+        mostrarCabecera("Gestor de Taller de Reparación de Vehículos.");
+        mostrarCabecera("Menú de opciones: ");
+        for (Evento evento : Evento.values()){
             System.out.println(evento);
         }
     }
 
-    static Evento elegirOpcion() {
+    public static Evento elegirOpcion(){
         Evento evento = null;
         do {
             try {
-                evento = Evento.get(leerEntero("\nElige una opción: "));
-            } catch (Exception e) {
+                evento = Evento.get(leerEntero("Introduzca el número de opción:"));
+            } catch (IllegalArgumentException e) {
                 System.out.printf("ERROR: %s%n", e.getMessage());
             }
+
         } while (evento == null);
+
+
         return evento;
     }
 
-    static int leerEntero(String mensaje) {
+    public static float leerReal(String mensaje){
         System.out.println(mensaje);
-        return Entrada.entero();
+        return Float.parseFloat(Entrada.cadena());
+
     }
 
-    static float leerReal(String mensaje) {
+    public static int leerEntero(String mensaje){
         System.out.println(mensaje);
-        return Entrada.real();
+        return Integer.parseInt(Entrada.cadena());
+
     }
 
-    static String leerCadena(String mensaje) {
+    public static String leerCadena(String mensaje){
         System.out.println(mensaje);
         return Entrada.cadena();
     }
 
-    static LocalDate leerFecha(String mensaje) {
-        LocalDate fecha;
-        DateTimeFormatter formatoFecha = DateTimeFormatter.ofPattern(CADENA_FORMATO_FECHA);
-        mensaje = String.format("%s (%s): ", mensaje, CADENA_FORMATO_FECHA);
-        try {
-            fecha = LocalDate.parse(leerCadena(mensaje), formatoFecha);
-        } catch (DateTimeParseException e) {
-            fecha = null;
-        }
-        return fecha;
+    public static LocalDate leerFecha(String mensaje){
+        System.out.printf("Introduzca la fecha en este formato: %s", CADENA_FORMATO_FECHA);
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern(CADENA_FORMATO_FECHA);
+        return LocalDate.parse(leerCadena(mensaje),formatter);
     }
+
+
+
+
+
 }
