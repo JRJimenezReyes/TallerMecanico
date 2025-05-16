@@ -19,7 +19,7 @@ public interface Vista {
 
     GestorEventos getGestorEventos();
 
-    void comenzar() throws TallerMecanicoExcepcion;
+    void comenzar();
 
     void terminar();
 
