@@ -35,7 +35,7 @@ public class ModeloCascada implements Modelo {
     }
 
     @Override
-    public void terminar() throws TallerMecanicoExcepcion {
+    public void terminar() {
         clientes.terminar();
         vehiculos.terminar();
         trabajos.terminar();

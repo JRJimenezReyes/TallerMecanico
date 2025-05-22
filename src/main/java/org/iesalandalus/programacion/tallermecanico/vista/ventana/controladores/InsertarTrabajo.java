@@ -1,8 +1,5 @@
 package org.iesalandalus.programacion.tallermecanico.vista.ventana.controladores;
 
-import java.net.URL;
-import java.util.ResourceBundle;
-
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -25,12 +22,12 @@ public class InsertarTrabajo extends Controlador {
     private TextField tfMatricula;
 
     @FXML
-    void AccionAceptar(ActionEvent event) {
+    void accionAceptar(ActionEvent event) {
 
     }
 
     @FXML
-    void AccionCancelar(ActionEvent event) {
+    void accionCancelar(ActionEvent event) {
         getEscenario().close();
     }
 

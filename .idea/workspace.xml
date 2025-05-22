@@ -4,47 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8b0e04e-6981-41d9-b2bd-c9ae382a0816" name="Changes" comment="Listas ordenadas en clientes, vehiculos y trabajos">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/vista/ventana/LanzadoraVistaGrafica.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/vista/ventana/VistaGrafica.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/vista/ventana/controladores/AcercaDe.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/vista/ventana/controladores/BorrarCliente.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/vista/ventana/controladores/BorrarTrabajo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/vista/ventana/controladores/BorrarVehiculo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/vista/ventana/controladores/InsertarCliente.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/vista/ventana/controladores/InsertarTrabajo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/vista/ventana/controladores/InsertarVehiculo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/vista/ventana/controladores/ListarCliente.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/vista/ventana/controladores/ListarTrabajo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/vista/ventana/controladores/ListarVehiculo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/vista/ventana/controladores/VentanaPrincipal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/vista/ventana/utilidades/Controlador.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/vista/ventana/utilidades/Controladores.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/vista/ventana/utilidades/Controles.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/vista/ventana/utilidades/Dialogos.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/estilos/estilos.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/imagenes/borrar.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/imagenes/insertar.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/imagenes/lista.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/vistas/AcercaDe.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/vistas/BorrarCliente.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/vistas/BorrarTrabajo.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/vistas/BorrarVehiculo.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/vistas/InsertarCliente.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/vistas/InsertarTrabajo.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/vistas/InsertarVehiculo.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/vistas/ListarCliente.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/vistas/ListarTrabajo.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/vistas/ListarVehiculo.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/vistas/VentanaPrincipal.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="f8b0e04e-6981-41d9-b2bd-c9ae382a0816" name="Changes" comment="Esqueleto de las ventanas sin mapear">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datos/clientes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/datos/clientes.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datos/trabajos.xml" beforeDir="false" afterPath="$PROJECT_DIR$/datos/trabajos.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datos/vehiculos.xml" beforeDir="false" afterPath="$PROJECT_DIR$/datos/vehiculos.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/controlador/Controlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/controlador/Controlador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/vista/FabricaVista.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/vista/FabricaVista.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/vista/Vista.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/vista/Vista.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/vista/texto/VistaTexto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/vista/texto/VistaTexto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/modelo/Modelo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/modelo/Modelo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/modelo/cascada/ModeloCascada.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/modelo/cascada/ModeloCascada.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/modelo/negocio/ITrabajos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/modelo/negocio/ITrabajos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/modelo/negocio/ficheros/Trabajos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/modelo/negocio/ficheros/Trabajos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/vista/ventana/LanzadoraVistaGrafica.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/vista/ventana/LanzadoraVistaGrafica.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/vista/ventana/VistaGrafica.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/vista/ventana/VistaGrafica.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/vista/ventana/controladores/BorrarTrabajo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/vista/ventana/controladores/BorrarTrabajo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/vista/ventana/controladores/InsertarCliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/vista/ventana/controladores/InsertarCliente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/vista/ventana/controladores/InsertarTrabajo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/vista/ventana/controladores/InsertarTrabajo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/vista/ventana/controladores/InsertarVehiculo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/vista/ventana/controladores/InsertarVehiculo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/vista/ventana/controladores/VentanaPrincipal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/vista/ventana/controladores/VentanaPrincipal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/vistas/BorrarTrabajo.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/vistas/BorrarTrabajo.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/vistas/InsertarTrabajo.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/vistas/InsertarTrabajo.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/vistas/InsertarVehiculo.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/vistas/InsertarVehiculo.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/vistas/VentanaPrincipal.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/vistas/VentanaPrincipal.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -378,7 +359,15 @@
       <option name="project" value="LOCAL" />
       <updated>1744007788622</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Esqueleto de las ventanas sin mapear">
+      <option name="closed" value="true" />
+      <created>1747395952170</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1747395952170</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -402,22 +391,8 @@
     <MESSAGE value="Terminamos Vista, sin actulizar y notificar resultado." />
     <MESSAGE value="Cambios a Controlador y main completados" />
     <MESSAGE value="Listas ordenadas en clientes, vehiculos y trabajos" />
-    <option name="LAST_COMMIT_MESSAGE" value="Listas ordenadas en clientes, vehiculos y trabajos" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <breakpoint type="java-exception">
-          <properties class="java.lang.NullPointerException" package="java.lang" />
-          <option name="timeStamp" value="1" />
-        </breakpoint>
-        <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/modelo/FabricaModelo.java</url>
-          <line>5</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Esqueleto de las ventanas sin mapear" />
+    <option name="LAST_COMMIT_MESSAGE" value="Esqueleto de las ventanas sin mapear" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/TallerMecanico$ClienteTest.ic" NAME="ClienteTest Coverage Results" MODIFIED="1706862931206" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

@@ -147,7 +147,7 @@ public class Trabajos implements ITrabajos {
         return trabajo;
     }
 
-    private Document crearDocumentoXml() throws TallerMecanicoExcepcion {
+    private Document crearDocumentoXml() {
         DocumentBuilder constructor = UtilidadesXml.crearConstructorDocumentoXml();
         Document documentoXml = null;
         if (constructor != null){
@@ -193,7 +193,7 @@ public class Trabajos implements ITrabajos {
     }
 
     @Override
-    public void terminar() throws TallerMecanicoExcepcion {
+    public void terminar(){
         Document documentoXml = crearDocumentoXml();
         UtilidadesXml.escribirDocumentoXml(documentoXml, FICHERO_TRABAJO);
         System.out.println("Fichero trabajos escrito correctamente.");

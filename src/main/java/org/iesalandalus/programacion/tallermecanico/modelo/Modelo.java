@@ -9,7 +9,7 @@ import java.util.Map;
 public interface Modelo {
     void comenzar();
 
-    void terminar() throws TallerMecanicoExcepcion;
+    void terminar();
 
     void insertar(Cliente cliente) throws TallerMecanicoExcepcion;
 

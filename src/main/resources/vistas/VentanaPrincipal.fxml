@@ -16,19 +16,19 @@
    <children>
       <MenuBar>
         <menus>
-          <Menu fx:id="idAyuda" mnemonicParsing="false" text="Ayuda">
+          <Menu fx:id="idAyuda" mnemonicParsing="false" text="Archivo">
             <items>
-              <MenuItem mnemonicParsing="false" onAction="#PincharAyuda" text="Ayuda" />
+              <MenuItem mnemonicParsing="false" onAction="#pincharSalir" text="salir" />
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="Estadística">
             <items>
-              <MenuItem mnemonicParsing="false" onAction="#PincharEstadistica" text="Mensual" />
+              <MenuItem mnemonicParsing="false" onAction="#pincharEstadistica" text="Mensual" />
             </items>
           </Menu>
-          <Menu mnemonicParsing="false" text="Help">
+          <Menu mnemonicParsing="false" text="Ayuda">
             <items>
-              <MenuItem mnemonicParsing="false" onAction="#PincharAcercaDe" text="Acerca de" />
+              <MenuItem mnemonicParsing="false" onAction="#pincharAcercaDe" text="Acerca de" />
             </items>
           </Menu>
         </menus>
@@ -133,7 +133,7 @@
                            </image></ImageView>
                      </graphic>
                   </Button>
-                  <Button alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#BBorTrabajos" text="Borrar">
+                  <Button alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#bBorTrabajos" text="Borrar">
                      <graphic>
                         <ImageView fitHeight="74.0" fitWidth="98.0" pickOnBounds="true" preserveRatio="true">
                            <image>

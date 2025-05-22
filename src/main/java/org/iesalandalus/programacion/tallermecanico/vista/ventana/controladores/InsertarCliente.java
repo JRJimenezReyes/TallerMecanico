@@ -5,6 +5,9 @@ import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
+import org.iesalandalus.programacion.tallermecanico.modelo.dominio.Cliente;
+import org.iesalandalus.programacion.tallermecanico.vista.eventos.Evento;
+import org.iesalandalus.programacion.tallermecanico.vista.ventana.VistaGrafica;
 import org.iesalandalus.programacion.tallermecanico.vista.ventana.utilidades.Controlador;
 
 public class InsertarCliente extends Controlador {
@@ -22,7 +25,8 @@ public class InsertarCliente extends Controlador {
 
     @FXML
     void AccionAceptar(ActionEvent event) {
-
+        VistaGrafica.getInstance().getGestorEventos().notificarEvento(Evento.INSERTAR_CLIENTE);
+        getEscenario().close();
     }
 
     @FXML
@@ -35,6 +39,10 @@ public class InsertarCliente extends Controlador {
         tfDNI.clear();
         tfNombre.clear();
         tfNumeroTelefono.clear();
+    }
+
+    public Cliente getCliente(){
+        return new Cliente(tfNombre.getText(),tfDNI.getText(),tfNumeroTelefono.getText());
     }
 
     @FXML

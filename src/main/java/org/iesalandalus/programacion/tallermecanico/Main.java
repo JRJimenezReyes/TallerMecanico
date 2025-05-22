@@ -9,10 +9,24 @@ import org.iesalandalus.programacion.tallermecanico.modelo.TallerMecanicoExcepci
 public class Main {
     public static void main(String[] args){
         FabricaModelo fabricaModelo = FabricaModelo.CASCADA;
-        FabricaVista fabricaVista = FabricaVista.VENTANA;
+
         FabricaFuenteDatos fabricaFuenteDatos = FabricaFuenteDatos.MEMORIA;
-        Controlador controlador = new Controlador(fabricaModelo,fabricaFuenteDatos,fabricaVista);
+        Controlador controlador = new Controlador(fabricaModelo,fabricaFuenteDatos,procesarArgumentosVista(args));
             controlador.comenzar();
 
+    }
+
+    private static FabricaVista procesarArgumentosVista(String[] args){
+        FabricaVista fabricaVista = FabricaVista.VENTANA;
+        for (String argumento : args){
+            if (argumento.equalsIgnoreCase("-vventana")){
+                fabricaVista = FabricaVista.VENTANA;
+            }
+            if (argumento.equalsIgnoreCase("-vtexto")){
+                fabricaVista = FabricaVista.TEXTO;
+            }
+
+        }
+        return fabricaVista;
     }
 }

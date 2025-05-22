@@ -34,5 +34,5 @@ public interface ITrabajos {
 
     void comenzar();
 
-    void terminar() throws TallerMecanicoExcepcion;
+    void terminar();
 }

@@ -3,4 +3,5 @@
     <cliente dni="11223344B" nombre="Bob Esponja" telefono="950112233"/>
     <cliente dni="11111111H" nombre="Patricio Estrella" telefono="950111111"/>
     <cliente dni="85466726Z" nombre="Juan" telefono="635984125"/>
+    <cliente dni="77159513X" nombre="Diego" telefono="635980252"/>
 </clientes>

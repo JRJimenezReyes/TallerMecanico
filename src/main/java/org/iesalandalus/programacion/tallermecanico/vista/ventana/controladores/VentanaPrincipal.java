@@ -1,21 +1,20 @@
 package org.iesalandalus.programacion.tallermecanico.vista.ventana.controladores;
 
 
-import javafx.scene.image.Image;
+import org.iesalandalus.programacion.tallermecanico.vista.eventos.Evento;
+import org.iesalandalus.programacion.tallermecanico.vista.ventana.VistaGrafica;
 import org.iesalandalus.programacion.tallermecanico.vista.ventana.utilidades.Controlador;
 
-import java.net.URL;
-import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.image.ImageView;
 import org.iesalandalus.programacion.tallermecanico.vista.ventana.utilidades.Controladores;
+import org.iesalandalus.programacion.tallermecanico.vista.ventana.utilidades.Dialogos;
 
 public class VentanaPrincipal extends Controlador {
 
 
     @FXML
-    void PincharAcercaDe(ActionEvent event) {
+    void pincharAcercaDe(ActionEvent event) {
         AcercaDe acercaDe = (AcercaDe) Controladores.get("/vistas/AcercaDe.fxml","Acerca De...",getEscenario());
         acercaDe.getEscenario().show();
         acercaDe.centrar();
@@ -24,17 +23,18 @@ public class VentanaPrincipal extends Controlador {
     }
 
     @FXML
-    void PincharAyuda(ActionEvent event) {
+    void pincharSalir(ActionEvent event) {
+        salir();
 
     }
 
     @FXML
-    void PincharEstadistica(ActionEvent event) {
+    void pincharEstadistica(ActionEvent event) {
 
     }
 
     @FXML
-    void BBorTrabajos(ActionEvent event) {
+    void bBorTrabajos(ActionEvent event) {
         BorrarTrabajo borrarTrabajo = (BorrarTrabajo) Controladores.get("/vistas/BorrarTrabajo.fxml","Borrar Trabajo", getEscenario());
         borrarTrabajo.getEscenario().show();
         borrarTrabajo.centrar();
@@ -104,5 +104,15 @@ public class VentanaPrincipal extends Controlador {
 
     @FXML
     void initialize() {
+
     }
+
+     void salir(){
+        if (Dialogos.mostrarDialogoConfirmacion("Salir", "¿Está seguro de que quiere salir?",getEscenario())){
+            getEscenario().close();
+            VistaGrafica.getInstance().getGestorEventos().notificarEvento(Evento.SALIR);
+        }
+    }
+
+
 }

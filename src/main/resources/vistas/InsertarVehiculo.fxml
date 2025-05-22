@@ -45,9 +45,9 @@
       </GridPane>
       <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="150.0">
          <children>
-            <Button fx:id="bCancelar" mnemonicParsing="false" onAction="#AccionCancelar" style="-fx-background-color: SALMON;" text="Cancelar" />
+            <Button fx:id="bCancelar" mnemonicParsing="false" onAction="#accionCancelar" style="-fx-background-color: SALMON;" text="Cancelar" />
             <Button mnemonicParsing="false" onAction="#bLimpiar" style="-fx-background-color: #5245f7;" text="Limpiar" />
-            <Button fx:id="bAceptar" mnemonicParsing="false" onAction="#AccionAceptar" style="-fx-background-color: #5CE65C;" text="Aceptar" />
+            <Button fx:id="bAceptar" mnemonicParsing="false" onAction="#accionAceptar" style="-fx-background-color: #5CE65C;" text="Aceptar" />
          </children></HBox>
    </children>
    <padding>

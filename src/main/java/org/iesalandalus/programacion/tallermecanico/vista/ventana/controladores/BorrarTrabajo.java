@@ -1,7 +1,5 @@
 package org.iesalandalus.programacion.tallermecanico.vista.ventana.controladores;
 
-import java.net.URL;
-import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.DatePicker;
@@ -22,12 +20,12 @@ public class BorrarTrabajo extends Controlador {
     private TextField tfMatricula;
 
     @FXML
-    void AccionAceptar(ActionEvent event) {
+    void accionAceptar(ActionEvent event) {
 
     }
 
     @FXML
-    void AccionCancelar(ActionEvent event) {
+    void accionCancelar(ActionEvent event) {
         getEscenario().close();
     }
 
