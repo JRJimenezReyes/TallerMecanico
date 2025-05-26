@@ -102,22 +102,23 @@ public class Clientes implements org.iesalandalus.programacion.tallermecanico.mo
     }
 
     @Override
-    public boolean modificar(Cliente cliente, String nombre, String telefono)throws TallerMecanicoExcepcion{
+    public Cliente modificar(Cliente cliente, String nombre, String telefono)throws TallerMecanicoExcepcion{
         Objects.requireNonNull(cliente, "No se puede modificar un cliente nulo.");
 
         if (clientes.contains(cliente)){
 
+            Cliente clienteAux = new Cliente(cliente);
 
 
             if (nombre != null && !nombre.isBlank()){
-                buscar(cliente).setNombre(nombre);
+                clienteAux.setNombre(nombre);
             }
 
             if (telefono != null && !telefono.isBlank()){
-                buscar(cliente).setTelefono(telefono);
+                clienteAux.setTelefono(telefono);
             }
 
-            return true;
+            return clienteAux;
 
         } else {
             throw new TallerMecanicoExcepcion("No existe ningún cliente con ese DNI.");

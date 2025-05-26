@@ -9,6 +9,6 @@ services:
     volumes:
       - volumen-tallermecanico:/data/db
     ports:
-      - 27017:27017
+      - "27017:27017"
 volumes:
   volumen-tallermecanico:
