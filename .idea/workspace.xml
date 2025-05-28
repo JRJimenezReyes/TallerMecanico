@@ -4,79 +4,39 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8b0e04e-6981-41d9-b2bd-c9ae382a0816" name="Changes" comment="Tipo de trabajo Finalizado 2">
-      <change afterPath="$PROJECT_DIR$/ficheros/clientes.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ficheros/trabajos.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ficheros/vehiculos.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/modelo/negocio/ficheros/UtilidadesXml.java" afterDir="false" />
+    <list default="true" id="f8b0e04e-6981-41d9-b2bd-c9ae382a0816" name="Changes" comment="Rama ficheros finalizada">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/vista/ventanas/controladores/AcercaDe.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/vista/ventanas/controladores/BuscarClientes.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/vista/ventanas/controladores/BuscarTrabajos.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/vista/ventanas/controladores/BuscarVehiculos.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/vista/ventanas/controladores/LeerCliente.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/vista/ventanas/controladores/LeerTrabajo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/vista/ventanas/controladores/LeerVehiculo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/vista/ventanas/controladores/ListarClientes.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/vista/ventanas/controladores/ListarTrabajos.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/vista/ventanas/controladores/ListarVehiculos.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/vistas/VentanaPrincipal.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/vistas/buscarClientes.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/vistas/buscarTrabajos.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/vistas/buscarVehiculos.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/vistas/listarClientes.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/vistas/listarTrabajos.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/vistas/listarVehiculos.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TallerMecanico/TallerMecanico/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/TallerMecanico/TallerMecanico/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TallerMecanico/TallerMecanico/datos/clientes.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TallerMecanico/TallerMecanico/datos/trabajos.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TallerMecanico/TallerMecanico/datos/vehiculos.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TallerMecanico/TallerMecanico/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TallerMecanico/TallerMecanico/gradle/wrapper/gradle-wrapper.properties.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TallerMecanico/TallerMecanico/libs/entrada-1.0.3 (copia).jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TallerMecanico/TallerMecanico/libs/entrada-1.0.3.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TallerMecanico/TallerMecanico/src/main/java/org/iesalandalus/programacion/tallermecanico/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TallerMecanico/TallerMecanico/src/main/java/org/iesalandalus/programacion/tallermecanico/controlador/Controlador.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TallerMecanico/TallerMecanico/src/main/java/org/iesalandalus/programacion/tallermecanico/controlador/IControlador.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TallerMecanico/TallerMecanico/src/main/java/org/iesalandalus/programacion/tallermecanico/modelo/FabricaModelo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TallerMecanico/TallerMecanico/src/main/java/org/iesalandalus/programacion/tallermecanico/modelo/Modelo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TallerMecanico/TallerMecanico/src/main/java/org/iesalandalus/programacion/tallermecanico/modelo/TallerMecanicoExcepcion.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TallerMecanico/TallerMecanico/src/main/java/org/iesalandalus/programacion/tallermecanico/modelo/cascada/ModeloCascada.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TallerMecanico/TallerMecanico/src/main/java/org/iesalandalus/programacion/tallermecanico/modelo/dominio/Cliente.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TallerMecanico/TallerMecanico/src/main/java/org/iesalandalus/programacion/tallermecanico/modelo/dominio/Mecanico.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TallerMecanico/TallerMecanico/src/main/java/org/iesalandalus/programacion/tallermecanico/modelo/dominio/Revision.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TallerMecanico/TallerMecanico/src/main/java/org/iesalandalus/programacion/tallermecanico/modelo/dominio/TipoTrabajo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TallerMecanico/TallerMecanico/src/main/java/org/iesalandalus/programacion/tallermecanico/modelo/dominio/Trabajo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TallerMecanico/TallerMecanico/src/main/java/org/iesalandalus/programacion/tallermecanico/modelo/dominio/Vehiculo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TallerMecanico/TallerMecanico/src/main/java/org/iesalandalus/programacion/tallermecanico/modelo/negocio/FabricaFuenteDatos.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TallerMecanico/TallerMecanico/src/main/java/org/iesalandalus/programacion/tallermecanico/modelo/negocio/IClientes.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TallerMecanico/TallerMecanico/src/main/java/org/iesalandalus/programacion/tallermecanico/modelo/negocio/IFuenteDatos.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TallerMecanico/TallerMecanico/src/main/java/org/iesalandalus/programacion/tallermecanico/modelo/negocio/ITrabajos.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TallerMecanico/TallerMecanico/src/main/java/org/iesalandalus/programacion/tallermecanico/modelo/negocio/IVehiculos.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TallerMecanico/TallerMecanico/src/main/java/org/iesalandalus/programacion/tallermecanico/modelo/negocio/memoria/Clientes.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TallerMecanico/TallerMecanico/src/main/java/org/iesalandalus/programacion/tallermecanico/modelo/negocio/memoria/FuenteDatosMemoria.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TallerMecanico/TallerMecanico/src/main/java/org/iesalandalus/programacion/tallermecanico/modelo/negocio/memoria/Trabajos.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TallerMecanico/TallerMecanico/src/main/java/org/iesalandalus/programacion/tallermecanico/modelo/negocio/memoria/Vehiculos.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TallerMecanico/TallerMecanico/src/main/java/org/iesalandalus/programacion/tallermecanico/vista/FabricaVista.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TallerMecanico/TallerMecanico/src/main/java/org/iesalandalus/programacion/tallermecanico/vista/Vista.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TallerMecanico/TallerMecanico/src/main/java/org/iesalandalus/programacion/tallermecanico/vista/eventos/Evento.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TallerMecanico/TallerMecanico/src/main/java/org/iesalandalus/programacion/tallermecanico/vista/eventos/GestorEventos.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TallerMecanico/TallerMecanico/src/main/java/org/iesalandalus/programacion/tallermecanico/vista/eventos/ReceptorEventos.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TallerMecanico/TallerMecanico/src/main/java/org/iesalandalus/programacion/tallermecanico/vista/texto/Consola.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TallerMecanico/TallerMecanico/src/main/java/org/iesalandalus/programacion/tallermecanico/vista/texto/VistaTexto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TallerMecanico/TallerMecanico/src/main/resources/uml/MiEstilo.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TallerMecanico/TallerMecanico/src/main/resources/uml/record.profile.uml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TallerMecanico/TallerMecanico/src/main/resources/uml/tallerMecanico.di" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TallerMecanico/TallerMecanico/src/main/resources/uml/tallerMecanico.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TallerMecanico/TallerMecanico/src/main/resources/uml/tallerMecanico.notation" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TallerMecanico/TallerMecanico/src/main/resources/uml/tallerMecanico.notation.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TallerMecanico/TallerMecanico/src/main/resources/uml/tallerMecanico.uml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TallerMecanico/TallerMecanico/src/main/resources/uml/tallerMecanico_es_ES.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TallerMecanico/TallerMecanico/src/test/java/org/iesalandalus/programacion/tallermecanico/modelo/ModeloCascadaTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TallerMecanico/TallerMecanico/src/test/java/org/iesalandalus/programacion/tallermecanico/modelo/dominio/ClienteTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TallerMecanico/TallerMecanico/src/test/java/org/iesalandalus/programacion/tallermecanico/modelo/dominio/MecanicoTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TallerMecanico/TallerMecanico/src/test/java/org/iesalandalus/programacion/tallermecanico/modelo/dominio/RevisionTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TallerMecanico/TallerMecanico/src/test/java/org/iesalandalus/programacion/tallermecanico/modelo/dominio/TrabajoTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TallerMecanico/TallerMecanico/src/test/java/org/iesalandalus/programacion/tallermecanico/modelo/dominio/VehiculoTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TallerMecanico/TallerMecanico/src/test/java/org/iesalandalus/programacion/tallermecanico/modelo/negocio/ficheros/ClientesTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TallerMecanico/TallerMecanico/src/test/java/org/iesalandalus/programacion/tallermecanico/modelo/negocio/ficheros/TrabajosTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TallerMecanico/TallerMecanico/src/test/java/org/iesalandalus/programacion/tallermecanico/modelo/negocio/ficheros/VehiculosTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/controlador/Controlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/controlador/Controlador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/modelo/cascada/ModeloCascada.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/modelo/cascada/ModeloCascada.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/modelo/dominio/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/modelo/dominio/Cliente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/modelo/dominio/Vehiculo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/modelo/dominio/Vehiculo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/modelo/negocio/FabricaFuenteDatos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/modelo/negocio/FabricaFuenteDatos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/modelo/negocio/IClientes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/modelo/negocio/IClientes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/modelo/negocio/ITrabajos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/modelo/negocio/ITrabajos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/modelo/negocio/IVehiculos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/modelo/negocio/IVehiculos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/modelo/negocio/memoria/Clientes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/modelo/negocio/ficheros/Clientes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/modelo/negocio/memoria/FuenteDatosMemoria.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/modelo/negocio/ficheros/FuenteDatosFicheros.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/modelo/negocio/memoria/Trabajos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/modelo/negocio/ficheros/Trabajos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/modelo/negocio/memoria/Vehiculos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/modelo/negocio/ficheros/Vehiculos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ficheros/clientes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ficheros/clientes.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ficheros/trabajos.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ficheros/trabajos.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ficheros/vehiculos.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ficheros/vehiculos.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/vista/FabricaVista.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/vista/Vista.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/vista/eventos/Evento.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/vista/eventos/GestorEventos.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/vista/eventos/ReceptorEventos.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/vista/texto/Consola.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/vista/texto/VistaTexto.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,6 +82,7 @@
         <option value="Exception" />
         <option value="Interface" />
         <option value="Enum" />
+        <option value="FxmlFile" />
         <option value="Class" />
       </list>
     </option>
@@ -132,7 +93,9 @@
         <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
+    <option name="RECENT_COMMON_BRANCH" value="master" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="SYNC" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -153,13 +116,13 @@
   &quot;associatedIndex&quot;: 8
 }</component>
   <component name="ProjectId" id="2b7VdNJDYYb9khOs32YlvwYhqd1" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;Application.LanzadoraVentanaPrincipal.executor&quot;: &quot;Run&quot;,
     &quot;Application.Main.executor&quot;: &quot;Run&quot;,
     &quot;Gradle.Build TallerMecanico.executor&quot;: &quot;Run&quot;,
     &quot;Gradle.Tests in 'org.iesalandalus.programacion.tallermecanico.modelo'.executor&quot;: &quot;Run&quot;,
@@ -204,22 +167,28 @@
     &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;ficheros&quot;,
+    &quot;deletionFromPopupRequiresConfirmation&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;interfaces&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/adria/Desktop/1ºDAW/Prog/TallerMecanico&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/adria/Desktop/1ºDAW/Prog/TallerMecanico/src/main/resources/vistas&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.excludes&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\adria\Desktop\1ºDAW\Prog\TallerMecanico\src\main\resources\vistas" />
       <recent name="$PROJECT_DIR$/src/test/java/org/iesalandalus/programacion/tallermecanico/modelo/dominio" />
       <recent name="$PROJECT_DIR$/src/main/java/org/iesalandalus/programacion/tallermecanico/modelo/dominio" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\adria\Desktop\1ºDAW\Prog\TallerMecanico\src\main\java\org\iesalandalus\programacion\tallermecanico" />
+      <recent name="C:\Users\adria\Desktop\1ºDAW\Prog\TallerMecanico\src\main\java\org\iesalandalus\programacion\tallermecanico\vista" />
     </key>
     <key name="ExtractSuperBase.RECENT_KEYS">
       <recent name="org.iesalandalus.programacion.tallermecanico.vista" />
@@ -233,103 +202,9 @@
       <recent name="org.iesalandalus.programacion.tallermecanico.modelo.negocio" />
       <recent name="org.iesalandalus.programacion.tallermecanico.modelo.dominio" />
     </key>
-  </component>
-  <component name="RunManager">
-    <configuration name="TrabajosTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="TallerMecanico.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.iesalandalus.programacion.tallermecanico.modelo.negocio.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.iesalandalus.programacion.tallermecanico.modelo.negocio" />
-      <option name="MAIN_CLASS_NAME" value="org.iesalandalus.programacion.tallermecanico.modelo.negocio.TrabajosTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TrabajosTest.borrarTrabajoNoExistenteLanzaExcepcion" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="TallerMecanico.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.iesalandalus.programacion.tallermecanico.modelo.negocio.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.iesalandalus.programacion.tallermecanico.modelo.negocio" />
-      <option name="MAIN_CLASS_NAME" value="org.iesalandalus.programacion.tallermecanico.modelo.negocio.TrabajosTest" />
-      <option name="METHOD_NAME" value="borrarTrabajoNoExistenteLanzaExcepcion" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TrabajosTest.borrarTrabajoNuloLanzaExcepcion" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="TallerMecanico.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.iesalandalus.programacion.tallermecanico.modelo.negocio.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.iesalandalus.programacion.tallermecanico.modelo.negocio" />
-      <option name="MAIN_CLASS_NAME" value="org.iesalandalus.programacion.tallermecanico.modelo.negocio.TrabajosTest" />
-      <option name="METHOD_NAME" value="borrarTrabajoNuloLanzaExcepcion" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TrabajosTest.buscarTrabajoNuloLanzaExcepcion" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="TallerMecanico.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.iesalandalus.programacion.tallermecanico.modelo.negocio.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.iesalandalus.programacion.tallermecanico.modelo.negocio" />
-      <option name="MAIN_CLASS_NAME" value="org.iesalandalus.programacion.tallermecanico.modelo.negocio.TrabajosTest" />
-      <option name="METHOD_NAME" value="buscarTrabajoNuloLanzaExcepcion" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TrabajosTest.cerrarTrabajoNuloFechaValidaLanzaExcepcion" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="TallerMecanico.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.iesalandalus.programacion.tallermecanico.modelo.negocio.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.iesalandalus.programacion.tallermecanico.modelo.negocio" />
-      <option name="MAIN_CLASS_NAME" value="org.iesalandalus.programacion.tallermecanico.modelo.negocio.TrabajosTest" />
-      <option name="METHOD_NAME" value="cerrarTrabajoNuloFechaValidaLanzaExcepcion" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <list>
-      <item itemvalue="JUnit.TrabajosTest" />
-      <item itemvalue="JUnit.TrabajosTest.borrarTrabajoNoExistenteLanzaExcepcion" />
-      <item itemvalue="JUnit.TrabajosTest.borrarTrabajoNuloLanzaExcepcion" />
-      <item itemvalue="JUnit.TrabajosTest.buscarTrabajoNuloLanzaExcepcion" />
-      <item itemvalue="JUnit.TrabajosTest.cerrarTrabajoNuloFechaValidaLanzaExcepcion" />
-    </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="JUnit.TrabajosTest.cerrarTrabajoNuloFechaValidaLanzaExcepcion" />
-        <item itemvalue="JUnit.TrabajosTest.buscarTrabajoNuloLanzaExcepcion" />
-        <item itemvalue="JUnit.TrabajosTest.borrarTrabajoNuloLanzaExcepcion" />
-        <item itemvalue="JUnit.TrabajosTest.borrarTrabajoNoExistenteLanzaExcepcion" />
-        <item itemvalue="JUnit.TrabajosTest" />
-      </list>
-    </recent_temporary>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.iesalandalus.programacion.tallermecanico.vista.ventana.controladores" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -480,14 +355,8 @@
     <option name="LAST_COMMIT_MESSAGE" value="Tipo de trabajo Finalizado 2" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/TallerMecanico$RevisionTest.ic" NAME="RevisionTest Coverage Results" MODIFIED="1706862963586" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>org.iesalandalus.programacion.tallermecanico.modelo.dominio.*</FILTER>
-    </SUITE>
     <SUITE FILE_PATH="coverage/TallerMecanico$ClienteTest.ic" NAME="ClienteTest Coverage Results" MODIFIED="1706862931206" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>org.iesalandalus.programacion.tallermecanico.modelo.dominio.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/TallerMecanico$VehiculosTest.ic" NAME="VehiculosTest Coverage Results" MODIFIED="1706862990915" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>org.iesalandalus.programacion.tallermecanico.modelo.negocio.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/TallerMecanico$RevisionesTest.ic" NAME="RevisionesTest Coverage Results" MODIFIED="1706863003924" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>org.iesalandalus.programacion.tallermecanico.modelo.negocio.*</FILTER>
@@ -495,14 +364,20 @@
     <SUITE FILE_PATH="coverage/TallerMecanico$ModeloTest.ic" NAME="ModeloTest Coverage Results" MODIFIED="1706863016430" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>org.iesalandalus.programacion.tallermecanico.modelo.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/TallerMecanico$org_iesalandalus_programacion_tallermecanico_modelo_in_TallerMecanico_test.ic" NAME="org.iesalandalus.programacion.tallermecanico.modelo in TallerMecanico.test Coverage Results" MODIFIED="1706605137635" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>org.iesalandalus.programacion.tallermecanico.modelo.*</FILTER>
+    <SUITE FILE_PATH="coverage/TallerMecanico$RevisionTest.ic" NAME="RevisionTest Coverage Results" MODIFIED="1706862963586" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>org.iesalandalus.programacion.tallermecanico.modelo.dominio.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/TallerMecanico$VehiculoTest.ic" NAME="VehiculoTest Coverage Results" MODIFIED="1706862953572" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>org.iesalandalus.programacion.tallermecanico.modelo.dominio.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/TallerMecanico$ClientesTest.ic" NAME="ClientesTest Coverage Results" MODIFIED="1706862978002" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>org.iesalandalus.programacion.tallermecanico.modelo.negocio.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/TallerMecanico$VehiculosTest.ic" NAME="VehiculosTest Coverage Results" MODIFIED="1706862990915" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>org.iesalandalus.programacion.tallermecanico.modelo.negocio.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/TallerMecanico$org_iesalandalus_programacion_tallermecanico_modelo_in_TallerMecanico_test.ic" NAME="org.iesalandalus.programacion.tallermecanico.modelo in TallerMecanico.test Coverage Results" MODIFIED="1706605137635" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>org.iesalandalus.programacion.tallermecanico.modelo.*</FILTER>
     </SUITE>
   </component>
 </project>
