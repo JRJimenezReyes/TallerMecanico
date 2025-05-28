@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" style="-fx-background-color: #305768;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.iesalandalus.programacion.tallermecanico.vista.ventanas.controladores.AcercaDe">
+   <children>
+      <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+         <VBox.margin>
+            <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+         </VBox.margin>
+         <image>
+            <Image url="@../imagenes/f40.jpg" />
+         </image>
+      </ImageView>
+      <Label text="Proyecto Taller Mecánico" textFill="WHITE">
+         <VBox.margin>
+            <Insets bottom="10.0" left="30.0" right="30.0" top="30.0" />
+         </VBox.margin>
+         <font>
+            <Font name="Arial Black" size="13.0" />
+         </font>
+      </Label>
+      <Label text="- Programacion 1º DAW Ies Alandalus -" textFill="WHITE">
+         <font>
+            <Font name="Arial Black" size="13.0" />
+         </font>
+         <VBox.margin>
+            <Insets bottom="10.0" left="30.0" right="30.0" top="10.0" />
+         </VBox.margin>
+      </Label>
+      <Label text="Realizado por Adrián Siles Pérez" textFill="WHITE">
+         <VBox.margin>
+            <Insets bottom="30.0" left="30.0" right="30.0" top="10.0" />
+         </VBox.margin>
+         <font>
+            <Font name="Arial Black" size="13.0" />
+         </font>
+      </Label>
+   </children>
+</VBox>

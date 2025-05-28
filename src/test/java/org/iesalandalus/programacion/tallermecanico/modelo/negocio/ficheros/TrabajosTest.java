@@ -17,7 +17,7 @@ import static org.mockito.Mockito.when;
 
 class TrabajosTest {
 
-    private static Revision revision;
+    private static Trabajo revision;
     private static Mecanico mecanico;
     private static Revision trabajo3;
     private static Cliente cliente1;
